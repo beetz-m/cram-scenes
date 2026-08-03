@@ -2,6 +2,10 @@
  "default": "pr2_kitchen",
  "scenes": [
   "pr2_kitchen",
-  "garmi_apartment"
+  "garmi_apartment",
+  "g1-warehouse",
+  "g1_warehouse",
+  "g1_test",
+  "aicor_cell"
  ]
 }
