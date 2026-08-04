@@ -17,6 +17,11 @@
    "environment": "apartment"
   },
   {
+   "name": "Unitree_warehouse",
+   "robot": "unitreeg1",
+   "environment": "no_roof_small_warehouse"
+  },
+  {
    "name": "aicor_cell",
    "robot": "aicor_cell_arm",
    "environment": "aicor_cell_environment"
