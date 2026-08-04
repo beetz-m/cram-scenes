@@ -1,12 +1,30 @@
 {
  "default": "pr2_kitchen",
  "scenes": [
-  "pr2_kitchen",
-  "garmi_apartment",
-  "g1-warehouse",
-  "g1_warehouse",
-  "g1_test",
-  "aicor_cell",
-  "garmi_mobile_lab"
+  {
+   "name": "aicor_cell",
+   "robot": "aicor_cell_arm",
+   "environment": "aicor_cell_environment"
+  },
+  {
+   "name": "hsr_apartment",
+   "robot": "hsrb",
+   "environment": "apartment"
+  },
+  {
+   "name": "pr2_apartment",
+   "robot": "pr2",
+   "environment": "apartment"
+  },
+  {
+   "name": "tiago_apartment",
+   "robot": "tiago",
+   "environment": "apartment"
+  },
+  {
+   "name": "tracy_lab",
+   "robot": "tracy",
+   "environment": null
+  }
  ]
 }
