@@ -39,3 +39,4 @@ scenes work without it — it only provides ready-made demo recordings.
 | ----------------- | ------------------------------------------- |
 | `pr2_kitchen`     | PR2 transporting milk/bowl/spoon (IAI apartment) |
 | `garmi_apartment` | Garmi in the apartment                      |
+| `garmi_mobile_lab` | Garmi transporting a bowl from the counter to the table (IAI KIT mobile lab, R007) |
