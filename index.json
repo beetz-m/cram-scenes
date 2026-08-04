@@ -2,24 +2,24 @@
  "default": "pr2_kitchen",
  "scenes": [
   {
-   "name": "aicor_cell",
-   "robot": "aicor_cell_arm",
-   "environment": "aicor_cell_environment"
-  },
-  {
-   "name": "hsr_apartment",
+   "name": "HSR_Apartment",
    "robot": "hsrb",
    "environment": "apartment"
   },
   {
-   "name": "pr2_apartment",
+   "name": "PR2_Apartment",
    "robot": "pr2",
    "environment": "apartment"
   },
   {
-   "name": "tiago_apartment",
+   "name": "TIAGO_Apartment",
    "robot": "tiago",
    "environment": "apartment"
+  },
+  {
+   "name": "aicor_cell",
+   "robot": "aicor_cell_arm",
+   "environment": "aicor_cell_environment"
   },
   {
    "name": "tracy_lab",
