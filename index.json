@@ -27,6 +27,11 @@
    "environment": "aicor_cell_environment"
   },
   {
+   "name": "garmi_garmiapartment",
+   "robot": "garmi",
+   "environment": "scene-bodies"
+  },
+  {
    "name": "tracy_lab",
    "robot": "tracy",
    "environment": null
