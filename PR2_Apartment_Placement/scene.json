@@ -608,5 +608,132 @@
    }
   ]
  },
+ "household": {
+  "places": {
+   "cold_cabinet": {
+    "label": "cold storage",
+    "pos": [
+     0.9,
+     1.05,
+     0.68
+    ],
+    "kind": "destination"
+   },
+   "pantry": {
+    "label": "pantry",
+    "pos": [
+     1.62,
+     0.88,
+     1.12
+    ],
+    "kind": "destination"
+   },
+   "drawer": {
+    "label": "cutlery drawer",
+    "pos": [
+     1.3,
+     1.5,
+     0.75
+    ],
+    "kind": "destination"
+   },
+   "table": {
+    "label": "breakfast table",
+    "pos": [
+     5.1,
+     3.35,
+     0.76
+    ],
+    "kind": "spot"
+   },
+   "counter": {
+    "label": "kitchen counter",
+    "pos": [
+     2.4,
+     1.8,
+     0.97
+    ],
+    "kind": "spot"
+   }
+  },
+  "objects": [
+   {
+    "id": "milk",
+    "key": "milk.stl",
+    "label": "milk",
+    "state": "opened",
+    "current": "cold_cabinet",
+    "home": "cold_cabinet",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": "breakfast"
+   },
+   {
+    "id": "breakfast_cereal",
+    "key": "breakfast_cereal.stl",
+    "label": "cereal",
+    "state": "open",
+    "current": "pantry",
+    "home": "pantry",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": "breakfast"
+   },
+   {
+    "id": "spoon",
+    "key": "spoon.stl",
+    "label": "spoon",
+    "state": "used",
+    "current": "drawer",
+    "home": "drawer",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": "breakfast"
+   }
+  ],
+  "norms": [
+   {
+    "object": "milk",
+    "destination": "cold_cabinet",
+    "relation": "inside",
+    "confidence": 0.9,
+    "states": [],
+    "restoration": "state_mediated_return"
+   },
+   {
+    "object": "breakfast_cereal",
+    "destination": "pantry",
+    "relation": "inside",
+    "confidence": 0.88,
+    "states": [],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "spoon",
+    "destination": "drawer",
+    "relation": "inside",
+    "confidence": 0.85,
+    "states": [],
+    "restoration": "state_mediated_return"
+   }
+  ],
+  "activities": [
+   {
+    "id": "breakfast",
+    "label": "Breakfast in progress",
+    "licenses": [
+     "milk",
+     "breakfast_cereal",
+     "spoon"
+    ]
+   }
+  ]
+ },
  "audit": "audit.json"
 }
