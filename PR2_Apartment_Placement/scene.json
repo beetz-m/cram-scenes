@@ -1,0 +1,587 @@
+{
+ "name": "PR2_Apartment_Placement",
+ "fps": 17,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "apartment",
+   "urdf": "apartment.urdf",
+   "prefix": "apartment",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "wardrobe_door_left_joint",
+    "wardrobe_door_right_joint",
+    "coffee_table_drawer_joint",
+    "cabinet1_door_top_left_joint",
+    "cabinet1_drawer_middle_joint",
+    "cabinet1_drawer_bottom_joint",
+    "cabinet2_door_out_joint",
+    "cabinet2_door_left_joint",
+    "cabinet2_drawer_small_joint",
+    "cabinet2_drawer_big_joint",
+    "cabinet3_door_top_out_joint",
+    "cabinet3_door_top_left_joint",
+    "cabinet3_door_bottom_out_joint",
+    "cabinet3_door_bottom_left_joint",
+    "cabinet4_door_top_top_joint",
+    "cabinet4_door_bottom_bottom_joint",
+    "cabinet5_drawer_top_joint",
+    "cabinet5_drawer_middle_joint",
+    "cabinet5_drawer_bottom_joint",
+    "cabinet6_drawer_top_joint",
+    "cabinet6_drawer_middle_joint",
+    "cabinet6_drawer_bottom_joint",
+    "cabinet7_door_bottom_left_joint",
+    "dishwasher_drawer_middle_joint",
+    "cabinet8_drawer_middle_joint",
+    "cabinet8_drawer_bottom_joint",
+    "cabinet9_drawer_top_joint",
+    "cabinet9_drawer_middle_joint",
+    "cabinet9_drawer_bottom_joint",
+    "cabinet10_drawer_top_joint",
+    "cabinet10_drawer_middle_joint",
+    "cabinet10_drawer_bottom_joint",
+    "cabinet11_drawer_top_joint",
+    "cabinet11_drawer_middle_joint",
+    "cabinet11_drawer_bottom_joint",
+    "tap_joint",
+    "tap_handle_open_joint",
+    "tap_handle_hot_cold_joint"
+   ]
+  },
+  {
+   "name": "pr2_with_ft2_cableguide",
+   "urdf": "pr2_with_ft2_cableguide.urdf",
+   "prefix": "pr2",
+   "robot": true,
+   "links": 108,
+   "movableJoints": [
+    "fl_caster_rotation_joint",
+    "fl_caster_l_wheel_joint",
+    "fl_caster_r_wheel_joint",
+    "fr_caster_rotation_joint",
+    "fr_caster_l_wheel_joint",
+    "fr_caster_r_wheel_joint",
+    "bl_caster_rotation_joint",
+    "bl_caster_l_wheel_joint",
+    "bl_caster_r_wheel_joint",
+    "br_caster_rotation_joint",
+    "br_caster_l_wheel_joint",
+    "br_caster_r_wheel_joint",
+    "torso_lift_joint",
+    "torso_lift_motor_screw_joint",
+    "torso_lift_screw_torso_lift_joint",
+    "head_pan_joint",
+    "head_tilt_joint",
+    "laser_tilt_mount_joint",
+    "r_shoulder_pan_joint",
+    "r_shoulder_lift_joint",
+    "r_upper_arm_roll_joint",
+    "r_forearm_roll_joint",
+    "r_elbow_flex_joint",
+    "r_wrist_flex_joint",
+    "r_wrist_roll_joint",
+    "r_gripper_motor_slider_joint",
+    "r_gripper_motor_screw_joint",
+    "r_gripper_l_finger_joint",
+    "r_gripper_r_finger_joint",
+    "r_gripper_l_finger_tip_joint",
+    "r_gripper_r_finger_tip_joint",
+    "r_gripper_r_screw_screw_joint",
+    "r_gripper_l_screw_screw_joint",
+    "r_gripper_r_parallel_root_joint",
+    "r_gripper_l_parallel_root_joint",
+    "r_gripper_r_parallel_tip_joint",
+    "r_gripper_l_parallel_tip_joint",
+    "r_gripper_joint",
+    "r_gripper_joint",
+    "l_shoulder_pan_joint",
+    "l_shoulder_lift_joint",
+    "l_upper_arm_roll_joint",
+    "l_forearm_roll_joint",
+    "l_elbow_flex_joint",
+    "l_wrist_flex_joint",
+    "l_wrist_roll_joint",
+    "l_gripper_motor_slider_joint",
+    "l_gripper_motor_screw_joint",
+    "l_gripper_l_finger_joint",
+    "l_gripper_r_finger_joint",
+    "l_gripper_l_finger_tip_joint",
+    "l_gripper_r_finger_tip_joint",
+    "l_gripper_r_screw_screw_joint",
+    "l_gripper_l_screw_screw_joint",
+    "l_gripper_r_parallel_root_joint",
+    "l_gripper_l_parallel_root_joint",
+    "l_gripper_r_parallel_tip_joint",
+    "l_gripper_l_parallel_tip_joint",
+    "l_gripper_joint",
+    "l_gripper_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "milk",
+   "key": "milk.stl",
+   "mesh": "meshes/objects/milk.stl",
+   "spawn": [
+    2.37,
+    2.0,
+    1.05,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#f3f0ea",
+   "height": 1.0
+  },
+  {
+   "id": "breakfast_cereal",
+   "key": "breakfast_cereal.stl",
+   "mesh": "meshes/objects/breakfast_cereal.stl",
+   "spawn": [
+    2.37,
+    1.8,
+    1.05,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#cf5b3a",
+   "height": 1.0
+  },
+  {
+   "id": "spoon",
+   "key": "spoon.stl",
+   "mesh": "meshes/objects/spoon.stl",
+   "spawn": [
+    2.37,
+    1.6,
+    1.05,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#b8bcc4",
+   "height": 1.0
+  }
+ ],
+ "segments": [
+  {
+   "step": "generate",
+   "action": "PerceiveAndProposeAction",
+   "arm": null,
+   "start": 0,
+   "end": 204
+  },
+  {
+   "step": "translate",
+   "action": "TranslateToDesignatorAction",
+   "arm": null,
+   "start": 204,
+   "end": 375
+  },
+  {
+   "step": "ground",
+   "action": "GroundInTwinAction",
+   "arm": null,
+   "start": 375,
+   "end": 512,
+   "picks": "milk"
+  },
+  {
+   "step": "check",
+   "action": "RunCriticSuiteAction",
+   "arm": null,
+   "start": 512,
+   "end": 682,
+   "picks": "milk"
+  },
+  {
+   "step": "commit",
+   "action": "CommitPlacementAction",
+   "arm": null,
+   "start": 682,
+   "end": 785,
+   "picks": "milk"
+  },
+  {
+   "step": "monitor",
+   "action": "ExecuteAndMonitorAction",
+   "arm": null,
+   "start": 785,
+   "end": 1229,
+   "picks": "milk"
+  },
+  {
+   "step": "restore",
+   "action": "AwaitRestorationAction",
+   "arm": null,
+   "start": 1229,
+   "end": 1468
+  },
+  {
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "start": 1468,
+   "end": 1707
+  }
+ ],
+ "actions": [
+  {
+   "action": "PerceiveAndProposeAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "TranslateToDesignatorAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "GroundInTwinAction",
+   "arm": null,
+   "target": "milk"
+  },
+  {
+   "action": "RunCriticSuiteAction",
+   "arm": null,
+   "target": "milk"
+  },
+  {
+   "action": "CommitPlacementAction",
+   "arm": null,
+   "target": "milk"
+  },
+  {
+   "action": "ExecuteAndMonitorAction",
+   "arm": null,
+   "target": "milk"
+  },
+  {
+   "action": "AwaitRestorationAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "PlanNode",
+   "label": "put_the_milk_back (GAP)",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "generate \u00b7 PerceiveAndProposeAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "holds(milk) \u2227 state(milk) = opened_nonempty",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "BelongingStore.applicable_place(milk, state)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "candidates = {table:on, cabinet7:inside, recycling:inside}",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "translate \u00b7 TranslateToDesignatorAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "belonging_norm.confidence = 0.75",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "PlacementDesignator(milk \u2192 table_area_main : on)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ground \u00b7 GroundInTwinAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "region \u2286 support(table) \u2229 reachable(pr2)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "GroundRegionMotion \u2192 placeTarget @ (5.1, 3.3)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "stable_pose(milk) \u2227 collision_free",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "check \u00b7 RunCriticSuiteAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "completeness \u2227 relational \u2227 physical \u2227 safety",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "accessibility \u2227 workflow \u2227 convention",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "commit \u00b7 CommitPlacementAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "verdict(milk @ table) = LICENSED (breakfast active)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "OpenObligation(milk: inside cabinet7, licensed by breakfast_use)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "monitor \u00b7 ExecuteAndMonitorAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "TransportAction(milk \u2192 table)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "monitor: identity \u2227 grasp \u2227 support \u2227 release",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "at(milk, table) \u2227 on(milk, table)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "restore \u00b7 AwaitRestorationAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "obligation.status = LICENSED (breakfast active)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "counterfactual: no license \u21d2 verdict = MISPLACED",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "discharge_alternatives = {state_mediated_return, successor_state}",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "record \u00b7 LogEvidenceAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "evidence: scoped competence claim (evidence, not proof)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "LogEvidenceMotion \u2192 NEEM (hash-chained)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "placeTarget": {
+  "pos": [
+   5.1,
+   3.3
+  ],
+  "z": 0.735,
+  "bounds": {
+   "minX": 4.55,
+   "maxX": 5.65,
+   "minY": 2.75,
+   "maxY": 3.95
+  }
+ },
+ "dragBounds": {
+  "minX": 2.02,
+  "maxX": 2.72,
+  "minY": 1.0,
+  "maxY": 2.6
+ },
+ "missingAssets": [],
+ "placement": {
+  "object": "milk",
+  "target": {
+   "destination": "table_area_main",
+   "relation": "on",
+   "region": "support(table) \u2229 reachable",
+   "purpose": "breakfast_use",
+   "verdict": "LICENSED"
+  },
+  "belongingByState": [
+   {
+    "state": "in_use_during_breakfast",
+    "destination": "table_area_main",
+    "relation": "on",
+    "restoration": "exact_return",
+    "confidence": 0.75,
+    "reading": "milk actively used during breakfast \u2192 temporarily on the breakfast table"
+   },
+   {
+    "state": "opened_nonempty_after_breakfast",
+    "destination": "cabinet7",
+    "relation": "inside",
+    "restoration": "state_mediated_return",
+    "confidence": 0.9,
+    "reading": "opened, non-empty milk after breakfast \u2192 upright inside cold storage"
+   },
+   {
+    "state": "empty_recyclable_carton",
+    "destination": "recycling_zone",
+    "relation": "inside",
+    "restoration": "successor_state_resolution",
+    "confidence": 0.95,
+    "reading": "empty recyclable carton \u2192 recycling container (original relation no longer applies)"
+   }
+  ],
+  "obligation": {
+   "disturbed": "milk",
+   "priorRelation": "inside cabinet7",
+   "cause": "ROBOT",
+   "status": "LICENSED",
+   "warrantsRestoration": true,
+   "dischargeAlternatives": [
+    "state_mediated_return",
+    "successor_state_resolution"
+   ]
+  }
+ },
+ "audit": "audit.json"
+}

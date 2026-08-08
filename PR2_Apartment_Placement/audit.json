@@ -1,0 +1,163 @@
+{
+ "workflow": "Put the milk back \u2014 normative placement in the EASE apartment",
+ "gap": "put_back(milk M: table \u2192 belonging_place(M, state)) under belonging(M | context), restoration_obligation(M), critics{completeness, relational, physical, safety, accessibility, workflow, convention}",
+ "genesis": "0000000000000000000000000000000000000000000000000000000000000000",
+ "entries": [
+  {
+   "seq": 0,
+   "t": "2026-09-15T11:08:00",
+   "frame": 0,
+   "step": "generate",
+   "action": "PerceiveAndProposeAction",
+   "detail": "Perceive the milk and its state; propose candidate destinations from the belonging store. Three states select three destinations: table_area_main / cabinet7 / recycling_zone.",
+   "constraints": [
+    {
+     "id": 3101,
+     "source": "AICOR \u00a73.1 \u00b7 Belonging norm",
+     "text": "Belonging is contextual: milk resolves to table_area_main (in_use_during_breakfast), cabinet7 (opened_nonempty_after_breakfast), recycling_zone (empty_recyclable_carton) by state \u2014 observation frequency alone is insufficient",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "ecf0bb02fb4e94ad18f2be219b149cbff293f2b28f79ecc87f856ecc8048a125",
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "seq": 1,
+   "t": "2026-09-15T11:08:06",
+   "frame": 204,
+   "step": "translate",
+   "action": "TranslateToDesignatorAction",
+   "detail": "Translate the resolved belonging norm into an explicit placement designator: Place(milk) = \u27e8table_area_main, on, region, pose, breakfast_use, constraints, evidence\u27e9.",
+   "constraints": [
+    {
+     "id": 3102,
+     "source": "AICOR \u00a73.1 \u00b7 Belonging norm",
+     "text": "Most-confident applicable norm selected: table_area_main : on (confidence 0.75)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "6e6db7625b928e699085e8e14718999a88a40a33d012aed4b8d5d6ac3aa4ad22",
+   "prev": "ecf0bb02fb4e94ad18f2be219b149cbff293f2b28f79ecc87f856ecc8048a125"
+  },
+  {
+   "seq": 2,
+   "t": "2026-09-15T11:08:12",
+   "frame": 375,
+   "step": "ground",
+   "action": "GroundInTwinAction",
+   "detail": "Ground the designator in the semantic digital twin: select an admissible placement region (reachability \u2229 support \u2229 visibility) and a stable pose on the table.",
+   "constraints": [
+    {
+     "id": 8001,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Placement region = support(table) \u2229 reachable(pr2) \u2229 visible; stable, collision-free pose grounded at (5.1, 3.3)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "2735d7038b063e8eb9779c8c254f3d4bbd9a29dcc97f0d584c8de5757fd6eada",
+   "prev": "6e6db7625b928e699085e8e14718999a88a40a33d012aed4b8d5d6ac3aa4ad22"
+  },
+  {
+   "seq": 3,
+   "t": "2026-09-15T11:08:18",
+   "frame": 512,
+   "step": "check",
+   "action": "RunCriticSuiteAction",
+   "detail": "Run the critic suite over the grounded candidate. All seven dimensions pass; the placement is admissible and warranted.",
+   "constraints": [
+    {
+     "id": 6401,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "completeness \u00b7 relational \u00b7 physical \u00b7 safety \u2014 all pass",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 6402,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "accessibility \u00b7 workflow \u00b7 convention \u2014 all pass",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "02393d96b634bec1adee479272ef0a27e2561700ab8d5105891be203fce00110",
+   "prev": "2735d7038b063e8eb9779c8c254f3d4bbd9a29dcc97f0d584c8de5757fd6eada"
+  },
+  {
+   "seq": 4,
+   "t": "2026-09-15T11:08:24",
+   "frame": 682,
+   "step": "commit",
+   "action": "CommitPlacementAction",
+   "detail": "Commit the reason-warranted placement and open a restoration obligation: the milk's stable relation (inside cold storage) is disturbed under the breakfast license.",
+   "constraints": [
+    {
+     "id": 6101,
+     "source": "AICOR \u00a76.1 \u00b7 Misplacement predicate",
+     "text": "verdict(milk @ table, breakfast active) = LICENSED \u2014 licensed, not misplaced",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 1001,
+     "source": "AICOR Principle 1 \u00b7 Restorative manipulation",
+     "text": "Disturbance of stable relation (milk inside cabinet7) caused by ROBOT \u2192 prima-facie warrant; restoration obligation opened, status LICENSED",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "9714928db359c0b1a07830e1f286c63c2c96c780ef6a4c48f99e1af9fb0a531f",
+   "prev": "02393d96b634bec1adee479272ef0a27e2561700ab8d5105891be203fce00110"
+  },
+  {
+   "seq": 5,
+   "t": "2026-09-15T11:08:30",
+   "frame": 785,
+   "step": "monitor",
+   "action": "ExecuteAndMonitorAction",
+   "detail": "Execute the transport and monitor object identity, grasp, support and release until the milk rests on the table.",
+   "constraints": [
+    {
+     "id": 6001,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Runtime monitors: object identity \u2227 grasp \u2227 support \u2227 release \u2014 held; at(milk, table) established",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "9c944606ba9ea544be7092ab725158e7a664970708cf8dfcdb911b75811ad508",
+   "prev": "9714928db359c0b1a07830e1f286c63c2c96c780ef6a4c48f99e1af9fb0a531f"
+  },
+  {
+   "seq": 6,
+   "t": "2026-09-15T11:08:36",
+   "frame": 1229,
+   "step": "restore",
+   "action": "AwaitRestorationAction",
+   "detail": "The obligation persists past the placement. When breakfast ends the license lapses, the obligation becomes dischargeable, and the same on-table milk would read MISPLACED \u2014 driving a state-mediated return to cold storage.",
+   "constraints": [
+    {
+     "id": 1002,
+     "source": "AICOR Principle 1 \u00b7 Restorative manipulation",
+     "text": "Counterfactual \u2014 breakfast ended (no license): verdict(milk @ table) = MISPLACED; discharge via state_mediated_return",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "58ab3032f08d4c7a986fe04254ceed682c0e2c4c0a6783d33ead0af5de7ba9e8",
+   "prev": "9c944606ba9ea544be7092ab725158e7a664970708cf8dfcdb911b75811ad508"
+  },
+  {
+   "seq": 7,
+   "t": "2026-09-15T11:08:42",
+   "frame": 1468,
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "detail": "Record the episode as a tamper-evident, hash-chained trace: belonging resolution, verdict, obligation, and critic verdicts become NEEM evidence.",
+   "constraints": [
+    {
+     "id": 6601,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "A single successful placement is evidence, not proof \u2014 logged as a scoped competence claim (NEEM, hash-chained)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "53cdad89b497807d2fab2d62ae4cf4b9909385e3f90cbf63c23b1a21047102cf",
+   "prev": "58ab3032f08d4c7a986fe04254ceed682c0e2c4c0a6783d33ead0af5de7ba9e8"
+  }
+ ]
+}
