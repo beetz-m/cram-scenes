@@ -12,6 +12,11 @@
    "environment": "apartment"
   },
   {
+   "name": "PR2_Apartment_Household",
+   "robot": "pr2",
+   "environment": "apartment"
+  },
+  {
    "name": "PR2_Apartment_KitchenReorg",
    "robot": "pr2",
    "environment": "apartment"

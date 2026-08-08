@@ -1,0 +1,501 @@
+{
+ "name": "PR2_Apartment_Household",
+ "fps": 20,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "apartment",
+   "urdf": "apartment.urdf",
+   "prefix": "apartment",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "wardrobe_door_left_joint",
+    "wardrobe_door_right_joint",
+    "coffee_table_drawer_joint",
+    "cabinet1_door_top_left_joint",
+    "cabinet1_drawer_middle_joint",
+    "cabinet1_drawer_bottom_joint",
+    "cabinet2_door_out_joint",
+    "cabinet2_door_left_joint",
+    "cabinet2_drawer_small_joint",
+    "cabinet2_drawer_big_joint",
+    "cabinet3_door_top_out_joint",
+    "cabinet3_door_top_left_joint",
+    "cabinet3_door_bottom_out_joint",
+    "cabinet3_door_bottom_left_joint",
+    "cabinet4_door_top_top_joint",
+    "cabinet4_door_bottom_bottom_joint",
+    "cabinet5_drawer_top_joint",
+    "cabinet5_drawer_middle_joint",
+    "cabinet5_drawer_bottom_joint",
+    "cabinet6_drawer_top_joint",
+    "cabinet6_drawer_middle_joint",
+    "cabinet6_drawer_bottom_joint",
+    "cabinet7_door_bottom_left_joint",
+    "dishwasher_drawer_middle_joint",
+    "cabinet8_drawer_middle_joint",
+    "cabinet8_drawer_bottom_joint",
+    "cabinet9_drawer_top_joint",
+    "cabinet9_drawer_middle_joint",
+    "cabinet9_drawer_bottom_joint",
+    "cabinet10_drawer_top_joint",
+    "cabinet10_drawer_middle_joint",
+    "cabinet10_drawer_bottom_joint",
+    "cabinet11_drawer_top_joint",
+    "cabinet11_drawer_middle_joint",
+    "cabinet11_drawer_bottom_joint",
+    "tap_joint",
+    "tap_handle_open_joint",
+    "tap_handle_hot_cold_joint"
+   ]
+  },
+  {
+   "name": "pr2_with_ft2_cableguide",
+   "urdf": "pr2_with_ft2_cableguide.urdf",
+   "prefix": "pr2",
+   "robot": true,
+   "links": 108,
+   "movableJoints": [
+    "fl_caster_rotation_joint",
+    "fl_caster_l_wheel_joint",
+    "fl_caster_r_wheel_joint",
+    "fr_caster_rotation_joint",
+    "fr_caster_l_wheel_joint",
+    "fr_caster_r_wheel_joint",
+    "bl_caster_rotation_joint",
+    "bl_caster_l_wheel_joint",
+    "bl_caster_r_wheel_joint",
+    "br_caster_rotation_joint",
+    "br_caster_l_wheel_joint",
+    "br_caster_r_wheel_joint",
+    "torso_lift_joint",
+    "torso_lift_motor_screw_joint",
+    "torso_lift_screw_torso_lift_joint",
+    "head_pan_joint",
+    "head_tilt_joint",
+    "laser_tilt_mount_joint",
+    "r_shoulder_pan_joint",
+    "r_shoulder_lift_joint",
+    "r_upper_arm_roll_joint",
+    "r_forearm_roll_joint",
+    "r_elbow_flex_joint",
+    "r_wrist_flex_joint",
+    "r_wrist_roll_joint",
+    "r_gripper_motor_slider_joint",
+    "r_gripper_motor_screw_joint",
+    "r_gripper_l_finger_joint",
+    "r_gripper_r_finger_joint",
+    "r_gripper_l_finger_tip_joint",
+    "r_gripper_r_finger_tip_joint",
+    "r_gripper_r_screw_screw_joint",
+    "r_gripper_l_screw_screw_joint",
+    "r_gripper_r_parallel_root_joint",
+    "r_gripper_l_parallel_root_joint",
+    "r_gripper_r_parallel_tip_joint",
+    "r_gripper_l_parallel_tip_joint",
+    "r_gripper_joint",
+    "r_gripper_joint",
+    "l_shoulder_pan_joint",
+    "l_shoulder_lift_joint",
+    "l_upper_arm_roll_joint",
+    "l_forearm_roll_joint",
+    "l_elbow_flex_joint",
+    "l_wrist_flex_joint",
+    "l_wrist_roll_joint",
+    "l_gripper_motor_slider_joint",
+    "l_gripper_motor_screw_joint",
+    "l_gripper_l_finger_joint",
+    "l_gripper_r_finger_joint",
+    "l_gripper_l_finger_tip_joint",
+    "l_gripper_r_finger_tip_joint",
+    "l_gripper_r_screw_screw_joint",
+    "l_gripper_l_screw_screw_joint",
+    "l_gripper_r_parallel_root_joint",
+    "l_gripper_l_parallel_root_joint",
+    "l_gripper_r_parallel_tip_joint",
+    "l_gripper_l_parallel_tip_joint",
+    "l_gripper_joint",
+    "l_gripper_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "milk",
+   "key": "milk",
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ],
+   "color": "#f3f0ea",
+   "spawn": [
+    4.94,
+    3.27,
+    0.76,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.14
+  },
+  {
+   "id": "dirty_mug",
+   "key": "dirty_mug",
+   "box": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "color": "#7a5a44",
+   "spawn": [
+    5.1,
+    3.27,
+    0.76,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "keys",
+   "key": "keys",
+   "box": [
+    0.03,
+    0.06,
+    0.012
+   ],
+   "color": "#d4af37",
+   "spawn": [
+    5.26,
+    3.27,
+    0.76,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "clean_plate",
+   "key": "clean_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.24,
+    1.72,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "empty_carton",
+   "key": "empty_carton",
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ],
+   "color": "#cfc9bf",
+   "spawn": [
+    2.4,
+    1.72,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.14
+  },
+  {
+   "id": "unknown_jar",
+   "key": "unknown_jar",
+   "box": [
+    0.06,
+    0.06,
+    0.11
+   ],
+   "color": "#9bb7c4",
+   "spawn": [
+    2.56,
+    1.72,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.11
+  }
+ ],
+ "segments": [
+  {
+   "step": "observe",
+   "action": "ObserveHouseholdAction",
+   "arm": null,
+   "start": 0,
+   "end": 30
+  }
+ ],
+ "actions": [
+  {
+   "action": "ObserveHouseholdAction",
+   "arm": null,
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "PlanNode",
+   "label": "household (interactive)",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "set context \u2192 assess \u2192 transport",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "verdict(o) via household_norms under the active context",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "placeTarget": null,
+ "dragBounds": null,
+ "missingAssets": [],
+ "household": {
+  "places": {
+   "table": {
+    "label": "breakfast table",
+    "pos": [
+     5.1,
+     3.35,
+     0.76
+    ]
+   },
+   "counter": {
+    "label": "kitchen counter",
+    "pos": [
+     2.4,
+     1.8,
+     0.97
+    ]
+   },
+   "cold_cabinet": {
+    "label": "cold storage",
+    "pos": [
+     0.9,
+     1.05,
+     0.68
+    ]
+   },
+   "dishwasher": {
+    "label": "dishwasher",
+    "pos": [
+     1.05,
+     1.3,
+     0.62
+    ]
+   },
+   "cupboard": {
+    "label": "cupboard",
+    "pos": [
+     1.62,
+     0.88,
+     1.12
+    ]
+   },
+   "recycling": {
+    "label": "recycling",
+    "pos": [
+     0.72,
+     2.38,
+     0.42
+    ]
+   },
+   "entrance_bowl": {
+    "label": "entrance bowl",
+    "pos": [
+     7.05,
+     0.55,
+     0.8
+    ]
+   }
+  },
+  "objects": [
+   {
+    "id": "milk",
+    "state": "opened_after_breakfast",
+    "current": "table"
+   },
+   {
+    "id": "dirty_mug",
+    "state": "dirty_after_use",
+    "current": "table"
+   },
+   {
+    "id": "keys",
+    "state": "deliberate_cue",
+    "current": "table"
+   },
+   {
+    "id": "clean_plate",
+    "state": "clean_not_in_use",
+    "current": "counter"
+   },
+   {
+    "id": "empty_carton",
+    "state": "empty_recyclable",
+    "current": "counter"
+   },
+   {
+    "id": "unknown_jar",
+    "state": "unknown_convention",
+    "current": "counter"
+   }
+  ],
+  "norms": [
+   {
+    "object": "milk",
+    "destination": "cold_cabinet",
+    "relation": "inside",
+    "confidence": 0.9,
+    "states": [
+     "opened_after_breakfast"
+    ],
+    "restoration": "state_mediated_return"
+   },
+   {
+    "object": "dirty_mug",
+    "destination": "dishwasher",
+    "relation": "inside",
+    "confidence": 0.92,
+    "states": [
+     "dirty_after_use"
+    ],
+    "restoration": "state_mediated_return"
+   },
+   {
+    "object": "keys",
+    "destination": "entrance_bowl",
+    "relation": "inside",
+    "confidence": 0.8,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "clean_plate",
+    "destination": "cupboard",
+    "relation": "inside",
+    "confidence": 0.9,
+    "states": [
+     "clean_not_in_use"
+    ],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "empty_carton",
+    "destination": "recycling",
+    "relation": "inside",
+    "confidence": 0.95,
+    "states": [
+     "empty_recyclable"
+    ],
+    "restoration": "successor_state_resolution"
+   }
+  ],
+  "activities": [
+   {
+    "id": "breakfast",
+    "label": "Breakfast in progress",
+    "licenses": [
+     "milk"
+    ]
+   },
+   {
+    "id": "keys_reminder",
+    "label": "Keys left as a reminder",
+    "licenses": [
+     "keys"
+    ]
+   }
+  ]
+ }
+}
