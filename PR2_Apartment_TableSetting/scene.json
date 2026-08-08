@@ -1,0 +1,1324 @@
+{
+ "name": "PR2_Apartment_TableSetting",
+ "fps": 20,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "apartment",
+   "urdf": "apartment.urdf",
+   "prefix": "apartment",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "wardrobe_door_left_joint",
+    "wardrobe_door_right_joint",
+    "coffee_table_drawer_joint",
+    "cabinet1_door_top_left_joint",
+    "cabinet1_drawer_middle_joint",
+    "cabinet1_drawer_bottom_joint",
+    "cabinet2_door_out_joint",
+    "cabinet2_door_left_joint",
+    "cabinet2_drawer_small_joint",
+    "cabinet2_drawer_big_joint",
+    "cabinet3_door_top_out_joint",
+    "cabinet3_door_top_left_joint",
+    "cabinet3_door_bottom_out_joint",
+    "cabinet3_door_bottom_left_joint",
+    "cabinet4_door_top_top_joint",
+    "cabinet4_door_bottom_bottom_joint",
+    "cabinet5_drawer_top_joint",
+    "cabinet5_drawer_middle_joint",
+    "cabinet5_drawer_bottom_joint",
+    "cabinet6_drawer_top_joint",
+    "cabinet6_drawer_middle_joint",
+    "cabinet6_drawer_bottom_joint",
+    "cabinet7_door_bottom_left_joint",
+    "dishwasher_drawer_middle_joint",
+    "cabinet8_drawer_middle_joint",
+    "cabinet8_drawer_bottom_joint",
+    "cabinet9_drawer_top_joint",
+    "cabinet9_drawer_middle_joint",
+    "cabinet9_drawer_bottom_joint",
+    "cabinet10_drawer_top_joint",
+    "cabinet10_drawer_middle_joint",
+    "cabinet10_drawer_bottom_joint",
+    "cabinet11_drawer_top_joint",
+    "cabinet11_drawer_middle_joint",
+    "cabinet11_drawer_bottom_joint",
+    "tap_joint",
+    "tap_handle_open_joint",
+    "tap_handle_hot_cold_joint"
+   ]
+  },
+  {
+   "name": "pr2_with_ft2_cableguide",
+   "urdf": "pr2_with_ft2_cableguide.urdf",
+   "prefix": "pr2",
+   "robot": true,
+   "links": 108,
+   "movableJoints": [
+    "fl_caster_rotation_joint",
+    "fl_caster_l_wheel_joint",
+    "fl_caster_r_wheel_joint",
+    "fr_caster_rotation_joint",
+    "fr_caster_l_wheel_joint",
+    "fr_caster_r_wheel_joint",
+    "bl_caster_rotation_joint",
+    "bl_caster_l_wheel_joint",
+    "bl_caster_r_wheel_joint",
+    "br_caster_rotation_joint",
+    "br_caster_l_wheel_joint",
+    "br_caster_r_wheel_joint",
+    "torso_lift_joint",
+    "torso_lift_motor_screw_joint",
+    "torso_lift_screw_torso_lift_joint",
+    "head_pan_joint",
+    "head_tilt_joint",
+    "laser_tilt_mount_joint",
+    "r_shoulder_pan_joint",
+    "r_shoulder_lift_joint",
+    "r_upper_arm_roll_joint",
+    "r_forearm_roll_joint",
+    "r_elbow_flex_joint",
+    "r_wrist_flex_joint",
+    "r_wrist_roll_joint",
+    "r_gripper_motor_slider_joint",
+    "r_gripper_motor_screw_joint",
+    "r_gripper_l_finger_joint",
+    "r_gripper_r_finger_joint",
+    "r_gripper_l_finger_tip_joint",
+    "r_gripper_r_finger_tip_joint",
+    "r_gripper_r_screw_screw_joint",
+    "r_gripper_l_screw_screw_joint",
+    "r_gripper_r_parallel_root_joint",
+    "r_gripper_l_parallel_root_joint",
+    "r_gripper_r_parallel_tip_joint",
+    "r_gripper_l_parallel_tip_joint",
+    "r_gripper_joint",
+    "r_gripper_joint",
+    "l_shoulder_pan_joint",
+    "l_shoulder_lift_joint",
+    "l_upper_arm_roll_joint",
+    "l_forearm_roll_joint",
+    "l_elbow_flex_joint",
+    "l_wrist_flex_joint",
+    "l_wrist_roll_joint",
+    "l_gripper_motor_slider_joint",
+    "l_gripper_motor_screw_joint",
+    "l_gripper_l_finger_joint",
+    "l_gripper_r_finger_joint",
+    "l_gripper_l_finger_tip_joint",
+    "l_gripper_r_finger_tip_joint",
+    "l_gripper_r_screw_screw_joint",
+    "l_gripper_l_screw_screw_joint",
+    "l_gripper_r_parallel_root_joint",
+    "l_gripper_l_parallel_root_joint",
+    "l_gripper_r_parallel_tip_joint",
+    "l_gripper_l_parallel_tip_joint",
+    "l_gripper_joint",
+    "l_gripper_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "south_plate",
+   "key": "south_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.15,
+    1.5,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "south_fork",
+   "key": "south_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    2.35,
+    1.5,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "south_knife",
+   "key": "south_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    2.55,
+    1.5,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "south_glass",
+   "key": "south_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    2.75,
+    1.5,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "north_plate",
+   "key": "north_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.15,
+    1.7,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "north_fork",
+   "key": "north_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    2.35,
+    1.7,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "north_knife",
+   "key": "north_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    2.55,
+    1.7,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "north_glass",
+   "key": "north_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    2.75,
+    1.7,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "west_plate",
+   "key": "west_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.15,
+    1.9,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "west_fork",
+   "key": "west_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    2.35,
+    1.9,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "west_knife",
+   "key": "west_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    2.55,
+    1.9,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "west_glass",
+   "key": "west_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    2.75,
+    1.9,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "east_plate",
+   "key": "east_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.15,
+    2.1,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "east_fork",
+   "key": "east_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    2.35,
+    2.1,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "east_knife",
+   "key": "east_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    2.55,
+    2.1,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "east_glass",
+   "key": "east_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    2.75,
+    2.1,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  }
+ ],
+ "segments": [
+  {
+   "step": "interpret",
+   "action": "InterpretActivityAction",
+   "arm": null,
+   "start": 0,
+   "end": 32
+  },
+  {
+   "step": "template",
+   "action": "SelectTemplateAction",
+   "arm": null,
+   "start": 32,
+   "end": 58
+  },
+  {
+   "step": "bind",
+   "action": "BindRolesAction",
+   "arm": null,
+   "start": 58,
+   "end": 86
+  },
+  {
+   "step": "synthesize",
+   "action": "SynthesizeConfigAction",
+   "arm": null,
+   "start": 86,
+   "end": 114
+  },
+  {
+   "step": "ground",
+   "action": "GroundInTwinAction",
+   "arm": null,
+   "start": 114,
+   "end": 140
+  },
+  {
+   "step": "plan_sequence",
+   "action": "PlanSequenceAction",
+   "arm": null,
+   "start": 140,
+   "end": 168
+  },
+  {
+   "step": "place_plates",
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "start": 168,
+   "end": 226
+  },
+  {
+   "step": "place_forks",
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "start": 226,
+   "end": 274
+  },
+  {
+   "step": "place_knives",
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "start": 274,
+   "end": 322
+  },
+  {
+   "step": "place_glasses",
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "start": 322,
+   "end": 372
+  },
+  {
+   "step": "check",
+   "action": "RunCriticSuiteAction",
+   "arm": null,
+   "start": 372,
+   "end": 406
+  },
+  {
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "start": 406,
+   "end": 456
+  }
+ ],
+ "actions": [
+  {
+   "action": "InterpretActivityAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "SelectTemplateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "BindRolesAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "SynthesizeConfigAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "GroundInTwinAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PlanSequenceAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "target": "plate"
+  },
+  {
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "target": "fork"
+  },
+  {
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "target": "knife"
+  },
+  {
+   "action": "PlaceGroupAction",
+   "arm": null,
+   "target": "glass"
+  },
+  {
+   "action": "RunCriticSuiteAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "PlanNode",
+   "label": "set_the_table_for_four (GAP)",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "interpret \u00b7 InterpretActivityAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "activity = dinner(covers=4)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "select time_horizon = meal",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "template \u00b7 SelectTemplateAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "ArrangementTemplate(dinner_for_four)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "required_roles \u2227 required_relations bound",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "bind \u00b7 BindRolesAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 seat \u2200 role \u2203 entity",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "participant_graph(16 bindings)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "synthesize \u00b7 SynthesizeConfigAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "relational_config over 4 covers",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "candidate \u22a8 required_relations",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "ground \u00b7 GroundInTwinAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "region \u2286 support(table) \u2229 reachable(seat)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "stable poses grounded",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "plan_sequence \u00b7 PlanSequenceAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "order = plates \u2192 forks \u2192 knives \u2192 glasses",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "each placement preserves access to the rest",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "place_plates \u00b7 PlaceGroupAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "Transport \u00d74 plates \u2192 covers",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 seat: plate in front of diner",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "place_forks \u00b7 PlaceGroupAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "Transport \u00d74 forks \u2192 left of plate",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 seat: fork left_of plate",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "place_knives \u00b7 PlaceGroupAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "Transport \u00d74 knives \u2192 right of plate",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 seat: knife right_of plate",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "place_glasses \u00b7 PlaceGroupAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "Transport \u00d74 glasses \u2192 upper-right",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 seat: glass upper_right_of plate \u2227 clear(serving_lane)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "check \u00b7 RunCriticSuiteAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "local: completeness \u2227 relational \u2227 physical \u2227 convention",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "global: accessibility \u2227 workflow \u2227 safety",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "is_admissible(candidate)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "record \u00b7 LogEvidenceAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "evidence: scoped arrangement competence claim",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "LogEvidenceMotion \u2192 NEEM (hash-chained)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "placeTarget": {
+  "pos": [
+   5.1,
+   3.35
+  ],
+  "z": 0.755,
+  "bounds": {
+   "minX": 4.55,
+   "maxX": 5.65,
+   "minY": 2.75,
+   "maxY": 3.95
+  }
+ },
+ "dragBounds": null,
+ "missingAssets": [],
+ "audit": "audit.json",
+ "arrangement": {
+  "template": {
+   "name": "dinner_for_four",
+   "parameters": {
+    "covers": 4,
+    "meal": "dinner",
+    "style": "western"
+   },
+   "requiredRoles": [
+    "plate",
+    "fork",
+    "knife",
+    "glass"
+   ],
+   "requiredRelations": [
+    "in_front_of plate seat",
+    "left_of fork plate",
+    "right_of knife plate",
+    "upper_right_of glass plate"
+   ],
+   "prohibitions": [
+    "no object in the shared serving lane",
+    "no cover beyond a diner's reach"
+   ],
+   "preferences": [
+    "customary spacing",
+    "visual coherence",
+    "legibility"
+   ]
+  },
+  "seats": {
+   "south": [
+    "fork",
+    "glass",
+    "knife",
+    "plate"
+   ],
+   "north": [
+    "fork",
+    "glass",
+    "knife",
+    "plate"
+   ],
+   "west": [
+    "fork",
+    "glass",
+    "knife",
+    "plate"
+   ],
+   "east": [
+    "fork",
+    "glass",
+    "knife",
+    "plate"
+   ]
+  },
+  "candidates": {
+   "adequate": {
+    "admissible": true,
+    "critics": [
+     {
+      "dimension": "completeness",
+      "ok": true,
+      "hard": true,
+      "detail": "all 4 settings complete (4 roles each)"
+     },
+     {
+      "dimension": "relational",
+      "ok": true,
+      "hard": true,
+      "detail": "all required relations hold in every setting"
+     },
+     {
+      "dimension": "physical",
+      "ok": true,
+      "hard": true,
+      "detail": "supports stable, non-overlapping placements"
+     },
+     {
+      "dimension": "convention",
+      "ok": true,
+      "hard": false,
+      "detail": "fork-left / knife-right convention respected"
+     },
+     {
+      "dimension": "safety",
+      "ok": true,
+      "hard": true,
+      "detail": "no hazards; nothing overhangs the edge"
+     },
+     {
+      "dimension": "accessibility",
+      "ok": true,
+      "hard": true,
+      "detail": "serving lane clear (r=0.16 m); every item reachable from its seat"
+     },
+     {
+      "dimension": "workflow",
+      "ok": true,
+      "hard": false,
+      "detail": "serving and clearing paths stay usable"
+     },
+     {
+      "dimension": "maintainability",
+      "ok": true,
+      "hard": false,
+      "detail": "restorable at reasonable cost (each setting returns to storage)"
+     }
+    ]
+   },
+   "serving_lane_obstructed": {
+    "admissible": false,
+    "critics": [
+     {
+      "dimension": "completeness",
+      "ok": true,
+      "hard": true,
+      "detail": "all 4 settings complete (4 roles each)"
+     },
+     {
+      "dimension": "relational",
+      "ok": true,
+      "hard": true,
+      "detail": "all required relations hold in every setting"
+     },
+     {
+      "dimension": "physical",
+      "ok": true,
+      "hard": true,
+      "detail": "supports stable, non-overlapping placements"
+     },
+     {
+      "dimension": "convention",
+      "ok": true,
+      "hard": false,
+      "detail": "fork-left / knife-right convention respected"
+     },
+     {
+      "dimension": "safety",
+      "ok": true,
+      "hard": true,
+      "detail": "no hazards; nothing overhangs the edge"
+     },
+     {
+      "dimension": "accessibility",
+      "ok": false,
+      "hard": true,
+      "detail": "serving lane obstructed by shared.serving_platter"
+     },
+     {
+      "dimension": "workflow",
+      "ok": false,
+      "hard": false,
+      "detail": "activity obstructed: shared.serving_platter"
+     },
+     {
+      "dimension": "maintainability",
+      "ok": true,
+      "hard": false,
+      "detail": "restorable at reasonable cost (each setting returns to storage)"
+     }
+    ]
+   }
+  }
+ },
+ "designators": {
+  "generator": "coraplex.robot_plans (real ActionDescription instances)",
+  "grounded_in": "semantic_digital_twin.world.World",
+  "planNode": "SequentialNode",
+  "performed": false,
+  "performRequires": "simulated_robot \u2014 giskardpy motion executor + pybullet (absent in the viewer venv)",
+  "count": 16,
+  "designators": [
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/south_plate",
+    "arm": "RIGHT",
+    "target": [
+     5.1,
+     3.05,
+     0.765
+    ],
+    "intent": "Transport(south_plate \u2192 in front of the seat)",
+    "resolvedBy": "reference frame (per cover)",
+    "stage": "place_plates"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/north_plate",
+    "arm": "RIGHT",
+    "target": [
+     5.1,
+     3.65,
+     0.765
+    ],
+    "intent": "Transport(north_plate \u2192 in front of the seat)",
+    "resolvedBy": "reference frame (per cover)",
+    "stage": "place_plates"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/west_plate",
+    "arm": "RIGHT",
+    "target": [
+     4.84,
+     3.35,
+     0.765
+    ],
+    "intent": "Transport(west_plate \u2192 in front of the seat)",
+    "resolvedBy": "reference frame (per cover)",
+    "stage": "place_plates"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/east_plate",
+    "arm": "RIGHT",
+    "target": [
+     5.36,
+     3.35,
+     0.765
+    ],
+    "intent": "Transport(east_plate \u2192 in front of the seat)",
+    "resolvedBy": "reference frame (per cover)",
+    "stage": "place_plates"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/south_fork",
+    "arm": "RIGHT",
+    "target": [
+     4.97,
+     3.05,
+     0.761
+    ],
+    "intent": "Transport(south_fork \u2192 left of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 fork left_of plate",
+    "stage": "place_forks"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/north_fork",
+    "arm": "RIGHT",
+    "target": [
+     5.23,
+     3.65,
+     0.761
+    ],
+    "intent": "Transport(north_fork \u2192 left of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 fork left_of plate",
+    "stage": "place_forks"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/west_fork",
+    "arm": "RIGHT",
+    "target": [
+     4.84,
+     3.48,
+     0.761
+    ],
+    "intent": "Transport(west_fork \u2192 left of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 fork left_of plate",
+    "stage": "place_forks"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/east_fork",
+    "arm": "RIGHT",
+    "target": [
+     5.36,
+     3.22,
+     0.761
+    ],
+    "intent": "Transport(east_fork \u2192 left of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 fork left_of plate",
+    "stage": "place_forks"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/south_knife",
+    "arm": "RIGHT",
+    "target": [
+     5.23,
+     3.05,
+     0.761
+    ],
+    "intent": "Transport(south_knife \u2192 right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 knife right_of plate",
+    "stage": "place_knives"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/north_knife",
+    "arm": "RIGHT",
+    "target": [
+     4.97,
+     3.65,
+     0.761
+    ],
+    "intent": "Transport(north_knife \u2192 right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 knife right_of plate",
+    "stage": "place_knives"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/west_knife",
+    "arm": "RIGHT",
+    "target": [
+     4.84,
+     3.22,
+     0.761
+    ],
+    "intent": "Transport(west_knife \u2192 right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 knife right_of plate",
+    "stage": "place_knives"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/east_knife",
+    "arm": "RIGHT",
+    "target": [
+     5.36,
+     3.48,
+     0.761
+    ],
+    "intent": "Transport(east_knife \u2192 right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 knife right_of plate",
+    "stage": "place_knives"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/south_glass",
+    "arm": "RIGHT",
+    "target": [
+     5.23,
+     3.15,
+     0.8
+    ],
+    "intent": "Transport(south_glass \u2192 upper-right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 glass upper_right_of plate",
+    "stage": "place_glasses"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/north_glass",
+    "arm": "RIGHT",
+    "target": [
+     4.97,
+     3.55,
+     0.8
+    ],
+    "intent": "Transport(north_glass \u2192 upper-right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 glass upper_right_of plate",
+    "stage": "place_glasses"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/west_glass",
+    "arm": "RIGHT",
+    "target": [
+     4.94,
+     3.22,
+     0.8
+    ],
+    "intent": "Transport(west_glass \u2192 upper-right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 glass upper_right_of plate",
+    "stage": "place_glasses"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/east_glass",
+    "arm": "RIGHT",
+    "target": [
+     5.26,
+     3.48,
+     0.8
+    ],
+    "intent": "Transport(east_glass \u2192 upper-right of the plate)",
+    "resolvedBy": "arrangement relation \u00b7 glass upper_right_of plate",
+    "stage": "place_glasses"
+   }
+  ]
+ }
+}

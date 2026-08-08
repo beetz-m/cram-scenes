@@ -34,9 +34,15 @@
      "source": "AICOR \u00a73.1 \u00b7 Belonging norm",
      "text": "Most-confident applicable norm selected: table_area_main : on (confidence 0.75)",
      "status": "ENFORCED"
+    },
+    {
+     "id": 3110,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Generated a real coraplex TransportAction grounded in a semantic-digital-twin World (object obj/milk, arm LEFT) \u2014 designator built, execution deferred (perform \u2192 simulated_robot \u2014 giskardpy motion executor + pybullet (absent in the viewer venv))",
+     "status": "ENFORCED"
     }
    ],
-   "hash": "6e6db7625b928e699085e8e14718999a88a40a33d012aed4b8d5d6ac3aa4ad22",
+   "hash": "890c60c882be5faa781aa17592bdf445a792020f81f5b1c7e8863c87dd17b999",
    "prev": "ecf0bb02fb4e94ad18f2be219b149cbff293f2b28f79ecc87f856ecc8048a125"
   },
   {
@@ -54,8 +60,8 @@
      "status": "ENFORCED"
     }
    ],
-   "hash": "2735d7038b063e8eb9779c8c254f3d4bbd9a29dcc97f0d584c8de5757fd6eada",
-   "prev": "6e6db7625b928e699085e8e14718999a88a40a33d012aed4b8d5d6ac3aa4ad22"
+   "hash": "34e1133334d658d2c5e0988e26be98464f3ed665d6f6fb38e81def923b455f9e",
+   "prev": "890c60c882be5faa781aa17592bdf445a792020f81f5b1c7e8863c87dd17b999"
   },
   {
    "seq": 3,
@@ -78,8 +84,8 @@
      "status": "ENFORCED"
     }
    ],
-   "hash": "02393d96b634bec1adee479272ef0a27e2561700ab8d5105891be203fce00110",
-   "prev": "2735d7038b063e8eb9779c8c254f3d4bbd9a29dcc97f0d584c8de5757fd6eada"
+   "hash": "b5a68bf709f3fc80e9f3c40e9b85568ec6dc8fc48b60bbb049150bf6bb2a7f6e",
+   "prev": "34e1133334d658d2c5e0988e26be98464f3ed665d6f6fb38e81def923b455f9e"
   },
   {
    "seq": 4,
@@ -102,8 +108,8 @@
      "status": "ENFORCED"
     }
    ],
-   "hash": "9714928db359c0b1a07830e1f286c63c2c96c780ef6a4c48f99e1af9fb0a531f",
-   "prev": "02393d96b634bec1adee479272ef0a27e2561700ab8d5105891be203fce00110"
+   "hash": "f651ce5a4d3de8ebb3d1ea3e07cc97c6912b330e8a2c89d91ed973a8a6b2acc5",
+   "prev": "b5a68bf709f3fc80e9f3c40e9b85568ec6dc8fc48b60bbb049150bf6bb2a7f6e"
   },
   {
    "seq": 5,
@@ -120,8 +126,8 @@
      "status": "ENFORCED"
     }
    ],
-   "hash": "9c944606ba9ea544be7092ab725158e7a664970708cf8dfcdb911b75811ad508",
-   "prev": "9714928db359c0b1a07830e1f286c63c2c96c780ef6a4c48f99e1af9fb0a531f"
+   "hash": "ec4731537f0a8708f848a5cbab9aaa1dd82a91a691a07ace3683a486d753b4de",
+   "prev": "f651ce5a4d3de8ebb3d1ea3e07cc97c6912b330e8a2c89d91ed973a8a6b2acc5"
   },
   {
    "seq": 6,
@@ -138,8 +144,8 @@
      "status": "ENFORCED"
     }
    ],
-   "hash": "58ab3032f08d4c7a986fe04254ceed682c0e2c4c0a6783d33ead0af5de7ba9e8",
-   "prev": "9c944606ba9ea544be7092ab725158e7a664970708cf8dfcdb911b75811ad508"
+   "hash": "544a3c87d0bcf50da5efd39e9a9b82f811e59b23f4d6081dfe15360a603d8cdc",
+   "prev": "ec4731537f0a8708f848a5cbab9aaa1dd82a91a691a07ace3683a486d753b4de"
   },
   {
    "seq": 7,
@@ -156,8 +162,8 @@
      "status": "ENFORCED"
     }
    ],
-   "hash": "53cdad89b497807d2fab2d62ae4cf4b9909385e3f90cbf63c23b1a21047102cf",
-   "prev": "58ab3032f08d4c7a986fe04254ceed682c0e2c4c0a6783d33ead0af5de7ba9e8"
+   "hash": "0541fe0647a06d580f3cbecaa2fc544ede9701cc9b236018207993e9534d123b",
+   "prev": "544a3c87d0bcf50da5efd39e9a9b82f811e59b23f4d6081dfe15360a603d8cdc"
   }
  ]
 }

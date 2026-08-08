@@ -17,6 +17,11 @@
    "environment": "apartment"
   },
   {
+   "name": "PR2_Apartment_TableSetting",
+   "robot": "pr2",
+   "environment": "apartment"
+  },
+  {
    "name": "TIAGO_Apartment",
    "robot": "tiago",
    "environment": "apartment"

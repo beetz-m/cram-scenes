@@ -1,0 +1,253 @@
+{
+ "workflow": "Set the table for four \u2014 arrangement competence in the EASE apartment",
+ "gap": "set_table(covers=4: staging \u2192 dinner_for_four) under fork\u22b2plate, knife\u22b3plate, glass\u231cplate, clear(serving_lane), reachable(cover,seat), sequence(plates\u2192forks\u2192knives\u2192glasses)",
+ "genesis": "0000000000000000000000000000000000000000000000000000000000000000",
+ "entries": [
+  {
+   "seq": 0,
+   "t": "2026-09-15T11:08:00",
+   "frame": 0,
+   "step": "interpret",
+   "action": "InterpretActivityAction",
+   "detail": "Interpret the request: a dinner for four is being prepared. Task model and time horizon fixed; the target is a valued relational configuration, not a pose.",
+   "constraints": [
+    {
+     "id": 3301,
+     "source": "AICOR \u00a73.3 \u00b7 Arrangement template",
+     "text": "Target is a valued relational configuration (dinner for four), not a pose",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "b13b9bb0e22d6c8df858fd2362a776b601ede4e973e21d74d6ac6ba8d3955c8a",
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "seq": 1,
+   "t": "2026-09-15T11:08:06",
+   "frame": 32,
+   "step": "template",
+   "action": "SelectTemplateAction",
+   "detail": "Select the arrangement template dinner_for_four: required roles {plate, fork, knife, glass}, required relations, prohibitions, preferences.",
+   "constraints": [
+    {
+     "id": 3302,
+     "source": "AICOR \u00a73.3 \u00b7 Arrangement template",
+     "text": "Template dinner_for_four: roles {plate, fork, knife, glass}; 4 required relations; 2 prohibitions",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "b7db2a45cb1369fc68f55983e3a8104a92cb12b72b174f7f662b8008b37ca3a0",
+   "prev": "b13b9bb0e22d6c8df858fd2362a776b601ede4e973e21d74d6ac6ba8d3955c8a"
+  },
+  {
+   "seq": 2,
+   "t": "2026-09-15T11:08:12",
+   "frame": 58,
+   "step": "bind",
+   "action": "BindRolesAction",
+   "detail": "Bind the abstract roles to available objects for each of the four seats \u2014 a sixteen-entity participant graph (4 covers \u00d7 4 roles).",
+   "constraints": [
+    {
+     "id": 3303,
+     "source": "AICOR \u00a73.3 \u00b7 Arrangement template",
+     "text": "16-entity participant graph bound (4 covers \u00d7 4 roles)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "4fcc6238bbb0e2f014f0779c1fc5ffb02b443f31e3599f49906af163a04b4494",
+   "prev": "b7db2a45cb1369fc68f55983e3a8104a92cb12b72b174f7f662b8008b37ca3a0"
+  },
+  {
+   "seq": 3,
+   "t": "2026-09-15T11:08:18",
+   "frame": 86,
+   "step": "synthesize",
+   "action": "SynthesizeConfigAction",
+   "detail": "Synthesize the relational configuration: fork left of plate, knife right, glass upper-right, every cover clear of the shared serving lane.",
+   "constraints": [
+    {
+     "id": 6410,
+     "source": "AICOR \u00a76.4 \u00b7 Required relations",
+     "text": "Relational configuration synthesized; correctness belongs to the whole",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "3ebbaa097ebb29a0fb576a2251126a3f9c0ded81d147e3163f3012d60d57ecb6",
+   "prev": "4fcc6238bbb0e2f014f0779c1fc5ffb02b443f31e3599f49906af163a04b4494"
+  },
+  {
+   "seq": 4,
+   "t": "2026-09-15T11:08:24",
+   "frame": 114,
+   "step": "ground",
+   "action": "GroundInTwinAction",
+   "detail": "Ground the configuration in the semantic digital twin: admissible regions on the table surface, stable poses, reachable from each seat.",
+   "constraints": [
+    {
+     "id": 8010,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Grounded on table support \u2229 reachable(seat); stable, collision-free poses",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "431cc7ac806c7589dee0cd020cefd02640ddf5fbff08ea063deee6f0865590ec",
+   "prev": "3ebbaa097ebb29a0fb576a2251126a3f9c0ded81d147e3163f3012d60d57ecb6"
+  },
+  {
+   "seq": 5,
+   "t": "2026-09-15T11:08:30",
+   "frame": 140,
+   "step": "plan_sequence",
+   "action": "PlanSequenceAction",
+   "detail": "Plan the global placement order: plates first as reference frames, then forks, then knives, then glasses. An arrangement is not a bag of independent placements.",
+   "constraints": [
+    {
+     "id": 9001,
+     "source": "AICOR Part X \u00b7 Global sequencing",
+     "text": "Global order plates\u2192forks\u2192knives\u2192glasses; each placement preserves access to the rest (not a bag of independent placements)",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 9002,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Generated 16 real coraplex TransportAction designators grounded in an SDT World, composed into a SequentialNode plan \u2014 built, not performed (perform \u2192 simulated_robot \u2014 giskardpy motion executor + pybullet (absent in the viewer venv))",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "fc52563db5b99ed9f29b41ca08838cae0749163486dea76227e74fcceae9b42a",
+   "prev": "431cc7ac806c7589dee0cd020cefd02640ddf5fbff08ea063deee6f0865590ec"
+  },
+  {
+   "seq": 6,
+   "t": "2026-09-15T11:08:36",
+   "frame": 168,
+   "step": "place_plates",
+   "action": "PlaceGroupAction",
+   "detail": "Place the four plates. Each plate establishes the reference frame its cover's utensils and glass are positioned against.",
+   "constraints": [
+    {
+     "id": 6411,
+     "source": "AICOR \u00a76.4 \u00b7 Required relations",
+     "text": "Plates establish per-cover reference frames",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "9a9f5165e243b96bf0c80d3a366497a00e09f6b000170c22caf18c3c4e6c5ad3",
+   "prev": "fc52563db5b99ed9f29b41ca08838cae0749163486dea76227e74fcceae9b42a"
+  },
+  {
+   "seq": 7,
+   "t": "2026-09-15T11:08:42",
+   "frame": 226,
+   "step": "place_forks",
+   "action": "PlaceGroupAction",
+   "detail": "Place the four forks to the left of each plate (seat-relative laterality).",
+   "constraints": [
+    {
+     "id": 6412,
+     "source": "AICOR \u00a76.4 \u00b7 Required relations",
+     "text": "Forks left of plate (seat-relative laterality)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "464d69362d004c71fba72e68117c636e427a0505aaed120163d5cc4be50e9020",
+   "prev": "9a9f5165e243b96bf0c80d3a366497a00e09f6b000170c22caf18c3c4e6c5ad3"
+  },
+  {
+   "seq": 8,
+   "t": "2026-09-15T11:08:48",
+   "frame": 274,
+   "step": "place_knives",
+   "action": "PlaceGroupAction",
+   "detail": "Place the four knives to the right of each plate.",
+   "constraints": [
+    {
+     "id": 6413,
+     "source": "AICOR \u00a76.4 \u00b7 Required relations",
+     "text": "Knives right of plate",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "4f8b330e7014e380e4c5cbac7af6bac85a1a03c3095f114782df10d723e41fd0",
+   "prev": "464d69362d004c71fba72e68117c636e427a0505aaed120163d5cc4be50e9020"
+  },
+  {
+   "seq": 9,
+   "t": "2026-09-15T11:08:54",
+   "frame": 322,
+   "step": "place_glasses",
+   "action": "PlaceGroupAction",
+   "detail": "Place the four glasses upper-right of each plate, each kept clear of the shared serving lane.",
+   "constraints": [
+    {
+     "id": 6414,
+     "source": "AICOR \u00a76.4 \u00b7 Required relations",
+     "text": "Glasses upper-right of plate; serving lane clear (r=0.16 m); every item reachable from its seat",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "37d5589fa59bc6404e5415087523a8ada2f2f8ca9acd3bf1b5eca4835414a55c",
+   "prev": "4f8b330e7014e380e4c5cbac7af6bac85a1a03c3095f114782df10d723e41fd0"
+  },
+  {
+   "seq": 10,
+   "t": "2026-09-15T11:09:00",
+   "frame": 372,
+   "step": "check",
+   "action": "RunCriticSuiteAction",
+   "detail": "Run the critic suite over the whole table. Local dimensions (completeness, relational, physical, convention) and global dimensions (accessibility, workflow) all pass \u2014 the configuration is admissible.",
+   "constraints": [
+    {
+     "id": 6401,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "LOCAL \u2014 all required relations hold in every setting",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 6402,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "LOCAL \u2014 all 4 settings complete (4 roles each)",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 6403,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "GLOBAL \u2014 serving lane clear (r=0.16 m); every item reachable from its seat",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 6404,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "GLOBAL \u2014 serving and clearing paths stay usable",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 6405,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "Counterfactual: a serving object in the lane keeps every LOCAL critic green but fails GLOBAL accessibility \u2014 serving lane obstructed by shared.serving_platter",
+     "status": "VIOLATED"
+    }
+   ],
+   "hash": "7879238f7f06ffc0048a3af00eb0f289be8562aaeb9495a381df44b806a43003",
+   "prev": "37d5589fa59bc6404e5415087523a8ada2f2f8ca9acd3bf1b5eca4835414a55c"
+  },
+  {
+   "seq": 11,
+   "t": "2026-09-15T11:09:06",
+   "frame": 406,
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "detail": "Commit and record the arrangement episode as tamper-evident, hash-chained evidence: template, bindings, relations and critic verdicts become NEEM.",
+   "constraints": [
+    {
+     "id": 6601,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "Scoped arrangement competence claim \u2014 admissible=True (evidence, not proof)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "6ce42b191de2a67e4efc3c738086b3e4ef395e9f78d0b443664f7cd52bdf53f5",
+   "prev": "7879238f7f06ffc0048a3af00eb0f289be8562aaeb9495a381df44b806a43003"
+  }
+ ]
+}
