@@ -1,0 +1,175 @@
+{
+ "workflow": "Tidy the kitchen \u2014 misplacement, cues and abstention in the EASE apartment",
+ "gap": "tidy(kitchen): \u2200 o classify(o) \u2208 {misplaced, licensed, at_belonging, indeterminate}; restore only the misplaced; leave cues; inspect the unknown",
+ "genesis": "0000000000000000000000000000000000000000000000000000000000000000",
+ "entries": [
+  {
+   "seq": 0,
+   "t": "2026-09-15T11:08:00",
+   "frame": 0,
+   "step": "survey",
+   "action": "SurveyKitchenAction",
+   "detail": "Survey the kitchen: perceive every object, its location and its state.",
+   "constraints": [
+    {
+     "id": 8001,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Perceived 5 objects with location + state (observed \u2260 expected \u2260 belonging)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "06bedc662caffb13f626879e91368358255e3a40c899fdaea911d62fd7fc253f",
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "seq": 1,
+   "t": "2026-09-15T11:08:06",
+   "frame": 34,
+   "step": "classify",
+   "action": "ClassifyPlacementAction",
+   "detail": "Classify each object with the misplacement predicate: 3 misplaced, 1 licensed/at-place, 1 indeterminate.",
+   "constraints": [
+    {
+     "id": 6101,
+     "source": "AICOR \u00a76.1 \u00b7 Misplacement predicate",
+     "text": "Misplaced(o) iff not licensed \u2227 not at belonging place \u2014 misplaced = {dirty_mug, clean_plate, empty_carton}",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 6102,
+     "source": "AICOR \u00a76.1 \u00b7 Misplacement predicate",
+     "text": "dirty_mug=MISPLACED; keys=LICENSED; clean_plate=MISPLACED; empty_carton=MISPLACED; unknown_jar=INDETERMINATE",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "624933ed4f2c0782b5c517bdf976151eeeeaf1fc547bc8e4bdec1db317a22bd6",
+   "prev": "06bedc662caffb13f626879e91368358255e3a40c899fdaea911d62fd7fc253f"
+  },
+  {
+   "seq": 2,
+   "t": "2026-09-15T11:08:12",
+   "frame": 72,
+   "step": "authorize",
+   "action": "AuthorizeTidyAction",
+   "detail": "Authorize only warranted actions: restore the misplaced, LEAVE the deliberate cue (keys), and ABSTAIN on the unknown convention (unknown_jar) \u2014 a human-created state does not by itself license intervention.",
+   "constraints": [
+    {
+     "id": 1301,
+     "source": "AICOR Part XIII \u00b7 Authorization",
+     "text": "Leave the deliberate cue: keys licensed (not misplaced)",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 1302,
+     "source": "AICOR \u00a76.1 \u00b7 Misplacement predicate",
+     "text": "Abstain on unknown convention: unknown_jar indeterminate \u2192 inspect/search/ask, do not move",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 1303,
+     "source": "AICOR Part XIII \u00b7 Authorization",
+     "text": "A human-created unusual state does not by itself authorize intervention",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 9002,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Generated 3 real coraplex TransportAction designators (grounded, not performed)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "b3f551a3a3c7bd9dc4a20d090c4b8fa69d45264701963d5b884451de2d73b037",
+   "prev": "624933ed4f2c0782b5c517bdf976151eeeeaf1fc547bc8e4bdec1db317a22bd6"
+  },
+  {
+   "seq": 3,
+   "t": "2026-09-15T11:08:18",
+   "frame": 106,
+   "step": "restore_dirty_mug",
+   "action": "RestoreObjectAction",
+   "detail": "Tidy dirty_mug: misplaced (dirty_after_use) \u2192 dishwasher (state_mediated_return).",
+   "constraints": [
+    {
+     "id": 1001,
+     "source": "AICOR Principle 1 \u00b7 Restorative manipulation",
+     "text": "Restore dirty_mug \u2192 dishwasher (state_mediated_return); belonging norm re-established",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "ea3d2f0f9eb1aa3434bf3cd9596590d980a08bc9ef398f6a844ed01df52eb347",
+   "prev": "b3f551a3a3c7bd9dc4a20d090c4b8fa69d45264701963d5b884451de2d73b037"
+  },
+  {
+   "seq": 4,
+   "t": "2026-09-15T11:08:24",
+   "frame": 158,
+   "step": "restore_clean_plate",
+   "action": "RestoreObjectAction",
+   "detail": "Tidy clean_plate: misplaced (clean_not_in_use) \u2192 cupboard (functional_return).",
+   "constraints": [
+    {
+     "id": 1001,
+     "source": "AICOR Principle 1 \u00b7 Restorative manipulation",
+     "text": "Restore clean_plate \u2192 cupboard (functional_return); belonging norm re-established",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "1b77394e397034b2ab8118c975c1dbbc4ddb4d070910a5d45f6c2e4b49bc8de3",
+   "prev": "ea3d2f0f9eb1aa3434bf3cd9596590d980a08bc9ef398f6a844ed01df52eb347"
+  },
+  {
+   "seq": 5,
+   "t": "2026-09-15T11:08:30",
+   "frame": 210,
+   "step": "restore_empty_carton",
+   "action": "RestoreObjectAction",
+   "detail": "Tidy empty_carton: misplaced (empty_recyclable) \u2192 recycling (successor_state_resolution).",
+   "constraints": [
+    {
+     "id": 1001,
+     "source": "AICOR Principle 1 \u00b7 Restorative manipulation",
+     "text": "Restore empty_carton \u2192 recycling (successor_state_resolution); belonging norm re-established",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "34e082700246732e7b2d7c387d514cb420d29691e885cae11d7460b19fd6ff22",
+   "prev": "1b77394e397034b2ab8118c975c1dbbc4ddb4d070910a5d45f6c2e4b49bc8de3"
+  },
+  {
+   "seq": 6,
+   "t": "2026-09-15T11:08:36",
+   "frame": 262,
+   "step": "verify",
+   "action": "VerifyTidyAction",
+   "detail": "Verify: every misplaced object is now at its belonging place; the cue and the unknown object are untouched.",
+   "constraints": [
+    {
+     "id": 6401,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "All 3 tidied objects at belonging place; cue + unknown untouched",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "10a5162ba1c4509d622b531361b9c6eb09a64dfce94fb633253fb54278f5c832",
+   "prev": "34e082700246732e7b2d7c387d514cb420d29691e885cae11d7460b19fd6ff22"
+  },
+  {
+   "seq": 7,
+   "t": "2026-09-15T11:08:42",
+   "frame": 294,
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "detail": "Record the tidy episode as tamper-evident, hash-chained evidence: verdicts, actions and abstentions become NEEM.",
+   "constraints": [
+    {
+     "id": 6601,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "Scoped tidy competence claim \u2014 3 tidied, 1 left, 1 inspected (evidence, not proof)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "213d5e65755fcb67020a2e942315e1142892ab0af375a3da269cbec0c4f1d735",
+   "prev": "10a5162ba1c4509d622b531361b9c6eb09a64dfce94fb633253fb54278f5c832"
+  }
+ ]
+}

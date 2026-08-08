@@ -1,0 +1,694 @@
+{
+ "name": "PR2_Apartment_TidyKitchen",
+ "fps": 20,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "apartment",
+   "urdf": "apartment.urdf",
+   "prefix": "apartment",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "wardrobe_door_left_joint",
+    "wardrobe_door_right_joint",
+    "coffee_table_drawer_joint",
+    "cabinet1_door_top_left_joint",
+    "cabinet1_drawer_middle_joint",
+    "cabinet1_drawer_bottom_joint",
+    "cabinet2_door_out_joint",
+    "cabinet2_door_left_joint",
+    "cabinet2_drawer_small_joint",
+    "cabinet2_drawer_big_joint",
+    "cabinet3_door_top_out_joint",
+    "cabinet3_door_top_left_joint",
+    "cabinet3_door_bottom_out_joint",
+    "cabinet3_door_bottom_left_joint",
+    "cabinet4_door_top_top_joint",
+    "cabinet4_door_bottom_bottom_joint",
+    "cabinet5_drawer_top_joint",
+    "cabinet5_drawer_middle_joint",
+    "cabinet5_drawer_bottom_joint",
+    "cabinet6_drawer_top_joint",
+    "cabinet6_drawer_middle_joint",
+    "cabinet6_drawer_bottom_joint",
+    "cabinet7_door_bottom_left_joint",
+    "dishwasher_drawer_middle_joint",
+    "cabinet8_drawer_middle_joint",
+    "cabinet8_drawer_bottom_joint",
+    "cabinet9_drawer_top_joint",
+    "cabinet9_drawer_middle_joint",
+    "cabinet9_drawer_bottom_joint",
+    "cabinet10_drawer_top_joint",
+    "cabinet10_drawer_middle_joint",
+    "cabinet10_drawer_bottom_joint",
+    "cabinet11_drawer_top_joint",
+    "cabinet11_drawer_middle_joint",
+    "cabinet11_drawer_bottom_joint",
+    "tap_joint",
+    "tap_handle_open_joint",
+    "tap_handle_hot_cold_joint"
+   ]
+  },
+  {
+   "name": "pr2_with_ft2_cableguide",
+   "urdf": "pr2_with_ft2_cableguide.urdf",
+   "prefix": "pr2",
+   "robot": true,
+   "links": 108,
+   "movableJoints": [
+    "fl_caster_rotation_joint",
+    "fl_caster_l_wheel_joint",
+    "fl_caster_r_wheel_joint",
+    "fr_caster_rotation_joint",
+    "fr_caster_l_wheel_joint",
+    "fr_caster_r_wheel_joint",
+    "bl_caster_rotation_joint",
+    "bl_caster_l_wheel_joint",
+    "bl_caster_r_wheel_joint",
+    "br_caster_rotation_joint",
+    "br_caster_l_wheel_joint",
+    "br_caster_r_wheel_joint",
+    "torso_lift_joint",
+    "torso_lift_motor_screw_joint",
+    "torso_lift_screw_torso_lift_joint",
+    "head_pan_joint",
+    "head_tilt_joint",
+    "laser_tilt_mount_joint",
+    "r_shoulder_pan_joint",
+    "r_shoulder_lift_joint",
+    "r_upper_arm_roll_joint",
+    "r_forearm_roll_joint",
+    "r_elbow_flex_joint",
+    "r_wrist_flex_joint",
+    "r_wrist_roll_joint",
+    "r_gripper_motor_slider_joint",
+    "r_gripper_motor_screw_joint",
+    "r_gripper_l_finger_joint",
+    "r_gripper_r_finger_joint",
+    "r_gripper_l_finger_tip_joint",
+    "r_gripper_r_finger_tip_joint",
+    "r_gripper_r_screw_screw_joint",
+    "r_gripper_l_screw_screw_joint",
+    "r_gripper_r_parallel_root_joint",
+    "r_gripper_l_parallel_root_joint",
+    "r_gripper_r_parallel_tip_joint",
+    "r_gripper_l_parallel_tip_joint",
+    "r_gripper_joint",
+    "r_gripper_joint",
+    "l_shoulder_pan_joint",
+    "l_shoulder_lift_joint",
+    "l_upper_arm_roll_joint",
+    "l_forearm_roll_joint",
+    "l_elbow_flex_joint",
+    "l_wrist_flex_joint",
+    "l_wrist_roll_joint",
+    "l_gripper_motor_slider_joint",
+    "l_gripper_motor_screw_joint",
+    "l_gripper_l_finger_joint",
+    "l_gripper_r_finger_joint",
+    "l_gripper_l_finger_tip_joint",
+    "l_gripper_r_finger_tip_joint",
+    "l_gripper_r_screw_screw_joint",
+    "l_gripper_l_screw_screw_joint",
+    "l_gripper_r_parallel_root_joint",
+    "l_gripper_l_parallel_root_joint",
+    "l_gripper_r_parallel_tip_joint",
+    "l_gripper_l_parallel_tip_joint",
+    "l_gripper_joint",
+    "l_gripper_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "dirty_mug",
+   "key": "dirty_mug",
+   "box": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "color": "#7a5a44",
+   "spawn": [
+    4.95,
+    3.25,
+    0.8,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "keys",
+   "key": "keys",
+   "box": [
+    0.03,
+    0.06,
+    0.012
+   ],
+   "color": "#d4af37",
+   "spawn": [
+    5.28,
+    3.45,
+    0.76,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "clean_plate",
+   "key": "clean_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.3,
+    1.7,
+    0.965,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "empty_carton",
+   "key": "empty_carton",
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ],
+   "color": "#cfc9bf",
+   "spawn": [
+    2.52,
+    1.92,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.14
+  },
+  {
+   "id": "unknown_jar",
+   "key": "unknown_jar",
+   "box": [
+    0.06,
+    0.06,
+    0.11
+   ],
+   "color": "#9bb7c4",
+   "spawn": [
+    2.18,
+    2.02,
+    0.955,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.11
+  }
+ ],
+ "segments": [
+  {
+   "step": "survey",
+   "action": "SurveyKitchenAction",
+   "arm": null,
+   "start": 0,
+   "end": 34
+  },
+  {
+   "step": "classify",
+   "action": "ClassifyPlacementAction",
+   "arm": null,
+   "start": 34,
+   "end": 72
+  },
+  {
+   "step": "authorize",
+   "action": "AuthorizeTidyAction",
+   "arm": null,
+   "start": 72,
+   "end": 106
+  },
+  {
+   "step": "restore_dirty_mug",
+   "action": "RestoreObjectAction",
+   "arm": null,
+   "start": 106,
+   "end": 158
+  },
+  {
+   "step": "restore_clean_plate",
+   "action": "RestoreObjectAction",
+   "arm": null,
+   "start": 158,
+   "end": 210
+  },
+  {
+   "step": "restore_empty_carton",
+   "action": "RestoreObjectAction",
+   "arm": null,
+   "start": 210,
+   "end": 262
+  },
+  {
+   "step": "verify",
+   "action": "VerifyTidyAction",
+   "arm": null,
+   "start": 262,
+   "end": 294
+  },
+  {
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "start": 294,
+   "end": 340
+  }
+ ],
+ "actions": [
+  {
+   "action": "SurveyKitchenAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "ClassifyPlacementAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "AuthorizeTidyAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "RestoreObjectAction",
+   "arm": null,
+   "target": "dirty_mug"
+  },
+  {
+   "action": "RestoreObjectAction",
+   "arm": null,
+   "target": "clean_plate"
+  },
+  {
+   "action": "RestoreObjectAction",
+   "arm": null,
+   "target": "empty_carton"
+  },
+  {
+   "action": "VerifyTidyAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "PlanNode",
+   "label": "tidy_the_kitchen (GAP)",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "survey \u00b7 SurveyKitchenAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "observed: 5 objects",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "perceive location \u2227 state \u2200 object",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "classify \u00b7 ClassifyPlacementAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 o: verdict(o) \u2208 {misplaced, licensed, at_belonging, indeterminate}",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "misplaced = {dirty_mug, clean_plate, empty_carton}",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "authorize \u00b7 AuthorizeTidyAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "leave: keys",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "inspect/ask: unknown_jar",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "restore_dirty_mug \u00b7 RestoreObjectAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "verdict(dirty_mug) = MISPLACED",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "Transport(dirty_mug \u2192 dishwasher)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "at_belonging_place(dirty_mug)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "restore_clean_plate \u00b7 RestoreObjectAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "verdict(clean_plate) = MISPLACED",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "Transport(clean_plate \u2192 cupboard)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "at_belonging_place(clean_plate)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "restore_empty_carton \u00b7 RestoreObjectAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "verdict(empty_carton) = MISPLACED",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "Transport(empty_carton \u2192 recycling)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "at_belonging_place(empty_carton)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "verify \u00b7 VerifyTidyAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 tidied o: at_belonging_place(o)",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "untouched(keys, unknown_jar)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "record \u00b7 LogEvidenceAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "evidence: scoped tidy competence claim",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "LogEvidenceMotion \u2192 NEEM (hash-chained)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "placeTarget": null,
+ "dragBounds": null,
+ "missingAssets": [],
+ "audit": "audit.json",
+ "tidy": {
+  "objects": [
+   {
+    "id": "dirty_mug",
+    "location": "table",
+    "state": "dirty_after_use",
+    "verdict": "MISPLACED",
+    "action": "tidy",
+    "destination": "dishwasher",
+    "restoration": "state_mediated_return",
+    "reading": "dirty mug left on the table \u2192 misplaced; wash, then store (state-mediated)"
+   },
+   {
+    "id": "keys",
+    "location": "table",
+    "state": "deliberate_cue",
+    "verdict": "LICENSED",
+    "action": "leave",
+    "destination": null,
+    "restoration": null,
+    "reading": "keys deliberately left as a reminder \u2192 licensed cue, not misplaced; leave in place"
+   },
+   {
+    "id": "clean_plate",
+    "location": "counter",
+    "state": "clean_not_in_use",
+    "verdict": "MISPLACED",
+    "action": "tidy",
+    "destination": "cupboard",
+    "restoration": "functional_return",
+    "reading": "clean plate out on the counter \u2192 misplaced; return to the cupboard"
+   },
+   {
+    "id": "empty_carton",
+    "location": "counter",
+    "state": "empty_recyclable",
+    "verdict": "MISPLACED",
+    "action": "tidy",
+    "destination": "recycling",
+    "restoration": "successor_state_resolution",
+    "reading": "empty carton on the counter \u2192 misplaced; original relation gone, goes to recycling"
+   },
+   {
+    "id": "unknown_jar",
+    "location": "counter",
+    "state": "unknown_convention",
+    "verdict": "INDETERMINATE",
+    "action": "inspect",
+    "destination": null,
+    "restoration": null,
+    "reading": "unfamiliar jar, no household convention known \u2192 inspect, search or ask; do not move"
+   }
+  ],
+  "summary": {
+   "tidied": 3,
+   "left": 1,
+   "inspected": 1
+  },
+  "focus": {
+   "id": "keys",
+   "cue": {
+    "context": "deliberately left as a reminder",
+    "verdict": "LICENSED",
+    "action": "leave"
+   },
+   "forgotten": {
+    "context": "genuinely forgotten (cue license lifted)",
+    "verdict": "MISPLACED",
+    "action": "tidy",
+    "destination": "entrance_bowl",
+    "restoration": "exact_return"
+   }
+  }
+ },
+ "designators": {
+  "generator": "coraplex.robot_plans (real ActionDescription instances)",
+  "grounded_in": "semantic_digital_twin.world.World",
+  "planNode": "SequentialNode",
+  "performed": false,
+  "performRequires": "simulated_robot \u2014 giskardpy motion executor + pybullet (absent in the viewer venv)",
+  "count": 3,
+  "designators": [
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/dirty_mug",
+    "arm": "RIGHT",
+    "target": [
+     1.05,
+     1.3,
+     0.62
+    ],
+    "intent": "Tidy(dirty_mug \u2192 dishwasher)",
+    "resolvedBy": "verdict MISPLACED \u00b7 belongs dishwasher (state_mediated_return)",
+    "stage": "restore_dirty_mug"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/clean_plate",
+    "arm": "RIGHT",
+    "target": [
+     1.62,
+     0.88,
+     1.12
+    ],
+    "intent": "Tidy(clean_plate \u2192 cupboard)",
+    "resolvedBy": "verdict MISPLACED \u00b7 belongs cupboard (functional_return)",
+    "stage": "restore_clean_plate"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/empty_carton",
+    "arm": "RIGHT",
+    "target": [
+     0.72,
+     2.38,
+     0.42
+    ],
+    "intent": "Tidy(empty_carton \u2192 recycling)",
+    "resolvedBy": "verdict MISPLACED \u00b7 belongs recycling (successor_state_resolution)",
+    "stage": "restore_empty_carton"
+   }
+  ]
+ }
+}
