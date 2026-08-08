@@ -1,0 +1,115 @@
+{
+ "workflow": "Apartment overview \u2014 four placement & arrangement competences",
+ "gap": "overview(apartment): place \u00b7 arrange \u00b7 restore \u00b7 stabilize",
+ "genesis": "0000000000000000000000000000000000000000000000000000000000000000",
+ "entries": [
+  {
+   "seq": 0,
+   "t": "2026-09-15T11:08:00",
+   "frame": 0,
+   "step": "intro",
+   "action": "OverviewIntroAction",
+   "detail": "The apartment holds four placement & arrangement competences; play through them as four acts.",
+   "constraints": [
+    {
+     "id": 1,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "One Body-World; four competences over it (evidence, not proof)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "5776bfabeab01743e6eca9111f70bdc76ffa71e32f2f356819fcb03b5dceb5e6",
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "seq": 1,
+   "t": "2026-09-15T11:08:06",
+   "frame": 34,
+   "step": "place",
+   "action": "PlaceAction",
+   "detail": "Place \u2014 put the milk back: table_area_main belongs on (in_use_during_breakfast), licensed while breakfast is in progress.",
+   "constraints": [
+    {
+     "id": 2,
+     "source": "AICOR \u00a73.1 \u00b7 Belonging",
+     "text": "Belonging: table_area_main : on (conf 0.75); verdict LICENSED during breakfast",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "1ba19851cfd25a7989a9e4ddfef4baa201430335e0be342fabf29a72b66a9e71",
+   "prev": "5776bfabeab01743e6eca9111f70bdc76ffa71e32f2f356819fcb03b5dceb5e6"
+  },
+  {
+   "seq": 2,
+   "t": "2026-09-15T11:08:12",
+   "frame": 92,
+   "step": "arrange",
+   "action": "ArrangeAction",
+   "detail": "Arrange \u2014 set the table for four: sixteen covers into a relational configuration; admissible=True (local \u22a8 global).",
+   "constraints": [
+    {
+     "id": 3,
+     "source": "AICOR \u00a76.4 \u00b7 Critics",
+     "text": "Local critics \u2227 global critics pass; admissible=True (local placement correctness \u2260 global adequacy)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "a1b19e8a5feeb9d37441902699c557a439b31619a1e73f732ef8a1327e1116dc",
+   "prev": "1ba19851cfd25a7989a9e4ddfef4baa201430335e0be342fabf29a72b66a9e71"
+  },
+  {
+   "seq": 3,
+   "t": "2026-09-15T11:08:18",
+   "frame": 230,
+   "step": "tidy",
+   "action": "RestoreAction",
+   "detail": "Restore \u2014 tidy the kitchen: 3 misplaced tidied, 1 cue left, 1 inspected.",
+   "constraints": [
+    {
+     "id": 4,
+     "source": "AICOR \u00a76.1 \u00b7 Misplacement",
+     "text": "Four-way verdict: tidy {dirty_mug, clean_plate, empty_carton}; leave {keys}; inspect {unknown_jar}",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "e11e5cc19a4528dc592056ce4e6a99065d3babffd1f84a5c1eeb973f943f9e9d",
+   "prev": "a1b19e8a5feeb9d37441902699c557a439b31619a1e73f732ef8a1327e1116dc"
+  },
+  {
+   "seq": 4,
+   "t": "2026-09-15T11:08:24",
+   "frame": 302,
+   "step": "reorganize",
+   "action": "StabilizeAction",
+   "detail": "Stabilize \u2014 reorganize the kitchen: cost 78\u219224, authority very_high, proposal authorized=True.",
+   "constraints": [
+    {
+     "id": 5,
+     "source": "AICOR Part XIII \u00b7 Authorization",
+     "text": "Prospective cost 78\u219224; authority very_high; proposal authorized=True (optimization is not authorization)",
+     "status": "VIOLATED"
+    }
+   ],
+   "hash": "526e4a8e19c7cb4ac7b29b81bbc418d3cee877e38086027d0c794a5925228fd8",
+   "prev": "e11e5cc19a4528dc592056ce4e6a99065d3babffd1f84a5c1eeb973f943f9e9d"
+  },
+  {
+   "seq": 5,
+   "t": "2026-09-15T11:08:30",
+   "frame": 382,
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "detail": "Record the overview episode as hash-chained evidence.",
+   "constraints": [
+    {
+     "id": 6,
+     "source": "AICOR \u00a78 \u00b7 Semantic digital twin",
+     "text": "Overview logged as tamper-evident, hash-chained NEEM",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "f307c4379d92faad6d5b014940ad97771bd9bb284aca572057fac89b8211a305",
+   "prev": "526e4a8e19c7cb4ac7b29b81bbc418d3cee877e38086027d0c794a5925228fd8"
+  }
+ ]
+}

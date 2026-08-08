@@ -1,0 +1,919 @@
+{
+ "name": "PR2_Apartment_Overview",
+ "fps": 20,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "apartment",
+   "urdf": "apartment.urdf",
+   "prefix": "apartment",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "wardrobe_door_left_joint",
+    "wardrobe_door_right_joint",
+    "coffee_table_drawer_joint",
+    "cabinet1_door_top_left_joint",
+    "cabinet1_drawer_middle_joint",
+    "cabinet1_drawer_bottom_joint",
+    "cabinet2_door_out_joint",
+    "cabinet2_door_left_joint",
+    "cabinet2_drawer_small_joint",
+    "cabinet2_drawer_big_joint",
+    "cabinet3_door_top_out_joint",
+    "cabinet3_door_top_left_joint",
+    "cabinet3_door_bottom_out_joint",
+    "cabinet3_door_bottom_left_joint",
+    "cabinet4_door_top_top_joint",
+    "cabinet4_door_bottom_bottom_joint",
+    "cabinet5_drawer_top_joint",
+    "cabinet5_drawer_middle_joint",
+    "cabinet5_drawer_bottom_joint",
+    "cabinet6_drawer_top_joint",
+    "cabinet6_drawer_middle_joint",
+    "cabinet6_drawer_bottom_joint",
+    "cabinet7_door_bottom_left_joint",
+    "dishwasher_drawer_middle_joint",
+    "cabinet8_drawer_middle_joint",
+    "cabinet8_drawer_bottom_joint",
+    "cabinet9_drawer_top_joint",
+    "cabinet9_drawer_middle_joint",
+    "cabinet9_drawer_bottom_joint",
+    "cabinet10_drawer_top_joint",
+    "cabinet10_drawer_middle_joint",
+    "cabinet10_drawer_bottom_joint",
+    "cabinet11_drawer_top_joint",
+    "cabinet11_drawer_middle_joint",
+    "cabinet11_drawer_bottom_joint",
+    "tap_joint",
+    "tap_handle_open_joint",
+    "tap_handle_hot_cold_joint"
+   ]
+  },
+  {
+   "name": "pr2_with_ft2_cableguide",
+   "urdf": "pr2_with_ft2_cableguide.urdf",
+   "prefix": "pr2",
+   "robot": true,
+   "links": 108,
+   "movableJoints": [
+    "fl_caster_rotation_joint",
+    "fl_caster_l_wheel_joint",
+    "fl_caster_r_wheel_joint",
+    "fr_caster_rotation_joint",
+    "fr_caster_l_wheel_joint",
+    "fr_caster_r_wheel_joint",
+    "bl_caster_rotation_joint",
+    "bl_caster_l_wheel_joint",
+    "bl_caster_r_wheel_joint",
+    "br_caster_rotation_joint",
+    "br_caster_l_wheel_joint",
+    "br_caster_r_wheel_joint",
+    "torso_lift_joint",
+    "torso_lift_motor_screw_joint",
+    "torso_lift_screw_torso_lift_joint",
+    "head_pan_joint",
+    "head_tilt_joint",
+    "laser_tilt_mount_joint",
+    "r_shoulder_pan_joint",
+    "r_shoulder_lift_joint",
+    "r_upper_arm_roll_joint",
+    "r_forearm_roll_joint",
+    "r_elbow_flex_joint",
+    "r_wrist_flex_joint",
+    "r_wrist_roll_joint",
+    "r_gripper_motor_slider_joint",
+    "r_gripper_motor_screw_joint",
+    "r_gripper_l_finger_joint",
+    "r_gripper_r_finger_joint",
+    "r_gripper_l_finger_tip_joint",
+    "r_gripper_r_finger_tip_joint",
+    "r_gripper_r_screw_screw_joint",
+    "r_gripper_l_screw_screw_joint",
+    "r_gripper_r_parallel_root_joint",
+    "r_gripper_l_parallel_root_joint",
+    "r_gripper_r_parallel_tip_joint",
+    "r_gripper_l_parallel_tip_joint",
+    "r_gripper_joint",
+    "r_gripper_joint",
+    "l_shoulder_pan_joint",
+    "l_shoulder_lift_joint",
+    "l_upper_arm_roll_joint",
+    "l_forearm_roll_joint",
+    "l_elbow_flex_joint",
+    "l_wrist_flex_joint",
+    "l_wrist_roll_joint",
+    "l_gripper_motor_slider_joint",
+    "l_gripper_motor_screw_joint",
+    "l_gripper_l_finger_joint",
+    "l_gripper_r_finger_joint",
+    "l_gripper_l_finger_tip_joint",
+    "l_gripper_r_finger_tip_joint",
+    "l_gripper_r_screw_screw_joint",
+    "l_gripper_l_screw_screw_joint",
+    "l_gripper_r_parallel_root_joint",
+    "l_gripper_l_parallel_root_joint",
+    "l_gripper_r_parallel_tip_joint",
+    "l_gripper_l_parallel_tip_joint",
+    "l_gripper_joint",
+    "l_gripper_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "milk",
+   "key": "milk",
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ],
+   "color": "#f3f0ea",
+   "spawn": [
+    3.3,
+    4.55,
+    0.95,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.14
+  },
+  {
+   "id": "cover_south_plate",
+   "key": "cover_south_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.85,
+    4.35,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "cover_south_fork",
+   "key": "cover_south_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    3.01,
+    4.35,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_south_knife",
+   "key": "cover_south_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    3.17,
+    4.35,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_south_glass",
+   "key": "cover_south_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    3.33,
+    4.35,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "cover_north_plate",
+   "key": "cover_north_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.85,
+    4.51,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "cover_north_fork",
+   "key": "cover_north_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    3.01,
+    4.51,
+    0.97,
+    0.0,
+    0.0,
+    -1.0,
+    0.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_north_knife",
+   "key": "cover_north_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    3.17,
+    4.51,
+    0.97,
+    0.0,
+    0.0,
+    -1.0,
+    0.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_north_glass",
+   "key": "cover_north_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    3.33,
+    4.51,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "cover_west_plate",
+   "key": "cover_west_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.85,
+    4.67,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "cover_west_fork",
+   "key": "cover_west_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    3.01,
+    4.67,
+    0.97,
+    0.0,
+    0.0,
+    -0.70711,
+    0.70711
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_west_knife",
+   "key": "cover_west_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    3.17,
+    4.67,
+    0.97,
+    0.0,
+    0.0,
+    -0.70711,
+    0.70711
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_west_glass",
+   "key": "cover_west_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    3.33,
+    4.67,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "cover_east_plate",
+   "key": "cover_east_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.85,
+    4.83,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "cover_east_fork",
+   "key": "cover_east_fork",
+   "box": [
+    0.02,
+    0.1,
+    0.012
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    3.01,
+    4.83,
+    0.97,
+    0.0,
+    0.0,
+    0.70711,
+    0.70711
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_east_knife",
+   "key": "cover_east_knife",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#c9cdd3",
+   "spawn": [
+    3.17,
+    4.83,
+    0.97,
+    0.0,
+    0.0,
+    0.70711,
+    0.70711
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "cover_east_glass",
+   "key": "cover_east_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.09
+   ],
+   "color": "#bcd8e8",
+   "spawn": [
+    3.33,
+    4.83,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "tidy_dirty_mug",
+   "key": "tidy_dirty_mug",
+   "box": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "color": "#7a5a44",
+   "spawn": [
+    2.15,
+    1.55,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "tidy_keys",
+   "key": "tidy_keys",
+   "box": [
+    0.03,
+    0.06,
+    0.012
+   ],
+   "color": "#d4af37",
+   "spawn": [
+    2.35,
+    1.55,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "tidy_clean_plate",
+   "key": "tidy_clean_plate",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    2.55,
+    1.55,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "tidy_empty_carton",
+   "key": "tidy_empty_carton",
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ],
+   "color": "#cfc9bf",
+   "spawn": [
+    2.75,
+    1.55,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.14
+  },
+  {
+   "id": "tidy_unknown_jar",
+   "key": "tidy_unknown_jar",
+   "box": [
+    0.06,
+    0.06,
+    0.11
+   ],
+   "color": "#9bb7c4",
+   "spawn": [
+    2.15,
+    1.75,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.11
+  },
+  {
+   "id": "reorg_mugs",
+   "key": "reorg_mugs",
+   "box": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "color": "#b5651d",
+   "spawn": [
+    0.46,
+    4.33,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "reorg_plates",
+   "key": "reorg_plates",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    0.6,
+    4.33,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "reorg_cereal",
+   "key": "reorg_cereal",
+   "box": [
+    0.08,
+    0.08,
+    0.2
+   ],
+   "color": "#cf5b3a",
+   "spawn": [
+    0.74,
+    4.33,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.2
+  },
+  {
+   "id": "reorg_pots",
+   "key": "reorg_pots",
+   "box": [
+    0.12,
+    0.12,
+    0.1
+   ],
+   "color": "#7d7f86",
+   "spawn": [
+    5.46,
+    3.37,
+    0.9,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.1
+  },
+  {
+   "id": "reorg_cutting_board",
+   "key": "reorg_cutting_board",
+   "box": [
+    0.16,
+    0.1,
+    0.02
+   ],
+   "color": "#a9784b",
+   "spawn": [
+    5.6,
+    3.37,
+    0.9,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "reorg_cutlery",
+   "key": "reorg_cutlery",
+   "box": [
+    0.03,
+    0.1,
+    0.02
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    0.74,
+    4.47,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  }
+ ],
+ "segments": [
+  {
+   "step": "intro",
+   "action": "OverviewIntroAction",
+   "arm": null,
+   "start": 0,
+   "end": 34
+  },
+  {
+   "step": "place",
+   "action": "PlaceAction",
+   "arm": null,
+   "start": 34,
+   "end": 92
+  },
+  {
+   "step": "arrange",
+   "action": "ArrangeAction",
+   "arm": null,
+   "start": 92,
+   "end": 230
+  },
+  {
+   "step": "tidy",
+   "action": "RestoreAction",
+   "arm": null,
+   "start": 230,
+   "end": 302
+  },
+  {
+   "step": "reorganize",
+   "action": "StabilizeAction",
+   "arm": null,
+   "start": 302,
+   "end": 382
+  },
+  {
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "start": 382,
+   "end": 428
+  }
+ ],
+ "actions": [
+  {
+   "action": "OverviewIntroAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "PlaceAction",
+   "arm": null,
+   "target": "place"
+  },
+  {
+   "action": "ArrangeAction",
+   "arm": null,
+   "target": "arrange"
+  },
+  {
+   "action": "RestoreAction",
+   "arm": null,
+   "target": "tidy"
+  },
+  {
+   "action": "StabilizeAction",
+   "arm": null,
+   "target": "reorganize"
+  },
+  {
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "PlanNode",
+   "label": "apartment_overview (four competences)",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "Place \u00b7 put the milk back",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "milk belongs on the table (licensed)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "Arrange \u00b7 set the table for four",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "4 covers admissible; local \u22a8 global",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "Restore \u00b7 tidy the kitchen",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "tidy misplaced; leave cue; inspect unknown",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "Stabilize \u00b7 reorganize the kitchen",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "proposed; authority very-high; unauthorized",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "placeTarget": null,
+ "dragBounds": null,
+ "missingAssets": [],
+ "audit": "audit.json",
+ "overview": {
+  "competences": [
+   {
+    "key": "place",
+    "name": "Place",
+    "act": 1,
+    "question": "Where and how should this object be positioned?",
+    "result": "milk \u2192 table_area_main (on) \u00b7 licensed during breakfast",
+    "tone": "ok"
+   },
+   {
+    "key": "arrange",
+    "name": "Arrange",
+    "act": 2,
+    "question": "How should several entities be configured together?",
+    "result": "4 covers admissible \u00b7 local placement \u2260 global adequacy",
+    "tone": "ok"
+   },
+   {
+    "key": "tidy",
+    "name": "Restore",
+    "act": 3,
+    "question": "What is out of place \u2014 and what must be left?",
+    "result": "3 tidied \u00b7 1 cue left \u00b7 1 inspected",
+    "tone": "warn"
+   },
+   {
+    "key": "stabilize",
+    "name": "Stabilize",
+    "act": 4,
+    "question": "Which persistent organization best supports recurring activity?",
+    "result": "cost 78\u219224 \u00b7 authority very-high \u00b7 proposed",
+    "tone": "warn"
+   }
+  ]
+ }
+}
