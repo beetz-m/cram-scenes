@@ -1,0 +1,748 @@
+{
+ "name": "PR2_Apartment_KitchenReorg",
+ "fps": 20,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "apartment",
+   "urdf": "apartment.urdf",
+   "prefix": "apartment",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "wardrobe_door_left_joint",
+    "wardrobe_door_right_joint",
+    "coffee_table_drawer_joint",
+    "cabinet1_door_top_left_joint",
+    "cabinet1_drawer_middle_joint",
+    "cabinet1_drawer_bottom_joint",
+    "cabinet2_door_out_joint",
+    "cabinet2_door_left_joint",
+    "cabinet2_drawer_small_joint",
+    "cabinet2_drawer_big_joint",
+    "cabinet3_door_top_out_joint",
+    "cabinet3_door_top_left_joint",
+    "cabinet3_door_bottom_out_joint",
+    "cabinet3_door_bottom_left_joint",
+    "cabinet4_door_top_top_joint",
+    "cabinet4_door_bottom_bottom_joint",
+    "cabinet5_drawer_top_joint",
+    "cabinet5_drawer_middle_joint",
+    "cabinet5_drawer_bottom_joint",
+    "cabinet6_drawer_top_joint",
+    "cabinet6_drawer_middle_joint",
+    "cabinet6_drawer_bottom_joint",
+    "cabinet7_door_bottom_left_joint",
+    "dishwasher_drawer_middle_joint",
+    "cabinet8_drawer_middle_joint",
+    "cabinet8_drawer_bottom_joint",
+    "cabinet9_drawer_top_joint",
+    "cabinet9_drawer_middle_joint",
+    "cabinet9_drawer_bottom_joint",
+    "cabinet10_drawer_top_joint",
+    "cabinet10_drawer_middle_joint",
+    "cabinet10_drawer_bottom_joint",
+    "cabinet11_drawer_top_joint",
+    "cabinet11_drawer_middle_joint",
+    "cabinet11_drawer_bottom_joint",
+    "tap_joint",
+    "tap_handle_open_joint",
+    "tap_handle_hot_cold_joint"
+   ]
+  },
+  {
+   "name": "pr2_with_ft2_cableguide",
+   "urdf": "pr2_with_ft2_cableguide.urdf",
+   "prefix": "pr2",
+   "robot": true,
+   "links": 108,
+   "movableJoints": [
+    "fl_caster_rotation_joint",
+    "fl_caster_l_wheel_joint",
+    "fl_caster_r_wheel_joint",
+    "fr_caster_rotation_joint",
+    "fr_caster_l_wheel_joint",
+    "fr_caster_r_wheel_joint",
+    "bl_caster_rotation_joint",
+    "bl_caster_l_wheel_joint",
+    "bl_caster_r_wheel_joint",
+    "br_caster_rotation_joint",
+    "br_caster_l_wheel_joint",
+    "br_caster_r_wheel_joint",
+    "torso_lift_joint",
+    "torso_lift_motor_screw_joint",
+    "torso_lift_screw_torso_lift_joint",
+    "head_pan_joint",
+    "head_tilt_joint",
+    "laser_tilt_mount_joint",
+    "r_shoulder_pan_joint",
+    "r_shoulder_lift_joint",
+    "r_upper_arm_roll_joint",
+    "r_forearm_roll_joint",
+    "r_elbow_flex_joint",
+    "r_wrist_flex_joint",
+    "r_wrist_roll_joint",
+    "r_gripper_motor_slider_joint",
+    "r_gripper_motor_screw_joint",
+    "r_gripper_l_finger_joint",
+    "r_gripper_r_finger_joint",
+    "r_gripper_l_finger_tip_joint",
+    "r_gripper_r_finger_tip_joint",
+    "r_gripper_r_screw_screw_joint",
+    "r_gripper_l_screw_screw_joint",
+    "r_gripper_r_parallel_root_joint",
+    "r_gripper_l_parallel_root_joint",
+    "r_gripper_r_parallel_tip_joint",
+    "r_gripper_l_parallel_tip_joint",
+    "r_gripper_joint",
+    "r_gripper_joint",
+    "l_shoulder_pan_joint",
+    "l_shoulder_lift_joint",
+    "l_upper_arm_roll_joint",
+    "l_forearm_roll_joint",
+    "l_elbow_flex_joint",
+    "l_wrist_flex_joint",
+    "l_wrist_roll_joint",
+    "l_gripper_motor_slider_joint",
+    "l_gripper_motor_screw_joint",
+    "l_gripper_l_finger_joint",
+    "l_gripper_r_finger_joint",
+    "l_gripper_l_finger_tip_joint",
+    "l_gripper_r_finger_tip_joint",
+    "l_gripper_r_screw_screw_joint",
+    "l_gripper_l_screw_screw_joint",
+    "l_gripper_r_parallel_root_joint",
+    "l_gripper_l_parallel_root_joint",
+    "l_gripper_r_parallel_tip_joint",
+    "l_gripper_l_parallel_tip_joint",
+    "l_gripper_joint",
+    "l_gripper_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  }
+ },
+ "objects": [
+  {
+   "id": "mugs",
+   "key": "mugs",
+   "box": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "color": "#b5651d",
+   "spawn": [
+    0.46,
+    4.33,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "plates",
+   "key": "plates",
+   "box": [
+    0.13,
+    0.13,
+    0.02
+   ],
+   "color": "#e7e2d6",
+   "spawn": [
+    0.6,
+    4.33,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "cereal",
+   "key": "cereal",
+   "box": [
+    0.08,
+    0.08,
+    0.2
+   ],
+   "color": "#cf5b3a",
+   "spawn": [
+    0.74,
+    4.33,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.2
+  },
+  {
+   "id": "pots",
+   "key": "pots",
+   "box": [
+    0.12,
+    0.12,
+    0.1
+   ],
+   "color": "#7d7f86",
+   "spawn": [
+    5.46,
+    3.37,
+    0.9,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.1
+  },
+  {
+   "id": "cutting_board",
+   "key": "cutting_board",
+   "box": [
+    0.16,
+    0.1,
+    0.02
+   ],
+   "color": "#a9784b",
+   "spawn": [
+    5.6,
+    3.37,
+    0.9,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "cutlery",
+   "key": "cutlery",
+   "box": [
+    0.03,
+    0.1,
+    0.02
+   ],
+   "color": "#b9bec7",
+   "spawn": [
+    0.74,
+    4.47,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  }
+ ],
+ "segments": [
+  {
+   "step": "assess",
+   "action": "AssessOrganizationAction",
+   "arm": null,
+   "start": 0,
+   "end": 34
+  },
+  {
+   "step": "generate",
+   "action": "GenerateCandidateAction",
+   "arm": null,
+   "start": 34,
+   "end": 60
+  },
+  {
+   "step": "evaluate",
+   "action": "EvaluateProspectivelyAction",
+   "arm": null,
+   "start": 60,
+   "end": 96
+  },
+  {
+   "step": "select",
+   "action": "SelectOrganizationAction",
+   "arm": null,
+   "start": 96,
+   "end": 120
+  },
+  {
+   "step": "propose",
+   "action": "ProposeReorganizationAction",
+   "arm": null,
+   "start": 120,
+   "end": 152
+  },
+  {
+   "step": "authorize",
+   "action": "AuthorizeReorganizationAction",
+   "arm": null,
+   "start": 152,
+   "end": 184
+  },
+  {
+   "step": "apply",
+   "action": "ApplyReorganizationAction",
+   "arm": null,
+   "start": 184,
+   "end": 256
+  },
+  {
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "start": 256,
+   "end": 298
+  }
+ ],
+ "actions": [
+  {
+   "action": "AssessOrganizationAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "GenerateCandidateAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "EvaluateProspectivelyAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "SelectOrganizationAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "ProposeReorganizationAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "AuthorizeReorganizationAction",
+   "arm": null,
+   "target": null
+  },
+  {
+   "action": "ApplyReorganizationAction",
+   "arm": null,
+   "target": "reorg"
+  },
+  {
+   "action": "LogEvidenceAction",
+   "arm": null,
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "PlanNode",
+   "label": "reorganize_the_kitchen (GAP)",
+   "status": "SUCCEEDED",
+   "children": [
+    {
+     "kind": "ActionNode",
+     "label": "assess \u00b7 AssessOrganizationAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "observe current class\u2192storage assignment",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "retrieval_cost(current) = 78.0",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "generate \u00b7 GenerateCandidateAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "candidate = clustered-by-activity",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "\u2200 class: assign(class) near its activity",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "evaluate \u00b7 EvaluateProspectivelyAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "score over representative activity families",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "cost(candidate)=23.6 < cost(current)=78.0",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "select \u00b7 SelectOrganizationAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "argmin cost = clustered-by-activity",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "improves \u2227 admissible",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "propose \u00b7 ProposeReorganizationAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "proposal.authorized = FALSE",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "present rationale + 6 affected conventions",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "authorize \u00b7 AuthorizeReorganizationAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "authority = VERY_HIGH",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "approved \u21d2 adopt candidate",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "apply \u00b7 ApplyReorganizationAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "MotionNode",
+       "label": "relocate 6 representative classes",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "rewrite 6 belonging norms",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "ConditionNode",
+       "label": "model updated",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    },
+    {
+     "kind": "ActionNode",
+     "label": "record \u00b7 LogEvidenceAction",
+     "status": "SUCCEEDED",
+     "children": [
+      {
+       "kind": "ConditionNode",
+       "label": "future retrieval/restoration re-resolve",
+       "status": "SUCCEEDED",
+       "children": []
+      },
+      {
+       "kind": "MotionNode",
+       "label": "LogEvidenceMotion \u2192 NEEM (hash-chained)",
+       "status": "SUCCEEDED",
+       "children": []
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "placeTarget": null,
+ "dragBounds": null,
+ "missingAssets": [],
+ "audit": "audit.json",
+ "reorg": {
+  "activities": [
+   "breakfast",
+   "cooking",
+   "cleanup"
+  ],
+  "authority": "very_high",
+  "current": {
+   "name": "current",
+   "score": {
+    "retrieval": 78.0182,
+    "spread": 0.0,
+    "total": 78.0182
+   }
+  },
+  "candidate": {
+   "name": "clustered-by-activity",
+   "score": {
+    "retrieval": 23.0561,
+    "spread": 1.0,
+    "total": 23.5561
+   }
+  },
+  "costReduction": 54.4621,
+  "changedCount": 6,
+  "delta": [
+   {
+    "class": "mugs",
+    "from": "far_pantry",
+    "to": "near_table"
+   },
+   {
+    "class": "plates",
+    "from": "far_pantry",
+    "to": "near_table"
+   },
+   {
+    "class": "cereal",
+    "from": "far_pantry",
+    "to": "near_table"
+   },
+   {
+    "class": "pots",
+    "from": "near_table",
+    "to": "near_stove"
+   },
+   {
+    "class": "cutting_board",
+    "from": "near_table",
+    "to": "near_stove"
+   },
+   {
+    "class": "cutlery",
+    "from": "far_pantry",
+    "to": "near_dishwasher"
+   }
+  ],
+  "normEffect": {
+   "example": "mugs",
+   "before": "far_pantry",
+   "after": "near_table"
+  },
+  "focus": {
+   "proposed": {
+    "authorized": false,
+    "action": "await approval",
+    "note": "optimization is not authorization"
+   },
+   "approved": {
+    "authorized": true,
+    "action": "adopt \u2192 rewrite belonging norms",
+    "effect": "retrieval, restoration and correct placement re-resolve"
+   }
+  }
+ },
+ "designators": {
+  "generator": "coraplex.robot_plans (real ActionDescription instances)",
+  "grounded_in": "semantic_digital_twin.world.World",
+  "planNode": "SequentialNode",
+  "performed": false,
+  "performRequires": "simulated_robot \u2014 giskardpy motion executor + pybullet (absent in the viewer venv)",
+  "count": 6,
+  "designators": [
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/mugs",
+    "arm": "RIGHT",
+    "target": [
+     5.46,
+     3.23,
+     0.9
+    ],
+    "intent": "Relocate(mugs: far_pantry \u2192 near_table)",
+    "resolvedBy": "reorganization \u00b7 adopted after approval",
+    "stage": "apply"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/plates",
+    "arm": "RIGHT",
+    "target": [
+     5.6,
+     3.23,
+     0.9
+    ],
+    "intent": "Relocate(plates: far_pantry \u2192 near_table)",
+    "resolvedBy": "reorganization \u00b7 adopted after approval",
+    "stage": "apply"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/cereal",
+    "arm": "RIGHT",
+    "target": [
+     5.74,
+     3.23,
+     0.9
+    ],
+    "intent": "Relocate(cereal: far_pantry \u2192 near_table)",
+    "resolvedBy": "reorganization \u00b7 adopted after approval",
+    "stage": "apply"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/pots",
+    "arm": "RIGHT",
+    "target": [
+     1.16,
+     1.07,
+     0.9
+    ],
+    "intent": "Relocate(pots: near_table \u2192 near_stove)",
+    "resolvedBy": "reorganization \u00b7 adopted after approval",
+    "stage": "apply"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/cutting_board",
+    "arm": "RIGHT",
+    "target": [
+     1.3,
+     1.07,
+     0.9
+    ],
+    "intent": "Relocate(cutting_board: near_table \u2192 near_stove)",
+    "resolvedBy": "reorganization \u00b7 adopted after approval",
+    "stage": "apply"
+   },
+   {
+    "class": "TransportAction",
+    "module": "coraplex.robot_plans.actions.composite.transporting",
+    "isActionDescription": true,
+    "object": "obj/cutlery",
+    "arm": "RIGHT",
+    "target": [
+     1.24,
+     1.47,
+     0.7
+    ],
+    "intent": "Relocate(cutlery: far_pantry \u2192 near_dishwasher)",
+    "resolvedBy": "reorganization \u00b7 adopted after approval",
+    "stage": "apply"
+   }
+  ]
+ }
+}

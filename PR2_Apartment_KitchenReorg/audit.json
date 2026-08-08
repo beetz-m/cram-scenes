@@ -1,0 +1,163 @@
+{
+ "workflow": "Reorganize the kitchen \u2014 environmental stabilization as a meta-competence",
+ "gap": "reorganize(kitchen): evaluate candidate organizations over {breakfast, cooking, cleanup}; propose the best; authority=very_high; adopt only if approved \u2192 rewrite belonging norms",
+ "genesis": "0000000000000000000000000000000000000000000000000000000000000000",
+ "entries": [
+  {
+   "seq": 0,
+   "t": "2026-09-15T11:08:00",
+   "frame": 0,
+   "step": "assess",
+   "action": "AssessOrganizationAction",
+   "detail": "Assess the current organization over the activity families. Breakfast items sit in the far pantry and cooking gear by the table \u2014 retrieval cost 78.0.",
+   "constraints": [
+    {
+     "id": 3401,
+     "source": "AICOR \u00a73.4 \u00b7 Environmental stabilization",
+     "text": "Current organization retrieval_cost=78.0, spread=0 \u2014 routine placement restores this; reorganization would change it",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "9339b7a67718f18830ce093ea3ddfc9e85b7ec6bce0220fc22a151cf9b94eeb1",
+   "prev": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  {
+   "seq": 1,
+   "t": "2026-09-15T11:08:06",
+   "frame": 34,
+   "step": "generate",
+   "action": "GenerateCandidateAction",
+   "detail": "Generate a candidate organization that clusters each activity's objects near where that activity happens.",
+   "constraints": [
+    {
+     "id": 3402,
+     "source": "AICOR \u00a73.4 \u00b7 Environmental stabilization",
+     "text": "Candidate: cluster each activity's classes near its workzone",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "94d60fc8dd129fd15f1612f9210c9827eb27f467616f2182c61724e83f83ed05",
+   "prev": "9339b7a67718f18830ce093ea3ddfc9e85b7ec6bce0220fc22a151cf9b94eeb1"
+  },
+  {
+   "seq": 2,
+   "t": "2026-09-15T11:08:12",
+   "frame": 60,
+   "step": "evaluate",
+   "action": "EvaluateProspectivelyAction",
+   "detail": "Evaluate prospectively over {breakfast, cooking, cleanup}: candidate cost 23.6 vs current 78.0 \u2014 54.5 lower, with fewer scattered trips.",
+   "constraints": [
+    {
+     "id": 9101,
+     "source": "AICOR Part XIII \u00b7 Prospective evaluation",
+     "text": "Prospective over {breakfast, cooking, cleanup}: candidate total=23.6 < current total=78.0 (\u0394=54.5)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "ca0bffd967bc954426dd85d654083b99410b5894899fea0bf8de87d614b145c3",
+   "prev": "94d60fc8dd129fd15f1612f9210c9827eb27f467616f2182c61724e83f83ed05"
+  },
+  {
+   "seq": 3,
+   "t": "2026-09-15T11:08:18",
+   "frame": 96,
+   "step": "select",
+   "action": "SelectOrganizationAction",
+   "detail": "Select the best admissible candidate \u2014 it reduces retrieval cost and improves plan reuse across the recurring activities.",
+   "constraints": [
+    {
+     "id": 9102,
+     "source": "AICOR Part XIII \u00b7 Prospective evaluation",
+     "text": "Selected argmin-cost candidate 'clustered-by-activity' (improves=True)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "41e0f5bcb29ce48e8f64b54f89478fa3092c401e4e786e4e2ff78f2f058227e7",
+   "prev": "ca0bffd967bc954426dd85d654083b99410b5894899fea0bf8de87d614b145c3"
+  },
+  {
+   "seq": 4,
+   "t": "2026-09-15T11:08:24",
+   "frame": 120,
+   "step": "propose",
+   "action": "ProposeReorganizationAction",
+   "detail": "Propose the reorganization with its rationale and the 6 conventions it would rewrite \u2014 but do NOT apply it. Optimization is not authorization.",
+   "constraints": [
+    {
+     "id": 1310,
+     "source": "AICOR Part XIII \u00b7 Authorization threshold",
+     "text": "Proposed with rationale + 6 affected conventions; proposal.authorized=FALSE \u2014 optimization is not authorization",
+     "status": "VIOLATED"
+    }
+   ],
+   "hash": "b81af00306c63c03f2c79a35e667882c757eebe6a00cb5f1a2ba9f76c58feb32",
+   "prev": "41e0f5bcb29ce48e8f64b54f89478fa3092c401e4e786e4e2ff78f2f058227e7"
+  },
+  {
+   "seq": 5,
+   "t": "2026-09-15T11:08:30",
+   "frame": 152,
+   "step": "authorize",
+   "action": "AuthorizeReorganizationAction",
+   "detail": "Authorization gate: reorganizing a kitchen zone changes persistent multi-user structure and needs very-high authority. On approval, adopt the candidate.",
+   "constraints": [
+    {
+     "id": 1311,
+     "source": "AICOR Part XIII \u00b7 Authorization threshold",
+     "text": "Authority=VERY_HIGH (persistent multi-user structure); approved \u21d2 adopt",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "b663986631b8e864e72bac52056088e3a64ffdffe531d48f8f1e5d0a7bd18229",
+   "prev": "b81af00306c63c03f2c79a35e667882c757eebe6a00cb5f1a2ba9f76c58feb32"
+  },
+  {
+   "seq": 6,
+   "t": "2026-09-15T11:08:36",
+   "frame": 184,
+   "step": "apply",
+   "action": "ApplyReorganizationAction",
+   "detail": "Apply the adopted organization: relocate each object class to its new home and rewrite the belonging norms \u2014 the knowledge effect of the meta-competence.",
+   "constraints": [
+    {
+     "id": 3101,
+     "source": "AICOR \u00a73.1 \u00b7 Belonging norm",
+     "text": "Rewrote 6 belonging norms; e.g. mugs: far_pantry \u2192 near_table",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 9103,
+     "source": "AICOR Part XIII \u00b7 Prospective evaluation",
+     "text": "Relocated 6 representative classes to their new homes",
+     "status": "ENFORCED"
+    },
+    {
+     "id": 9002,
+     "source": "AICOR Part XIII \u00b7 Prospective evaluation",
+     "text": "Generated 6 real coraplex TransportAction designators for the relocations (grounded, not performed)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "46cc468b85036fef6c95449b0c6ab1175c920fd391dbf9451784935f1956e543",
+   "prev": "b663986631b8e864e72bac52056088e3a64ffdffe531d48f8f1e5d0a7bd18229"
+  },
+  {
+   "seq": 7,
+   "t": "2026-09-15T11:08:42",
+   "frame": 256,
+   "step": "record",
+   "action": "LogEvidenceAction",
+   "detail": "Record the reorganization: retrieval, restoration and correct placement now resolve against the new conventions. Logged as hash-chained NEEM.",
+   "constraints": [
+    {
+     "id": 6601,
+     "source": "AICOR \u00a76.4 \u00b7 Critic suite",
+     "text": "Knowledge effect logged: future retrieval/restoration/placement re-resolve against the new organization (evidence, not proof)",
+     "status": "ENFORCED"
+    }
+   ],
+   "hash": "f1c8466853cbbc71ab6c8eb0c2692cd73465e8ebaefd9f588871203301d55c7d",
+   "prev": "46cc468b85036fef6c95449b0c6ab1175c920fd391dbf9451784935f1956e543"
+  }
+ ]
+}
