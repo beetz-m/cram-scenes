@@ -188,9 +188,9 @@
    ],
    "color": "#f3f0ea",
    "spawn": [
-    4.94,
-    3.27,
-    0.76,
+    0.9,
+    1.05,
+    0.68,
     0.0,
     0.0,
     0.0,
@@ -208,9 +208,9 @@
    ],
    "color": "#7a5a44",
    "spawn": [
-    5.1,
-    3.27,
-    0.76,
+    1.05,
+    1.3,
+    0.62,
     0.0,
     0.0,
     0.0,
@@ -219,44 +219,24 @@
    "height": 0.09
   },
   {
-   "id": "keys",
-   "key": "keys",
+   "id": "clean_glass",
+   "key": "clean_glass",
    "box": [
-    0.03,
-    0.06,
-    0.012
+    0.05,
+    0.05,
+    0.1
    ],
-   "color": "#d4af37",
+   "color": "#cfe2ee",
    "spawn": [
-    5.26,
-    3.27,
-    0.76,
+    1.62,
+    0.88,
+    1.12,
     0.0,
     0.0,
     0.0,
     1.0
    ],
-   "height": 0.012
-  },
-  {
-   "id": "clean_plate",
-   "key": "clean_plate",
-   "box": [
-    0.13,
-    0.13,
-    0.02
-   ],
-   "color": "#e7e2d6",
-   "spawn": [
-    2.24,
-    1.72,
-    0.97,
-    0.0,
-    0.0,
-    0.0,
-    1.0
-   ],
-   "height": 0.02
+   "height": 0.1
   },
   {
    "id": "empty_carton",
@@ -268,15 +248,75 @@
    ],
    "color": "#cfc9bf",
    "spawn": [
-    2.4,
-    1.72,
-    0.97,
+    0.72,
+    2.38,
+    0.42,
     0.0,
     0.0,
     0.0,
     1.0
    ],
    "height": 0.14
+  },
+  {
+   "id": "keys",
+   "key": "keys",
+   "box": [
+    0.03,
+    0.06,
+    0.012
+   ],
+   "color": "#d4af37",
+   "spawn": [
+    7.05,
+    0.55,
+    0.8,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "book",
+   "key": "book",
+   "box": [
+    0.14,
+    0.1,
+    0.03
+   ],
+   "color": "#8a5a3c",
+   "spawn": [
+    8.0,
+    3.4,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.03
+  },
+  {
+   "id": "tv_remote",
+   "key": "tv_remote",
+   "box": [
+    0.04,
+    0.12,
+    0.02
+   ],
+   "color": "#2b2f33",
+   "spawn": [
+    8.2,
+    2.0,
+    0.55,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
   },
   {
    "id": "unknown_jar",
@@ -288,8 +328,8 @@
    ],
    "color": "#9bb7c4",
    "spawn": [
-    2.56,
-    1.72,
+    2.4,
+    1.8,
     0.97,
     0.0,
     0.0,
@@ -318,17 +358,17 @@
  "planTrees": [
   {
    "kind": "PlanNode",
-   "label": "household (interactive)",
+   "label": "household cleanup (interactive)",
    "status": "SUCCEEDED",
    "children": [
     {
      "kind": "ActionNode",
-     "label": "set context \u2192 assess \u2192 transport",
+     "label": "sample \u2192 assess \u2192 plan \u2192 perform",
      "status": "SUCCEEDED",
      "children": [
       {
        "kind": "ConditionNode",
-       "label": "verdict(o) via household_norms under the active context",
+       "label": "misplacement verdict + transport designators via household_norms",
        "status": "SUCCEEDED",
        "children": []
       }
@@ -342,29 +382,14 @@
  "missingAssets": [],
  "household": {
   "places": {
-   "table": {
-    "label": "breakfast table",
-    "pos": [
-     5.1,
-     3.35,
-     0.76
-    ]
-   },
-   "counter": {
-    "label": "kitchen counter",
-    "pos": [
-     2.4,
-     1.8,
-     0.97
-    ]
-   },
    "cold_cabinet": {
     "label": "cold storage",
     "pos": [
      0.9,
      1.05,
      0.68
-    ]
+    ],
+    "kind": "destination"
    },
    "dishwasher": {
     "label": "dishwasher",
@@ -372,7 +397,8 @@
      1.05,
      1.3,
      0.62
-    ]
+    ],
+    "kind": "destination"
    },
    "cupboard": {
     "label": "cupboard",
@@ -380,7 +406,8 @@
      1.62,
      0.88,
      1.12
-    ]
+    ],
+    "kind": "destination"
    },
    "recycling": {
     "label": "recycling",
@@ -388,7 +415,8 @@
      0.72,
      2.38,
      0.42
-    ]
+    ],
+    "kind": "destination"
    },
    "entrance_bowl": {
     "label": "entrance bowl",
@@ -396,39 +424,154 @@
      7.05,
      0.55,
      0.8
-    ]
+    ],
+    "kind": "destination"
+   },
+   "bookshelf": {
+    "label": "bookshelf",
+    "pos": [
+     8.0,
+     3.4,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "tv_stand": {
+    "label": "TV stand",
+    "pos": [
+     8.2,
+     2.0,
+     0.55
+    ],
+    "kind": "destination"
+   },
+   "table": {
+    "label": "breakfast table",
+    "pos": [
+     5.1,
+     3.35,
+     0.76
+    ],
+    "kind": "spot"
+   },
+   "counter": {
+    "label": "kitchen counter",
+    "pos": [
+     2.4,
+     1.8,
+     0.97
+    ],
+    "kind": "spot"
+   },
+   "sofa": {
+    "label": "sofa",
+    "pos": [
+     7.6,
+     2.6,
+     0.55
+    ],
+    "kind": "spot"
+   },
+   "coffee_table": {
+    "label": "coffee table",
+    "pos": [
+     7.8,
+     1.1,
+     0.52
+    ],
+    "kind": "spot"
    }
   },
   "objects": [
    {
     "id": "milk",
-    "state": "opened_after_breakfast",
-    "current": "table"
+    "state": "opened",
+    "current": "cold_cabinet",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": "breakfast",
+    "home": "cold_cabinet"
    },
    {
     "id": "dirty_mug",
-    "state": "dirty_after_use",
-    "current": "table"
+    "state": "dirty",
+    "current": "dishwasher",
+    "outSpots": [
+     "table",
+     "counter",
+     "coffee_table"
+    ],
+    "licensedBy": null,
+    "home": "dishwasher"
    },
    {
-    "id": "keys",
-    "state": "deliberate_cue",
-    "current": "table"
-   },
-   {
-    "id": "clean_plate",
-    "state": "clean_not_in_use",
-    "current": "counter"
+    "id": "clean_glass",
+    "state": "clean",
+    "current": "cupboard",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null,
+    "home": "cupboard"
    },
    {
     "id": "empty_carton",
-    "state": "empty_recyclable",
-    "current": "counter"
+    "state": "empty",
+    "current": "recycling",
+    "outSpots": [
+     "counter",
+     "table"
+    ],
+    "licensedBy": null,
+    "home": "recycling"
+   },
+   {
+    "id": "keys",
+    "state": "cue",
+    "current": "entrance_bowl",
+    "outSpots": [
+     "table",
+     "sofa"
+    ],
+    "licensedBy": "keys_reminder",
+    "home": "entrance_bowl"
+   },
+   {
+    "id": "book",
+    "state": "unread",
+    "current": "bookshelf",
+    "outSpots": [
+     "sofa",
+     "coffee_table",
+     "table"
+    ],
+    "licensedBy": "reading",
+    "home": "bookshelf"
+   },
+   {
+    "id": "tv_remote",
+    "state": "idle",
+    "current": "tv_stand",
+    "outSpots": [
+     "sofa",
+     "coffee_table"
+    ],
+    "licensedBy": "reading",
+    "home": "tv_stand"
    },
    {
     "id": "unknown_jar",
-    "state": "unknown_convention",
-    "current": "counter"
+    "state": "unknown",
+    "current": "counter",
+    "outSpots": [
+     "counter",
+     "table"
+    ],
+    "licensedBy": null,
+    "home": "counter"
    }
   ],
   "norms": [
@@ -437,9 +580,7 @@
     "destination": "cold_cabinet",
     "relation": "inside",
     "confidence": 0.9,
-    "states": [
-     "opened_after_breakfast"
-    ],
+    "states": [],
     "restoration": "state_mediated_return"
    },
    {
@@ -447,10 +588,24 @@
     "destination": "dishwasher",
     "relation": "inside",
     "confidence": 0.92,
-    "states": [
-     "dirty_after_use"
-    ],
+    "states": [],
     "restoration": "state_mediated_return"
+   },
+   {
+    "object": "clean_glass",
+    "destination": "cupboard",
+    "relation": "inside",
+    "confidence": 0.9,
+    "states": [],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "empty_carton",
+    "destination": "recycling",
+    "relation": "inside",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "successor_state_resolution"
    },
    {
     "object": "keys",
@@ -461,24 +616,20 @@
     "restoration": "exact_return"
    },
    {
-    "object": "clean_plate",
-    "destination": "cupboard",
-    "relation": "inside",
-    "confidence": 0.9,
-    "states": [
-     "clean_not_in_use"
-    ],
-    "restoration": "functional_return"
+    "object": "book",
+    "destination": "bookshelf",
+    "relation": "on",
+    "confidence": 0.85,
+    "states": [],
+    "restoration": "exact_return"
    },
    {
-    "object": "empty_carton",
-    "destination": "recycling",
-    "relation": "inside",
-    "confidence": 0.95,
-    "states": [
-     "empty_recyclable"
-    ],
-    "restoration": "successor_state_resolution"
+    "object": "tv_remote",
+    "destination": "tv_stand",
+    "relation": "on",
+    "confidence": 0.8,
+    "states": [],
+    "restoration": "exact_return"
    }
   ],
   "activities": [
@@ -494,6 +645,14 @@
     "label": "Keys left as a reminder",
     "licenses": [
      "keys"
+    ]
+   },
+   {
+    "id": "reading",
+    "label": "Reading on the sofa",
+    "licenses": [
+     "book",
+     "tv_remote"
     ]
    }
   ]
