@@ -2,39 +2,14 @@
  "default": "pr2_kitchen",
  "scenes": [
   {
-   "name": "HSR_Apartment",
-   "robot": "hsrb",
-   "environment": "apartment"
+   "name": "my_run",
+   "robot": "",
+   "environment": "environment"
   },
   {
-   "name": "PR2_Apartment",
+   "name": "pr2_pouring",
    "robot": "pr2",
-   "environment": "apartment"
-  },
-  {
-   "name": "TIAGO_Apartment",
-   "robot": "tiago",
-   "environment": "apartment"
-  },
-  {
-   "name": "Unitree_warehouse",
-   "robot": "unitreeg1",
-   "environment": "no_roof_small_warehouse"
-  },
-  {
-   "name": "aicor_cell",
-   "robot": "aicor_cell_arm",
-   "environment": "aicor_cell_environment"
-  },
-  {
-   "name": "garmi_garmiapartment",
-   "robot": "garmi",
-   "environment": "scene-bodies"
-  },
-  {
-   "name": "tracy_lab",
-   "robot": "tracy",
-   "environment": null
+   "environment": "environment"
   }
  ]
 }

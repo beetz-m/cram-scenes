@@ -1,0 +1,273 @@
+{
+ "name": "pr2_pouring",
+ "framesPerSecond": 253.77,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "environment",
+   "urdf": "environment.urdf",
+   "prefix": "",
+   "robot": false,
+   "links": 113,
+   "movableJoints": [
+    "apartment/tap_joint",
+    "apartment/tap_handle_open_joint",
+    "apartment/tap_handle_hot_cold_joint",
+    "apartment/cabinet11_drawer_bottom_joint",
+    "apartment/cabinet11_drawer_middle_joint",
+    "apartment/cabinet11_drawer_top_joint",
+    "apartment/cabinet10_drawer_bottom_joint",
+    "apartment/cabinet10_drawer_middle_joint",
+    "apartment/cabinet10_drawer_top_joint",
+    "apartment/cabinet9_drawer_bottom_joint",
+    "apartment/cabinet9_drawer_middle_joint",
+    "apartment/cabinet9_drawer_top_joint",
+    "apartment/cabinet8_drawer_bottom_joint",
+    "apartment/cabinet8_drawer_middle_joint",
+    "apartment/dishwasher_drawer_middle_joint",
+    "apartment/cabinet7_door_bottom_left_joint",
+    "apartment/cabinet6_drawer_bottom_joint",
+    "apartment/cabinet6_drawer_middle_joint",
+    "apartment/cabinet6_drawer_top_joint",
+    "apartment/cabinet5_drawer_bottom_joint",
+    "apartment/cabinet5_drawer_middle_joint",
+    "apartment/cabinet5_drawer_top_joint",
+    "apartment/cabinet4_door_top_top_joint",
+    "apartment/cabinet4_door_bottom_bottom_joint",
+    "apartment/cabinet3_door_bottom_out_joint",
+    "apartment/cabinet3_door_bottom_left_joint",
+    "apartment/cabinet3_door_top_out_joint",
+    "apartment/cabinet3_door_top_left_joint",
+    "apartment/cabinet2_door_out_joint",
+    "apartment/cabinet2_door_left_joint",
+    "apartment/cabinet2_drawer_big_joint",
+    "apartment/cabinet2_drawer_small_joint",
+    "apartment/cabinet1_drawer_bottom_joint",
+    "apartment/cabinet1_drawer_middle_joint",
+    "apartment/cabinet1_door_top_left_joint",
+    "apartment/coffee_table_drawer_joint",
+    "apartment/wardrobe_door_right_joint",
+    "apartment/wardrobe_door_left_joint"
+   ]
+  },
+  {
+   "name": "pr2",
+   "urdf": "pr2.urdf",
+   "prefix": "",
+   "robot": true,
+   "links": 105,
+   "movableJoints": [
+    "pr2/torso_lift_motor_screw_joint",
+    "pr2/torso_lift_joint",
+    "pr2/l_shoulder_pan_joint",
+    "pr2/l_shoulder_lift_joint",
+    "pr2/l_upper_arm_roll_joint",
+    "pr2/l_elbow_flex_joint",
+    "pr2/l_forearm_roll_joint",
+    "pr2/l_wrist_flex_joint",
+    "pr2/l_wrist_roll_joint",
+    "pr2/l_gripper_r_finger_joint",
+    "pr2/l_gripper_r_finger_tip_joint",
+    "pr2/l_gripper_joint",
+    "pr2/l_gripper_l_finger_joint",
+    "pr2/l_gripper_l_finger_tip_joint",
+    "pr2/l_gripper_motor_slider_joint",
+    "pr2/l_gripper_motor_screw_joint",
+    "pr2/r_shoulder_pan_joint",
+    "pr2/r_shoulder_lift_joint",
+    "pr2/r_upper_arm_roll_joint",
+    "pr2/r_elbow_flex_joint",
+    "pr2/r_forearm_roll_joint",
+    "pr2/r_wrist_flex_joint",
+    "pr2/r_wrist_roll_joint",
+    "pr2/r_gripper_r_finger_joint",
+    "pr2/r_gripper_r_finger_tip_joint",
+    "pr2/r_gripper_joint",
+    "pr2/r_gripper_l_finger_joint",
+    "pr2/r_gripper_l_finger_tip_joint",
+    "pr2/r_gripper_motor_slider_joint",
+    "pr2/r_gripper_motor_screw_joint",
+    "pr2/laser_tilt_mount_joint",
+    "pr2/head_pan_joint",
+    "pr2/head_tilt_joint",
+    "pr2/br_caster_rotation_joint",
+    "pr2/br_caster_r_wheel_joint",
+    "pr2/br_caster_l_wheel_joint",
+    "pr2/bl_caster_rotation_joint",
+    "pr2/bl_caster_r_wheel_joint",
+    "pr2/bl_caster_l_wheel_joint",
+    "pr2/fr_caster_rotation_joint",
+    "pr2/fr_caster_r_wheel_joint",
+    "pr2/fr_caster_l_wheel_joint",
+    "pr2/fl_caster_rotation_joint",
+    "pr2/fl_caster_r_wheel_joint",
+    "pr2/fl_caster_l_wheel_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "pr2",
+  "prefix": "pr2",
+  "baseBody": "base_footprint",
+  "parts": {
+   "PR2LeftArm": [
+    "l_elbow_flex_link",
+    "l_forearm_link",
+    "l_forearm_roll_link",
+    "l_shoulder_lift_link",
+    "l_shoulder_pan_link",
+    "l_upper_arm_link",
+    "l_upper_arm_roll_link",
+    "l_wrist_flex_link",
+    "l_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2LeftGripper": [
+    "l_gripper_l_finger_link",
+    "l_gripper_l_finger_tip_frame",
+    "l_gripper_l_finger_tip_link",
+    "l_gripper_led_frame",
+    "l_gripper_motor_accelerometer_link",
+    "l_gripper_motor_screw_link",
+    "l_gripper_motor_slider_link",
+    "l_gripper_palm_link",
+    "l_gripper_r_finger_link",
+    "l_gripper_r_finger_tip_link",
+    "l_gripper_tool_frame"
+   ],
+   "PR2RightArm": [
+    "r_elbow_flex_link",
+    "r_forearm_link",
+    "r_forearm_roll_link",
+    "r_shoulder_lift_link",
+    "r_shoulder_pan_link",
+    "r_upper_arm_link",
+    "r_upper_arm_roll_link",
+    "r_wrist_flex_link",
+    "r_wrist_roll_link",
+    "torso_lift_link"
+   ],
+   "PR2RightGripper": [
+    "jeroen_cup.stl",
+    "r_gripper_l_finger_link",
+    "r_gripper_l_finger_tip_frame",
+    "r_gripper_l_finger_tip_link",
+    "r_gripper_led_frame",
+    "r_gripper_motor_accelerometer_link",
+    "r_gripper_motor_screw_link",
+    "r_gripper_motor_slider_link",
+    "r_gripper_palm_link",
+    "r_gripper_r_finger_link",
+    "r_gripper_r_finger_tip_link",
+    "r_gripper_tool_frame"
+   ]
+  },
+  "partAnnotations": [
+   {
+    "name": "PR2LeftArm",
+    "role": "arm",
+    "side": "left",
+    "links": [
+     "l_elbow_flex_link",
+     "l_forearm_link",
+     "l_forearm_roll_link",
+     "l_shoulder_lift_link",
+     "l_shoulder_pan_link",
+     "l_upper_arm_link",
+     "l_upper_arm_roll_link",
+     "l_wrist_flex_link",
+     "l_wrist_roll_link",
+     "torso_lift_link"
+    ],
+    "attachedTo": null
+   },
+   {
+    "name": "PR2LeftGripper",
+    "role": "end_effector",
+    "side": "left",
+    "links": [
+     "l_gripper_l_finger_link",
+     "l_gripper_l_finger_tip_frame",
+     "l_gripper_l_finger_tip_link",
+     "l_gripper_led_frame",
+     "l_gripper_motor_accelerometer_link",
+     "l_gripper_motor_screw_link",
+     "l_gripper_motor_slider_link",
+     "l_gripper_palm_link",
+     "l_gripper_r_finger_link",
+     "l_gripper_r_finger_tip_link",
+     "l_gripper_tool_frame"
+    ],
+    "attachedTo": "PR2LeftArm"
+   },
+   {
+    "name": "PR2RightArm",
+    "role": "arm",
+    "side": "right",
+    "links": [
+     "r_elbow_flex_link",
+     "r_forearm_link",
+     "r_forearm_roll_link",
+     "r_shoulder_lift_link",
+     "r_shoulder_pan_link",
+     "r_upper_arm_link",
+     "r_upper_arm_roll_link",
+     "r_wrist_flex_link",
+     "r_wrist_roll_link",
+     "torso_lift_link"
+    ],
+    "attachedTo": null
+   },
+   {
+    "name": "PR2RightGripper",
+    "role": "end_effector",
+    "side": "right",
+    "links": [
+     "jeroen_cup.stl",
+     "r_gripper_l_finger_link",
+     "r_gripper_l_finger_tip_frame",
+     "r_gripper_l_finger_tip_link",
+     "r_gripper_led_frame",
+     "r_gripper_motor_accelerometer_link",
+     "r_gripper_motor_screw_link",
+     "r_gripper_motor_slider_link",
+     "r_gripper_palm_link",
+     "r_gripper_r_finger_link",
+     "r_gripper_r_finger_tip_link",
+     "r_gripper_tool_frame"
+    ],
+    "attachedTo": "PR2RightArm"
+   }
+  ]
+ },
+ "objects": [
+  {
+   "id": "bowl",
+   "key": "bowl.stl",
+   "spawn": [
+    2.4,
+    2.2,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#cc3333",
+   "height": 0.06713,
+   "mesh": "meshes/objects/bowl.stl.stl"
+  }
+ ],
+ "segments": [
+  {
+   "step": "run",
+   "action": null,
+   "arm": null,
+   "start": 0,
+   "end": 1899
+  }
+ ],
+ "missingAssets": [],
+ "worldBound": true,
+ "bundleSignature": "world-91e498f46398fd94-robot-pr2"
+}
