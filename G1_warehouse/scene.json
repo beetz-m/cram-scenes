@@ -1,0 +1,197 @@
+{
+ "name": "G1_warehouse",
+ "framesPerSecond": 272.7,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "environment",
+   "urdf": "environment.urdf",
+   "prefix": "",
+   "robot": false,
+   "links": 27,
+   "movableJoints": [
+    "a2edc57a-5c9a-4682-89d5-b6b465b9369e/default_T_odom"
+   ]
+  },
+  {
+   "name": "unitreeg1",
+   "urdf": "unitreeg1.urdf",
+   "prefix": "",
+   "robot": true,
+   "links": 56,
+   "movableJoints": [
+    "offis_unitree_g1/waist_yaw_joint",
+    "offis_unitree_g1/waist_roll_joint",
+    "offis_unitree_g1/waist_pitch_joint",
+    "offis_unitree_g1/right_shoulder_pitch_joint",
+    "offis_unitree_g1/right_shoulder_roll_joint",
+    "offis_unitree_g1/right_shoulder_yaw_joint",
+    "offis_unitree_g1/right_elbow_joint",
+    "offis_unitree_g1/right_wrist_roll_joint",
+    "offis_unitree_g1/right_wrist_pitch_joint",
+    "offis_unitree_g1/right_wrist_yaw_joint",
+    "offis_unitree_g1/right_hand_index_0_joint",
+    "offis_unitree_g1/right_hand_index_1_joint",
+    "offis_unitree_g1/right_hand_middle_0_joint",
+    "offis_unitree_g1/right_hand_middle_1_joint",
+    "offis_unitree_g1/right_hand_thumb_0_joint",
+    "offis_unitree_g1/right_hand_thumb_1_joint",
+    "offis_unitree_g1/right_hand_thumb_2_joint",
+    "offis_unitree_g1/left_shoulder_pitch_joint",
+    "offis_unitree_g1/left_shoulder_roll_joint",
+    "offis_unitree_g1/left_shoulder_yaw_joint",
+    "offis_unitree_g1/left_elbow_joint",
+    "offis_unitree_g1/left_wrist_roll_joint",
+    "offis_unitree_g1/left_wrist_pitch_joint",
+    "offis_unitree_g1/left_wrist_yaw_joint",
+    "offis_unitree_g1/left_hand_index_0_joint",
+    "offis_unitree_g1/left_hand_index_1_joint",
+    "offis_unitree_g1/left_hand_middle_0_joint",
+    "offis_unitree_g1/left_hand_middle_1_joint",
+    "offis_unitree_g1/left_hand_thumb_0_joint",
+    "offis_unitree_g1/left_hand_thumb_1_joint",
+    "offis_unitree_g1/left_hand_thumb_2_joint",
+    "offis_unitree_g1/right_hip_pitch_joint",
+    "offis_unitree_g1/right_hip_roll_joint",
+    "offis_unitree_g1/right_hip_yaw_joint",
+    "offis_unitree_g1/right_knee_joint",
+    "offis_unitree_g1/right_ankle_pitch_joint",
+    "offis_unitree_g1/right_ankle_roll_joint",
+    "offis_unitree_g1/left_hip_pitch_joint",
+    "offis_unitree_g1/left_hip_roll_joint",
+    "offis_unitree_g1/left_hip_yaw_joint",
+    "offis_unitree_g1/left_knee_joint",
+    "offis_unitree_g1/left_ankle_pitch_joint",
+    "offis_unitree_g1/left_ankle_roll_joint"
+   ]
+  }
+ ],
+ "robot": {
+  "name": "unitreeg1",
+  "prefix": "offis_unitree_g1",
+  "baseBody": "pelvis",
+  "parts": {
+   "UnitreeG1LeftArm": [
+    "left_elbow_link",
+    "left_shoulder_pitch_link",
+    "left_shoulder_roll_link",
+    "left_shoulder_yaw_link",
+    "left_wrist_pitch_link",
+    "left_wrist_roll_link",
+    "left_wrist_yaw_link"
+   ],
+   "UnitreeG1LeftHand": [
+    "left_hand_index_0_link",
+    "left_hand_index_1_link",
+    "left_hand_middle_0_link",
+    "left_hand_middle_1_link",
+    "left_hand_palm_link",
+    "left_hand_thumb_0_link",
+    "left_hand_thumb_1_link",
+    "left_hand_thumb_2_link",
+    "left_hand_tool_frame",
+    "parcel"
+   ],
+   "UnitreeG1RightArm": [
+    "right_elbow_link",
+    "right_shoulder_pitch_link",
+    "right_shoulder_roll_link",
+    "right_shoulder_yaw_link",
+    "right_wrist_pitch_link",
+    "right_wrist_roll_link",
+    "right_wrist_yaw_link"
+   ],
+   "UnitreeG1RightHand": [
+    "right_hand_index_0_link",
+    "right_hand_index_1_link",
+    "right_hand_middle_0_link",
+    "right_hand_middle_1_link",
+    "right_hand_palm_link",
+    "right_hand_thumb_0_link",
+    "right_hand_thumb_1_link",
+    "right_hand_thumb_2_link",
+    "right_hand_tool_frame"
+   ]
+  },
+  "partAnnotations": [
+   {
+    "name": "UnitreeG1LeftArm",
+    "role": "arm",
+    "side": "left",
+    "links": [
+     "left_elbow_link",
+     "left_shoulder_pitch_link",
+     "left_shoulder_roll_link",
+     "left_shoulder_yaw_link",
+     "left_wrist_pitch_link",
+     "left_wrist_roll_link",
+     "left_wrist_yaw_link"
+    ],
+    "attachedTo": null
+   },
+   {
+    "name": "UnitreeG1LeftHand",
+    "role": "end_effector",
+    "side": "left",
+    "links": [
+     "left_hand_index_0_link",
+     "left_hand_index_1_link",
+     "left_hand_middle_0_link",
+     "left_hand_middle_1_link",
+     "left_hand_palm_link",
+     "left_hand_thumb_0_link",
+     "left_hand_thumb_1_link",
+     "left_hand_thumb_2_link",
+     "left_hand_tool_frame",
+     "parcel"
+    ],
+    "attachedTo": "UnitreeG1LeftArm"
+   },
+   {
+    "name": "UnitreeG1RightArm",
+    "role": "arm",
+    "side": "right",
+    "links": [
+     "right_elbow_link",
+     "right_shoulder_pitch_link",
+     "right_shoulder_roll_link",
+     "right_shoulder_yaw_link",
+     "right_wrist_pitch_link",
+     "right_wrist_roll_link",
+     "right_wrist_yaw_link"
+    ],
+    "attachedTo": null
+   },
+   {
+    "name": "UnitreeG1RightHand",
+    "role": "end_effector",
+    "side": "right",
+    "links": [
+     "right_hand_index_0_link",
+     "right_hand_index_1_link",
+     "right_hand_middle_0_link",
+     "right_hand_middle_1_link",
+     "right_hand_palm_link",
+     "right_hand_thumb_0_link",
+     "right_hand_thumb_1_link",
+     "right_hand_thumb_2_link",
+     "right_hand_tool_frame"
+    ],
+    "attachedTo": "UnitreeG1RightArm"
+   }
+  ]
+ },
+ "objects": [],
+ "segments": [
+  {
+   "step": "run",
+   "action": null,
+   "arm": null,
+   "start": 0,
+   "end": 7581
+  }
+ ],
+ "missingAssets": [],
+ "worldBound": true,
+ "bundleSignature": "world-44871514313f1926-robot-unitreeg1"
+}

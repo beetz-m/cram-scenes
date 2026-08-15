@@ -2,14 +2,19 @@
  "default": "pr2_kitchen",
  "scenes": [
   {
-   "name": "my_run",
-   "robot": "",
-   "environment": "environment"
+   "name": "G1_warehouse",
+   "robot": "unitreeg1",
+   "environment": "warehouse"
+  },
+  {
+   "name": "pr2_breakfast",
+   "robot": "pr2",
+   "environment": "apartment"
   },
   {
    "name": "pr2_pouring",
    "robot": "pr2",
-   "environment": "environment"
+   "environment": "apartment"
   }
  ]
 }
