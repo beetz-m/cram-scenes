@@ -4,17 +4,22 @@
   {
    "name": "G1_warehouse",
    "robot": "unitreeg1",
-   "environment": "warehouse"
+   "environment": "environment"
+  },
+  {
+   "name": "garmi_pick_place",
+   "robot": "garmi",
+   "environment": "environment"
   },
   {
    "name": "pr2_breakfast",
    "robot": "pr2",
-   "environment": "apartment"
+   "environment": "environment"
   },
   {
    "name": "pr2_pouring",
    "robot": "pr2",
-   "environment": "apartment"
+   "environment": "environment"
   }
  ]
 }
