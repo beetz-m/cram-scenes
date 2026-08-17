@@ -2,6 +2,11 @@
  "default": "pr2_kitchen",
  "scenes": [
   {
+   "name": "Franka_Montessori",
+   "robot": "panda",
+   "environment": "environment"
+  },
+  {
    "name": "G1_warehouse",
    "robot": "unitreeg1",
    "environment": "environment"

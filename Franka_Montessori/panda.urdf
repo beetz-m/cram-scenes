@@ -1,0 +1,633 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="panda">
+  <link name="world" />
+  <link name="link0">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_3.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_4.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_5.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_7.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_8.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_9.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_10.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link0_11.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="world_T_link0" type="fixed">
+    <parent link="world" />
+    <child link="link0" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="link1">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint1" type="revolute">
+    <parent link="link0" />
+    <child link="link1" />
+    <origin xyz="0.0 0.0 0.333" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-2.8973" upper="2.8973" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="link2">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint2" type="revolute">
+    <parent link="link1" />
+    <child link="link2" />
+    <origin xyz="0.0 0.0 0.0" rpy="-1.570796 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-1.7628" upper="1.7628" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="link3">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link3_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link3_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link3_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link3_3.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint3" type="revolute">
+    <parent link="link2" />
+    <child link="link3" />
+    <origin xyz="0.0 -0.316 0.0" rpy="1.570796 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-2.8973" upper="2.8973" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="link4">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link4_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link4_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link4_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link4_3.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint4" type="revolute">
+    <parent link="link3" />
+    <child link="link4" />
+    <origin xyz="0.0825 0.0 0.0" rpy="1.570796 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-3.0718" upper="-0.0698" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="link5">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link5_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link5_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link5_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint5" type="revolute">
+    <parent link="link4" />
+    <child link="link5" />
+    <origin xyz="-0.0825 0.384 0.0" rpy="-1.570796 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-2.8973" upper="2.8973" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="link6">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_3.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_4.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_5.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_6.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_7.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.039216 0.541176 0.780392 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_8.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.039216 0.541176 0.780392 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_9.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_10.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_11.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_12.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.0 1.0 0.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_13.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_14.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_15.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link6_16.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint6" type="revolute">
+    <parent link="link5" />
+    <child link="link6" />
+    <origin xyz="0.0 0.0 0.0" rpy="1.570796 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-0.0175" upper="3.7525" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="link7">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_3.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_4.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_5.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_6.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/link7_7.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="joint7" type="revolute">
+    <parent link="link6" />
+    <child link="link7" />
+    <origin xyz="0.088 0.0 0.0" rpy="1.570796 0.0 0.0" />
+    <axis xyz="0.0 0.0 1.0" />
+    <limit lower="-2.8973" upper="2.8973" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="attachment" />
+  <joint name="link7_T_attachment" type="fixed">
+    <parent link="link7" />
+    <child link="attachment" />
+    <origin xyz="0.0 0.0 0.107" rpy="0.0 0.0 2.356196" />
+  </joint>
+  <link name="/hand">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/hand_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/hand_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/hand_2.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/hand_3.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 1.0 1.0 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/hand_4.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="attachment_T_/hand" type="fixed">
+    <parent link="attachment" />
+    <child link="/hand" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="/right_finger">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/finger_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/finger_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="/finger_joint2" type="prismatic">
+    <parent link="/hand" />
+    <child link="/right_finger" />
+    <origin xyz="0.0 0.0 0.0584" rpy="0.0 0.0 3.141593" />
+    <axis xyz="0.0 1.0 0.0" />
+    <limit lower="0.0" upper="0.04" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="/left_finger">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/finger_0.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.901961 0.921569 0.929412 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/mjcf/assets/finger_1.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="0.25 0.25 0.25 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="/finger_joint1" type="prismatic">
+    <parent link="/hand" />
+    <child link="/left_finger" />
+    <origin xyz="0.0 0.0 0.0584" rpy="0.0 0.0 0.0" />
+    <axis xyz="0.0 1.0 0.0" />
+    <limit lower="0.0" upper="0.04" velocity="0.0" effort="0.0" />
+  </joint>
+  <link name="/tool_frame" />
+  <joint name="/hand_T_/tool_frame" type="fixed">
+    <parent link="/hand" />
+    <child link="/tool_frame" />
+    <origin xyz="0.0 0.0 0.1034" rpy="0.0 0.0 0.0" />
+  </joint>
+</robot>

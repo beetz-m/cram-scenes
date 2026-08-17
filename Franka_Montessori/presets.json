@@ -1,0 +1,104 @@
+{
+  "presets": [
+    {
+      "text": "which shapes are inserted?",
+      "code": "an(entity(shape).where(shape.is_inserted == True))",
+      "scope": "current_state"
+    },
+    {
+      "text": "which shapes are still out?",
+      "code": "an(entity(shape).where(shape.is_inserted == False))",
+      "scope": "current_state"
+    },
+    {
+      "text": "outcome per shape",
+      "code": "set_of(shape.name, shape.outcome, shape.attempt_count)",
+      "scope": "current_state"
+    },
+    {
+      "text": "how many of each outcome?",
+      "code": "set_of(shape.outcome, count(shape)).grouped_by(shape.outcome)",
+      "scope": "current_state"
+    },
+    {
+      "text": "where is each shape aimed?",
+      "code": "set_of(shape.name, shape.target_hole, shape.target_pose)",
+      "scope": "current_state"
+    },
+    {
+      "text": "where did each attempt aim?",
+      "code": "set_of(attempt.name, attempt.target_hole, attempt.target_pose)",
+      "scope": "current_state"
+    },
+    {
+      "text": "why did each shape fail?",
+      "code": "set_of(shape.name, shape.failure_reason, shape.failure_detail).where(shape.is_inserted == False)",
+      "scope": "current_state"
+    },
+    {
+      "text": "why did each attempt fail?",
+      "code": "set_of(attempt.name, attempt.failure_reason, attempt.failure_detail).where(attempt.succeeded == False)",
+      "scope": "current_state"
+    },
+    {
+      "text": "never picked up",
+      "code": "an(entity(attempt).where(attempt.failure_reason == 'not_picked_up'))",
+      "scope": "current_state"
+    },
+    {
+      "text": "dropped before insertion",
+      "code": "an(entity(attempt).where(attempt.failure_reason == 'dropped_before_insertion'))",
+      "scope": "current_state"
+    },
+    {
+      "text": "wedged in the hole",
+      "code": "an(entity(attempt).where(attempt.failure_reason == 'wedged_in_hole'))",
+      "scope": "current_state"
+    },
+    {
+      "text": "which plan steps failed?",
+      "code": "an(entity(plan_step).where(plan_step.status == 'FAILED'))",
+      "scope": "current_state"
+    },
+    {
+      "text": "what was detected, and when?",
+      "code": "set_of(event.shape_key, event.event_type, event.timestamp).ordered_by(event.timestamp)",
+      "scope": "current_state"
+    },
+    {
+      "text": "insertions and the hole they went through",
+      "code": "set_of(event.shape_key, event.through_hole).where(event.event_type == 'InsertionEvent')",
+      "scope": "current_state"
+    },
+    {
+      "text": "what is on the board?",
+      "code": "set_of(shape.name, shape.shape_category, shape.target_hole)",
+      "scope": "current_state"
+    },
+    {
+      "text": "steps of every attempt",
+      "code": "set_of(plan_step.name, plan_step.status, plan_step.duration).ordered_by(plan_step.started_at)",
+      "scope": "current_state"
+    },
+    {
+      "text": "slowest steps",
+      "code": "set_of(plan_step.name, plan_step.duration).ordered_by(plan_step.duration, descending=True).limit(10)",
+      "scope": "current_state"
+    },
+    {
+      "text": "success rate per shape",
+      "code": "shape_key = shape_result.shape_key\nset_of(\n    shape_key,\n    sum(case_when(shape_result.outcome == InsertionOutcome.FELL_THROUGH, 1, 0)),\n    count(shape_result),\n).grouped_by(shape_key).ordered_by(shape_key)",
+      "scope": "episodic_memory"
+    },
+    {
+      "text": "how did each shape's runs end?",
+      "code": "shape_key = shape_result.shape_key\noutcome = shape_result.outcome\nset_of(shape_key, outcome, count(shape_result)).grouped_by(shape_key, outcome).ordered_by(shape_key)",
+      "scope": "episodic_memory"
+    },
+    {
+      "text": "every recorded run",
+      "code": "set_of(shape_result.shape_key, shape_result.outcome)",
+      "scope": "episodic_memory"
+    }
+  ]
+}
