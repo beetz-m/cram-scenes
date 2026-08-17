@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="environment">
+  <link name="world_root" />
+  <link name="world/root" />
+  <joint name="world_root_to_world/root" type="fixed">
+    <parent link="world_root" />
+    <child link="world/root" />
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/panda_mount" />
+  <joint name="montessori/root_T_panda_mount" type="fixed">
+    <parent link="world/root" />
+    <child link="montessori/panda_mount" />
+    <origin xyz="0.0 0.0 0.5125" rpy="0.0 0.0 3.141593" />
+  </joint>
+  <link name="montessori/robot_stand">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.3 0.3 0.025" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.125 -0.125 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.125 0.125 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.125 -0.125 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.125 0.125 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/root_T_robot_stand" type="fixed">
+    <parent link="world/root" />
+    <child link="montessori/robot_stand" />
+    <origin xyz="0.0 0.0 0.5" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/board">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <mesh filename="meshes/environment/35061_p1eifze_/35061_p1eifze_.obj" scale="1.0 1.0 1.0" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/root_T_board" type="fixed">
+    <parent link="world/root" />
+    <child link="montessori/board" />
+    <origin xyz="-0.4225 0.0 0.553" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/drawer_3">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.09 0.08 0.06" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/board_T_drawer_3" type="fixed">
+    <parent link="montessori/board" />
+    <child link="montessori/drawer_3" />
+    <origin xyz="-0.003 -0.087 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/drawer_3_handle">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.03 0.015 0.015" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/drawer_3_T_drawer_3_handle" type="fixed">
+    <parent link="montessori/drawer_3" />
+    <child link="montessori/drawer_3_handle" />
+    <origin xyz="-0.061 0.0 0.001" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/drawer_2">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.09 0.08 0.06" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/board_T_drawer_2" type="fixed">
+    <parent link="montessori/board" />
+    <child link="montessori/drawer_2" />
+    <origin xyz="-0.003 0.0 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/drawer_2_handle">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.03 0.015 0.015" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/drawer_2_T_drawer_2_handle" type="fixed">
+    <parent link="montessori/drawer_2" />
+    <child link="montessori/drawer_2_handle" />
+    <origin xyz="-0.061 0.0 0.001" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/drawer_1">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.09 0.08 0.06" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/board_T_drawer_1" type="fixed">
+    <parent link="montessori/board" />
+    <child link="montessori/drawer_1" />
+    <origin xyz="-0.003 0.087 0.0" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/drawer_1_handle">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.03 0.015 0.015" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/drawer_1_T_drawer_1_handle" type="fixed">
+    <parent link="montessori/drawer_1" />
+    <child link="montessori/drawer_1_handle" />
+    <origin xyz="-0.061 0.0 0.001" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/shape_stand">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.5 0.4 0.025" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.225 -0.175 -0.28275" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.5405" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.225 0.175 -0.28275" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.5405" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.225 -0.175 -0.28275" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.5405" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.225 0.175 -0.28275" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.5405" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/root_T_shape_stand" type="fixed">
+    <parent link="world/root" />
+    <child link="montessori/shape_stand" />
+    <origin xyz="0.0 -0.5 0.553" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/board_table">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.35 0.35 0.025" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.15 -0.15 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="-0.15 0.15 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.15 -0.15 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+    <visual>
+      <origin xyz="0.15 0.15 -0.25625" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="0.05 0.05 0.4875" />
+      </geometry>
+      <material name="">
+        <color rgba="1.0 0.827 0.6078 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/root_T_board_table" type="fixed">
+    <parent link="world/root" />
+    <child link="montessori/board_table" />
+    <origin xyz="-0.5 0.0 0.5" rpy="0.0 0.0 0.0" />
+  </joint>
+  <link name="montessori/floor">
+    <visual>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+      <geometry>
+        <box size="6.0 4.0 0.02" />
+      </geometry>
+      <material name="">
+        <color rgba="0.5 0.5 0.5 1.0" />
+      </material>
+    </visual>
+  </link>
+  <joint name="montessori/root_T_floor" type="fixed">
+    <parent link="world/root" />
+    <child link="montessori/floor" />
+    <origin xyz="0.0 0.0 -0.01" rpy="0.0 0.0 0.0" />
+  </joint>
+</robot>

@@ -1,0 +1,477 @@
+{
+ "name": "Franka_Montessori",
+ "framesPerSecond": 50,
+ "trajectory": "trajectory.json",
+ "models": [
+  {
+   "name": "panda",
+   "urdf": "panda.urdf",
+   "prefix": "",
+   "robot": true,
+   "links": 14,
+   "movableJoints": [
+    "joint1",
+    "joint2",
+    "joint3",
+    "joint4",
+    "joint5",
+    "joint6",
+    "joint7",
+    "/finger_joint2",
+    "/finger_joint1"
+   ]
+  },
+  {
+   "name": "environment",
+   "urdf": "environment.urdf",
+   "prefix": "",
+   "robot": false,
+   "links": 13,
+   "movableJoints": []
+  }
+ ],
+ "robot": {
+  "name": "panda",
+  "prefix": "",
+  "baseBody": "link0",
+  "parts": {
+   "PandaArm": [
+    "link0",
+    "link1",
+    "link2",
+    "link3",
+    "link4",
+    "link5",
+    "link6",
+    "link7"
+   ],
+   "PandaGripper": [
+    "hand",
+    "left_finger",
+    "right_finger",
+    "tool_frame"
+   ]
+  },
+  "partAnnotations": [
+   {
+    "name": "PandaArm",
+    "role": "arm",
+    "side": null,
+    "links": [
+     "link0",
+     "link1",
+     "link2",
+     "link3",
+     "link4",
+     "link5",
+     "link6",
+     "link7"
+    ],
+    "attachedTo": null
+   },
+   {
+    "name": "PandaGripper",
+    "role": "end_effector",
+    "side": null,
+    "links": [
+     "hand",
+     "left_finger",
+     "right_finger",
+     "tool_frame"
+    ],
+    "attachedTo": "PandaArm"
+   }
+  ]
+ },
+ "objects": [
+  {
+   "id": "circular_hole_1_shape",
+   "key": "circular_hole_1_shape",
+   "spawn": [
+    -0.18003,
+    -0.4,
+    0.58048,
+    6e-05,
+    -0.00076,
+    -0.0,
+    1.0
+   ],
+   "color": "#f3f0ea",
+   "height": 0.03,
+   "mesh": "meshes/objects/circular_hole_1_shape.obj"
+  },
+  {
+   "id": "square_hole_shape",
+   "key": "square_hole_shape",
+   "spawn": [
+    -0.09,
+    -0.4,
+    0.58046,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#cf5b3a",
+   "height": 0.03,
+   "mesh": "meshes/objects/square_hole_shape.obj"
+  },
+  {
+   "id": "triangle_hole_shape",
+   "key": "triangle_hole_shape",
+   "spawn": [
+    2e-05,
+    -0.40003,
+    0.57545,
+    0.00011,
+    -0.00073,
+    -0.00042,
+    1.0
+   ],
+   "color": "#b8bcc4",
+   "height": 0.02,
+   "mesh": "meshes/objects/triangle_hole_shape.obj"
+  },
+  {
+   "id": "rectangular_hole_shape",
+   "key": "rectangular_hole_shape",
+   "spawn": [
+    0.09,
+    -0.4,
+    0.58046,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#e7c26a",
+   "height": 0.03,
+   "mesh": "meshes/objects/rectangular_hole_shape.obj"
+  },
+  {
+   "id": "circular_hole_2_shape",
+   "key": "circular_hole_2_shape",
+   "spawn": [
+    0.18,
+    -0.4,
+    0.58046,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "color": "#7fb069",
+   "height": 0.03,
+   "mesh": "meshes/objects/circular_hole_2_shape.obj"
+  }
+ ],
+ "segments": [
+  {
+   "step": "prepare",
+   "action": null,
+   "arm": null,
+   "start": 0,
+   "end": 316
+  },
+  {
+   "step": "insertmontessorishape_square_hole_shape",
+   "action": "InsertMontessoriShapeAction",
+   "arm": "RIGHT",
+   "start": 316,
+   "end": 606,
+   "picks": "square_hole_shape",
+   "attach": 316,
+   "detach": 469,
+   "place": [
+    -0.39845,
+    -0.08683,
+    0.52749
+   ]
+  }
+ ],
+ "actions": [
+  {
+   "action": "InsertMontessoriShapeAction",
+   "arm": "RIGHT",
+   "target": "square_hole_shape"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  },
+  {
+   "action": "PickUpAction",
+   "arm": "RIGHT",
+   "target": "square_hole_shape"
+  },
+  {
+   "action": "ReachAction",
+   "arm": "RIGHT",
+   "target": "square_hole_shape"
+  },
+  {
+   "action": "PlaceAction",
+   "arm": "RIGHT",
+   "target": "square_hole_shape"
+  },
+  {
+   "action": "ParkArmsAction",
+   "arm": "BOTH",
+   "target": null
+  }
+ ],
+ "planTrees": [
+  {
+   "kind": "ActionNode",
+   "label": "InsertMontessoriShapeAction",
+   "status": "SUCCEEDED",
+   "target": "square_hole_shape",
+   "arm": "RIGHT",
+   "children": [
+    {
+     "kind": "ConditionNode",
+     "label": "ConditionNode",
+     "status": "CREATED",
+     "children": []
+    },
+    {
+     "kind": "SequentialNode",
+     "label": "SequentialNode",
+     "status": "CREATED",
+     "children": [
+      {
+       "kind": "ActionNode",
+       "label": "ParkArmsAction",
+       "status": "CREATED",
+       "arm": "BOTH",
+       "children": [
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveJointsMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "MotionNode",
+       "label": "MoveJointsMotion",
+       "status": "CREATED",
+       "children": []
+      },
+      {
+       "kind": "ActionNode",
+       "label": "PickUpAction",
+       "status": "CREATED",
+       "target": "square_hole_shape",
+       "arm": "RIGHT",
+       "children": [
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "SequentialNode",
+         "label": "SequentialNode",
+         "status": "CREATED",
+         "children": [
+          {
+           "kind": "ActionNode",
+           "label": "ReachAction",
+           "status": "CREATED",
+           "target": "square_hole_shape",
+           "arm": "RIGHT",
+           "children": [
+            {
+             "kind": "ConditionNode",
+             "label": "ConditionNode",
+             "status": "CREATED",
+             "children": []
+            },
+            {
+             "kind": "SequentialNode",
+             "label": "SequentialNode",
+             "status": "CREATED",
+             "children": [
+              {
+               "kind": "MotionNode",
+               "label": "MoveToolCenterPointMotion",
+               "status": "CREATED",
+               "arm": "RIGHT",
+               "children": []
+              },
+              {
+               "kind": "MotionNode",
+               "label": "MoveGripperMotion",
+               "status": "CREATED",
+               "children": []
+              },
+              {
+               "kind": "MotionNode",
+               "label": "MoveToolCenterPointMotion",
+               "status": "CREATED",
+               "arm": "RIGHT",
+               "children": []
+              }
+             ]
+            },
+            {
+             "kind": "ConditionNode",
+             "label": "ConditionNode",
+             "status": "CREATED",
+             "children": []
+            }
+           ]
+          },
+          {
+           "kind": "MotionNode",
+           "label": "MoveGripperMotion",
+           "status": "CREATED",
+           "target": "square_hole_shape",
+           "children": []
+          },
+          {
+           "kind": "MotionNode",
+           "label": "MoveToolCenterPointMotion",
+           "status": "CREATED",
+           "arm": "RIGHT",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ActionNode",
+       "label": "PlaceAction",
+       "status": "CREATED",
+       "target": "square_hole_shape",
+       "arm": "RIGHT",
+       "children": [
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "SequentialNode",
+         "label": "SequentialNode",
+         "status": "CREATED",
+         "children": [
+          {
+           "kind": "MotionNode",
+           "label": "MoveToolCenterPointMotion",
+           "status": "CREATED",
+           "arm": "RIGHT",
+           "children": []
+          },
+          {
+           "kind": "MotionNode",
+           "label": "MoveToolCenterPointMotion",
+           "status": "CREATED",
+           "arm": "RIGHT",
+           "children": []
+          },
+          {
+           "kind": "MotionNode",
+           "label": "MoveGripperMotion",
+           "status": "CREATED",
+           "children": []
+          },
+          {
+           "kind": "MotionNode",
+           "label": "MoveToolCenterPointMotion",
+           "status": "CREATED",
+           "arm": "RIGHT",
+           "children": []
+          }
+         ]
+        },
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      },
+      {
+       "kind": "ActionNode",
+       "label": "ParkArmsAction",
+       "status": "CREATED",
+       "arm": "BOTH",
+       "children": [
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "MotionNode",
+         "label": "MoveJointsMotion",
+         "status": "CREATED",
+         "children": []
+        },
+        {
+         "kind": "ConditionNode",
+         "label": "ConditionNode",
+         "status": "CREATED",
+         "children": []
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "kind": "ConditionNode",
+     "label": "ConditionNode",
+     "status": "CREATED",
+     "children": []
+    }
+   ]
+  }
+ ],
+ "placeTarget": {
+  "position": [
+   -0.398,
+   -0.087
+  ],
+  "z": 0.507,
+  "bounds": {
+   "minX": -0.95,
+   "maxX": 0.15,
+   "minY": -0.64,
+   "maxY": 0.56
+  }
+ },
+ "dragBounds": {
+  "minX": -0.53,
+  "maxX": 0.53,
+  "minY": -1.0,
+  "maxY": 0.2
+ },
+ "missingAssets": []
+}
