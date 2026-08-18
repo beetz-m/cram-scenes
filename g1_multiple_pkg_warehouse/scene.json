@@ -1,6 +1,6 @@
 {
- "name": "G1_warehouse",
- "framesPerSecond": 272.7,
+ "name": "g1_multiple_pkg_warehouse",
+ "framesPerSecond": 89.35,
  "trajectory": "trajectory.json",
  "models": [
   {
@@ -10,7 +10,7 @@
    "robot": false,
    "links": 27,
    "movableJoints": [
-    "a2edc57a-5c9a-4682-89d5-b6b465b9369e/default_T_odom"
+    "aba61a87-38cb-438a-ac9f-631cb82ae6f0/default_T_odom"
    ]
   },
   {
@@ -18,7 +18,7 @@
    "urdf": "unitreeg1.urdf",
    "prefix": "",
    "robot": true,
-   "links": 56,
+   "links": 55,
    "movableJoints": [
     "offis_unitree_g1/waist_yaw_joint",
     "offis_unitree_g1/waist_roll_joint",
@@ -89,8 +89,7 @@
     "left_hand_thumb_0_link",
     "left_hand_thumb_1_link",
     "left_hand_thumb_2_link",
-    "left_hand_tool_frame",
-    "parcel"
+    "left_hand_tool_frame"
    ],
    "UnitreeG1RightArm": [
     "right_elbow_link",
@@ -142,8 +141,7 @@
      "left_hand_thumb_0_link",
      "left_hand_thumb_1_link",
      "left_hand_thumb_2_link",
-     "left_hand_tool_frame",
-     "parcel"
+     "left_hand_tool_frame"
     ],
     "attachedTo": "UnitreeG1LeftArm"
    },
@@ -181,17 +179,98 @@
    }
   ]
  },
- "objects": [],
+ "objects": [
+  {
+   "id": "parcel1",
+   "key": "parcel1",
+   "spawn": [
+    2.60006,
+    7.70052,
+    0.80145,
+    -0.00088,
+    -0.00087,
+    0.0005,
+    1.0
+   ],
+   "color": "#d9731a",
+   "height": 0.14,
+   "box": [
+    0.08,
+    0.08,
+    0.14
+   ]
+  },
+  {
+   "id": "parcel2",
+   "key": "parcel2",
+   "spawn": [
+    2.59988,
+    7.99905,
+    0.80494,
+    0.0019,
+    0.00145,
+    -0.00091,
+    1.0
+   ],
+   "color": "#99731a",
+   "height": 0.1,
+   "box": [
+    0.08,
+    0.08,
+    0.1
+   ]
+  },
+  {
+   "id": "parcel3",
+   "key": "parcel3",
+   "spawn": [
+    -0.637,
+    4.38,
+    0.74,
+    0.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "color": "#bf731a",
+   "height": 0.04,
+   "box": [
+    0.04,
+    0.04,
+    0.04
+   ]
+  },
+  {
+   "id": "parcel4",
+   "key": "parcel4",
+   "spawn": [
+    -0.637,
+    4.7,
+    0.788,
+    0.0,
+    -0.0,
+    1.0,
+    0.0
+   ],
+   "color": "#73731a",
+   "height": 0.14,
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ]
+  }
+ ],
  "segments": [
   {
    "step": "run",
    "action": null,
    "arm": null,
    "start": 0,
-   "end": 7581
+   "end": 5748
   }
  ],
  "missingAssets": [],
  "worldBound": true,
- "bundleSignature": "world-44871514313f1926-robot-unitreeg1"
+ "bundleSignature": "world-05b54f50743cb503-robot-unitreeg1"
 }

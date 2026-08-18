@@ -7,11 +7,11 @@
     <child link="default" />
     <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
   </joint>
-  <link name="a2edc57a-5c9a-4682-89d5-b6b465b9369e/odom" />
-  <joint name="a2edc57a-5c9a-4682-89d5-b6b465b9369e/default_T_odom" type="floating">
+  <link name="aba61a87-38cb-438a-ac9f-631cb82ae6f0/odom" />
+  <joint name="aba61a87-38cb-438a-ac9f-631cb82ae6f0/default_T_odom" type="floating">
     <parent link="default" />
-    <child link="a2edc57a-5c9a-4682-89d5-b6b465b9369e/odom" />
-    <origin xyz="1.9 9.1 0.7923" rpy="0.0 0.0 0.0" />
+    <child link="aba61a87-38cb-438a-ac9f-631cb82ae6f0/odom" />
+    <origin xyz="1.75 7.41 0.7923" rpy="0.0 0.0 0.0" />
   </joint>
   <link name="aws_robomaker_warehouse_PalletJackB_01_001/link">
     <visual>
