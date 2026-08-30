@@ -1,4 +1,595 @@
 {
+ "household":  {
+  "places": {
+   "seat_south_plate": {
+    "label": "south plate",
+    "pos": [
+     2.15,
+     1.5,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_south_plate": {
+    "label": "plate tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_south_fork": {
+    "label": "south fork",
+    "pos": [
+     2.35,
+     1.5,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_south_fork": {
+    "label": "fork tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_south_knife": {
+    "label": "south knife",
+    "pos": [
+     2.55,
+     1.5,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_south_knife": {
+    "label": "knife tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_south_glass": {
+    "label": "south glass",
+    "pos": [
+     2.75,
+     1.5,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_south_glass": {
+    "label": "glass tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_north_plate": {
+    "label": "north plate",
+    "pos": [
+     2.15,
+     1.7,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_north_plate": {
+    "label": "plate tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_north_fork": {
+    "label": "north fork",
+    "pos": [
+     2.35,
+     1.7,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_north_fork": {
+    "label": "fork tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_north_knife": {
+    "label": "north knife",
+    "pos": [
+     2.55,
+     1.7,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_north_knife": {
+    "label": "knife tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_north_glass": {
+    "label": "north glass",
+    "pos": [
+     2.75,
+     1.7,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_north_glass": {
+    "label": "glass tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_west_plate": {
+    "label": "west plate",
+    "pos": [
+     2.15,
+     1.9,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_west_plate": {
+    "label": "plate tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_west_fork": {
+    "label": "west fork",
+    "pos": [
+     2.35,
+     1.9,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_west_fork": {
+    "label": "fork tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_west_knife": {
+    "label": "west knife",
+    "pos": [
+     2.55,
+     1.9,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_west_knife": {
+    "label": "knife tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_west_glass": {
+    "label": "west glass",
+    "pos": [
+     2.75,
+     1.9,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_west_glass": {
+    "label": "glass tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_east_plate": {
+    "label": "east plate",
+    "pos": [
+     2.15,
+     2.1,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_east_plate": {
+    "label": "plate tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_east_fork": {
+    "label": "east fork",
+    "pos": [
+     2.35,
+     2.1,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_east_fork": {
+    "label": "fork tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_east_knife": {
+    "label": "east knife",
+    "pos": [
+     2.55,
+     2.1,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_east_knife": {
+    "label": "knife tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   },
+   "seat_east_glass": {
+    "label": "east glass",
+    "pos": [
+     2.75,
+     2.1,
+     1.0
+    ],
+    "kind": "destination"
+   },
+   "stage_east_glass": {
+    "label": "glass tray",
+    "pos": [
+     2.15,
+     2.5,
+     1.0
+    ],
+    "kind": "source"
+   }
+  },
+  "objects": [
+   {
+    "id": "south_plate",
+    "key": "south_plate",
+    "label": "south plate",
+    "state": "clean",
+    "current": "stage_south_plate",
+    "home": "seat_south_plate",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "south_fork",
+    "key": "south_fork",
+    "label": "south fork",
+    "state": "clean",
+    "current": "stage_south_fork",
+    "home": "seat_south_fork",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "south_knife",
+    "key": "south_knife",
+    "label": "south knife",
+    "state": "clean",
+    "current": "stage_south_knife",
+    "home": "seat_south_knife",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "south_glass",
+    "key": "south_glass",
+    "label": "south glass",
+    "state": "clean",
+    "current": "stage_south_glass",
+    "home": "seat_south_glass",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "north_plate",
+    "key": "north_plate",
+    "label": "north plate",
+    "state": "clean",
+    "current": "stage_north_plate",
+    "home": "seat_north_plate",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "north_fork",
+    "key": "north_fork",
+    "label": "north fork",
+    "state": "clean",
+    "current": "stage_north_fork",
+    "home": "seat_north_fork",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "north_knife",
+    "key": "north_knife",
+    "label": "north knife",
+    "state": "clean",
+    "current": "stage_north_knife",
+    "home": "seat_north_knife",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "north_glass",
+    "key": "north_glass",
+    "label": "north glass",
+    "state": "clean",
+    "current": "stage_north_glass",
+    "home": "seat_north_glass",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "west_plate",
+    "key": "west_plate",
+    "label": "west plate",
+    "state": "clean",
+    "current": "stage_west_plate",
+    "home": "seat_west_plate",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "west_fork",
+    "key": "west_fork",
+    "label": "west fork",
+    "state": "clean",
+    "current": "stage_west_fork",
+    "home": "seat_west_fork",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "west_knife",
+    "key": "west_knife",
+    "label": "west knife",
+    "state": "clean",
+    "current": "stage_west_knife",
+    "home": "seat_west_knife",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "west_glass",
+    "key": "west_glass",
+    "label": "west glass",
+    "state": "clean",
+    "current": "stage_west_glass",
+    "home": "seat_west_glass",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "east_plate",
+    "key": "east_plate",
+    "label": "east plate",
+    "state": "clean",
+    "current": "stage_east_plate",
+    "home": "seat_east_plate",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "east_fork",
+    "key": "east_fork",
+    "label": "east fork",
+    "state": "clean",
+    "current": "stage_east_fork",
+    "home": "seat_east_fork",
+    "outSpots": [],
+    "arm": "LEFT"
+   },
+   {
+    "id": "east_knife",
+    "key": "east_knife",
+    "label": "east knife",
+    "state": "clean",
+    "current": "stage_east_knife",
+    "home": "seat_east_knife",
+    "outSpots": [],
+    "arm": "RIGHT"
+   },
+   {
+    "id": "east_glass",
+    "key": "east_glass",
+    "label": "east glass",
+    "state": "clean",
+    "current": "stage_east_glass",
+    "home": "seat_east_glass",
+    "outSpots": [],
+    "arm": "RIGHT"
+   }
+  ],
+  "norms": [
+   {
+    "object": "south_plate",
+    "destination": "seat_south_plate",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "south_fork",
+    "destination": "seat_south_fork",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "south_knife",
+    "destination": "seat_south_knife",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "south_glass",
+    "destination": "seat_south_glass",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "north_plate",
+    "destination": "seat_north_plate",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "north_fork",
+    "destination": "seat_north_fork",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "north_knife",
+    "destination": "seat_north_knife",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "north_glass",
+    "destination": "seat_north_glass",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "west_plate",
+    "destination": "seat_west_plate",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "west_fork",
+    "destination": "seat_west_fork",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "west_knife",
+    "destination": "seat_west_knife",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "west_glass",
+    "destination": "seat_west_glass",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "east_plate",
+    "destination": "seat_east_plate",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "east_fork",
+    "destination": "seat_east_fork",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "east_knife",
+    "destination": "seat_east_knife",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "east_glass",
+    "destination": "seat_east_glass",
+    "relation": "on",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "exact_return"
+   }
+  ],
+  "activities": [
+   {
+    "id": "set_the_table",
+    "label": "set the table",
+    "licenses": []
+   }
+  ]
+ },
  "name": "PR2_Apartment_TableSetting",
  "fps": 20,
  "trajectory": "trajectory.json",
