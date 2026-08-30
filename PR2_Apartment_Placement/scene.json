@@ -1127,7 +1127,7 @@
     "key": "milk.stl",
     "label": "milk",
     "state": "opened",
-    "current": "cold_cabinet",
+    "current": "counter",
     "home": "cold_cabinet",
     "outSpots": [
      "table",
@@ -1166,7 +1166,7 @@
     "key": "dirty_mug",
     "label": "dirty mug",
     "state": "dirty",
-    "current": "dishwasher",
+    "current": "counter",
     "home": "dishwasher",
     "outSpots": [
      "table",
@@ -1206,7 +1206,7 @@
     "key": "keys",
     "label": "keys",
     "state": "cue",
-    "current": "entrance_bowl",
+    "current": "table",
     "home": "entrance_bowl",
     "outSpots": [
      "table",
@@ -1219,7 +1219,7 @@
     "key": "book",
     "label": "book",
     "state": "unread",
-    "current": "bookshelf",
+    "current": "coffee_table",
     "home": "bookshelf",
     "outSpots": [
      "sofa",
@@ -1234,7 +1234,7 @@
     "key": "tv_remote",
     "label": "TV remote",
     "state": "idle",
-    "current": "tv_stand",
+    "current": "sofa",
     "home": "tv_stand",
     "outSpots": [
      "sofa",
