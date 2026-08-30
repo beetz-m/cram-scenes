@@ -1,5 +1,5 @@
 {
- "default": "pr2_kitchen",
+ "default": "PR2_Apartment_Placement",
  "scenes": [
   {
    "name": "HSR_Apartment",
