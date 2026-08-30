@@ -225,6 +225,306 @@
    ],
    "color": "#b8bcc4",
    "height": 1.0
+  },
+  {
+   "id": "dirty_mug",
+   "key": "dirty_mug",
+   "box": [
+    0.07,
+    0.07,
+    0.09
+   ],
+   "color": "#7a5a44",
+   "spawn": [
+    1.05,
+    1.3,
+    0.62,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.09
+  },
+  {
+   "id": "clean_glass",
+   "key": "clean_glass",
+   "box": [
+    0.05,
+    0.05,
+    0.1
+   ],
+   "color": "#cfe2ee",
+   "spawn": [
+    1.95,
+    0.9,
+    1.15,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.1
+  },
+  {
+   "id": "empty_carton",
+   "key": "empty_carton",
+   "box": [
+    0.06,
+    0.06,
+    0.14
+   ],
+   "color": "#cfc9bf",
+   "spawn": [
+    0.72,
+    2.38,
+    0.42,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.14
+  },
+  {
+   "id": "keys",
+   "key": "keys",
+   "box": [
+    0.03,
+    0.06,
+    0.012
+   ],
+   "color": "#d4af37",
+   "spawn": [
+    7.05,
+    0.55,
+    0.8,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "book",
+   "key": "book",
+   "box": [
+    0.14,
+    0.1,
+    0.03
+   ],
+   "color": "#8a5a3c",
+   "spawn": [
+    8.0,
+    3.4,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.03
+  },
+  {
+   "id": "tv_remote",
+   "key": "tv_remote",
+   "box": [
+    0.04,
+    0.12,
+    0.02
+   ],
+   "color": "#2b2f33",
+   "spawn": [
+    8.2,
+    2.0,
+    0.55,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "plate",
+   "key": "plate",
+   "box": [
+    0.12,
+    0.12,
+    0.02
+   ],
+   "color": "#e8e6e1",
+   "spawn": [
+    1.95,
+    0.9,
+    1.15,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "bowl",
+   "key": "bowl",
+   "box": [
+    0.11,
+    0.11,
+    0.06
+   ],
+   "color": "#dcd3c4",
+   "spawn": [
+    1.95,
+    0.9,
+    1.15,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.06
+  },
+  {
+   "id": "fork",
+   "key": "fork",
+   "box": [
+    0.02,
+    0.11,
+    0.012
+   ],
+   "color": "#b8bcc4",
+   "spawn": [
+    1.3,
+    1.5,
+    0.75,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "knife",
+   "key": "knife",
+   "box": [
+    0.02,
+    0.12,
+    0.012
+   ],
+   "color": "#c2c6cc",
+   "spawn": [
+    1.3,
+    1.5,
+    0.75,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.012
+  },
+  {
+   "id": "water_bottle",
+   "key": "water_bottle",
+   "box": [
+    0.06,
+    0.06,
+    0.2
+   ],
+   "color": "#a9d3e0",
+   "spawn": [
+    1.95,
+    0.9,
+    1.15,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.2
+  },
+  {
+   "id": "napkin",
+   "key": "napkin",
+   "box": [
+    0.09,
+    0.09,
+    0.02
+   ],
+   "color": "#efe7d8",
+   "spawn": [
+    0.72,
+    2.38,
+    0.42,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "phone",
+   "key": "phone",
+   "box": [
+    0.07,
+    0.14,
+    0.01
+   ],
+   "color": "#23262b",
+   "spawn": [
+    7.9,
+    0.9,
+    0.6,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.01
+  },
+  {
+   "id": "magazine",
+   "key": "magazine",
+   "box": [
+    0.2,
+    0.14,
+    0.02
+   ],
+   "color": "#c8543f",
+   "spawn": [
+    8.0,
+    3.4,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.02
+  },
+  {
+   "id": "unknown_jar",
+   "key": "unknown_jar",
+   "box": [
+    0.06,
+    0.06,
+    0.11
+   ],
+   "color": "#9bb7c4",
+   "spawn": [
+    2.4,
+    1.8,
+    0.97,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "height": 0.11
   }
  ],
  "segments": [
@@ -617,7 +917,12 @@
      1.05,
      0.68
     ],
-    "kind": "destination"
+    "kind": "destination",
+    "performPose": [
+     4.9,
+     3.3,
+     0.8
+    ]
    },
    "pantry": {
     "label": "pantry",
@@ -626,7 +931,12 @@
      0.88,
      1.12
     ],
-    "kind": "destination"
+    "kind": "destination",
+    "performPose": [
+     4.6,
+     3.55,
+     0.8
+    ]
    },
    "drawer": {
     "label": "cutlery drawer",
@@ -635,7 +945,110 @@
      1.5,
      0.75
     ],
-    "kind": "destination"
+    "kind": "destination",
+    "performPose": [
+     0.55,
+     1.95,
+     0.86
+    ]
+   },
+   "dishwasher": {
+    "label": "dishwasher",
+    "pos": [
+     1.05,
+     1.3,
+     0.62
+    ],
+    "kind": "destination",
+    "performPose": [
+     0.55,
+     2.35,
+     0.86
+    ]
+   },
+   "cupboard": {
+    "label": "cupboard",
+    "pos": [
+     1.95,
+     0.9,
+     1.15
+    ],
+    "kind": "destination",
+    "performPose": [
+     4.9,
+     3.3,
+     0.8
+    ]
+   },
+   "recycling": {
+    "label": "recycling",
+    "pos": [
+     0.72,
+     2.38,
+     0.42
+    ],
+    "kind": "destination",
+    "performPose": [
+     4.6,
+     3.55,
+     0.8
+    ]
+   },
+   "entrance_bowl": {
+    "label": "entrance bowl",
+    "pos": [
+     7.05,
+     0.55,
+     0.8
+    ],
+    "kind": "destination",
+    "performPose": [
+     0.55,
+     1.95,
+     0.86
+    ]
+   },
+   "bookshelf": {
+    "label": "bookshelf",
+    "pos": [
+     8.0,
+     3.4,
+     1.0
+    ],
+    "kind": "destination",
+    "performPose": [
+     0.55,
+     2.35,
+     0.86
+    ]
+   },
+   "tv_stand": {
+    "label": "TV stand",
+    "pos": [
+     8.2,
+     2.0,
+     0.55
+    ],
+    "kind": "destination",
+    "performPose": [
+     4.9,
+     3.3,
+     0.8
+    ]
+   },
+   "charging_dock": {
+    "label": "charging dock",
+    "pos": [
+     7.9,
+     0.9,
+     0.6
+    ],
+    "kind": "destination",
+    "performPose": [
+     4.6,
+     3.55,
+     0.8
+    ]
    },
    "table": {
     "label": "breakfast table",
@@ -644,7 +1057,12 @@
      3.35,
      0.76
     ],
-    "kind": "spot"
+    "kind": "spot",
+    "performPose": [
+     2.37,
+     2.0,
+     1.05
+    ]
    },
    "counter": {
     "label": "kitchen counter",
@@ -653,7 +1071,54 @@
      1.8,
      0.97
     ],
-    "kind": "spot"
+    "kind": "spot",
+    "performPose": [
+     2.37,
+     2.0,
+     1.05
+    ]
+   },
+   "sofa": {
+    "label": "sofa",
+    "pos": [
+     7.6,
+     2.6,
+     0.55
+    ],
+    "kind": "spot",
+    "performPose": [
+     2.37,
+     2.0,
+     1.05
+    ]
+   },
+   "coffee_table": {
+    "label": "coffee table",
+    "pos": [
+     7.8,
+     1.1,
+     0.52
+    ],
+    "kind": "spot",
+    "performPose": [
+     2.37,
+     2.0,
+     1.05
+    ]
+   },
+   "bed": {
+    "label": "bed",
+    "pos": [
+     6.5,
+     4.3,
+     0.6
+    ],
+    "kind": "spot",
+    "performPose": [
+     2.37,
+     2.0,
+     1.05
+    ]
    }
   },
   "objects": [
@@ -695,6 +1160,208 @@
      "counter"
     ],
     "licensedBy": "breakfast"
+   },
+   {
+    "id": "dirty_mug",
+    "key": "dirty_mug",
+    "label": "dirty mug",
+    "state": "dirty",
+    "current": "dishwasher",
+    "home": "dishwasher",
+    "outSpots": [
+     "table",
+     "counter",
+     "coffee_table"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "clean_glass",
+    "key": "clean_glass",
+    "label": "clean glass",
+    "state": "clean",
+    "current": "cupboard",
+    "home": "cupboard",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "empty_carton",
+    "key": "empty_carton",
+    "label": "empty carton",
+    "state": "empty",
+    "current": "recycling",
+    "home": "recycling",
+    "outSpots": [
+     "counter",
+     "table"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "keys",
+    "key": "keys",
+    "label": "keys",
+    "state": "cue",
+    "current": "entrance_bowl",
+    "home": "entrance_bowl",
+    "outSpots": [
+     "table",
+     "sofa"
+    ],
+    "licensedBy": "keys_reminder"
+   },
+   {
+    "id": "book",
+    "key": "book",
+    "label": "book",
+    "state": "unread",
+    "current": "bookshelf",
+    "home": "bookshelf",
+    "outSpots": [
+     "sofa",
+     "coffee_table",
+     "table",
+     "bed"
+    ],
+    "licensedBy": "reading"
+   },
+   {
+    "id": "tv_remote",
+    "key": "tv_remote",
+    "label": "TV remote",
+    "state": "idle",
+    "current": "tv_stand",
+    "home": "tv_stand",
+    "outSpots": [
+     "sofa",
+     "coffee_table"
+    ],
+    "licensedBy": "reading"
+   },
+   {
+    "id": "plate",
+    "key": "plate",
+    "label": "plate",
+    "state": "clean",
+    "current": "cupboard",
+    "home": "cupboard",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "bowl",
+    "key": "bowl",
+    "label": "bowl",
+    "state": "clean",
+    "current": "cupboard",
+    "home": "cupboard",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "fork",
+    "key": "fork",
+    "label": "fork",
+    "state": "used",
+    "current": "drawer",
+    "home": "drawer",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "knife",
+    "key": "knife",
+    "label": "knife",
+    "state": "used",
+    "current": "drawer",
+    "home": "drawer",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "water_bottle",
+    "key": "water_bottle",
+    "label": "water bottle",
+    "state": "clean",
+    "current": "cupboard",
+    "home": "cupboard",
+    "outSpots": [
+     "table",
+     "sofa",
+     "coffee_table"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "napkin",
+    "key": "napkin",
+    "label": "napkin",
+    "state": "used",
+    "current": "recycling",
+    "home": "recycling",
+    "outSpots": [
+     "table",
+     "counter"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "phone",
+    "key": "phone",
+    "label": "phone",
+    "state": "idle",
+    "current": "charging_dock",
+    "home": "charging_dock",
+    "outSpots": [
+     "sofa",
+     "coffee_table",
+     "table",
+     "bed"
+    ],
+    "licensedBy": "reading"
+   },
+   {
+    "id": "magazine",
+    "key": "magazine",
+    "label": "magazine",
+    "state": "unread",
+    "current": "bookshelf",
+    "home": "bookshelf",
+    "outSpots": [
+     "sofa",
+     "coffee_table",
+     "bed"
+    ],
+    "licensedBy": null
+   },
+   {
+    "id": "unknown_jar",
+    "key": "unknown_jar",
+    "label": "unknown jar",
+    "state": "unknown",
+    "current": "counter",
+    "home": "counter",
+    "outSpots": [
+     "counter",
+     "table"
+    ],
+    "licensedBy": null
    }
   ],
   "norms": [
@@ -721,6 +1388,118 @@
     "confidence": 0.85,
     "states": [],
     "restoration": "state_mediated_return"
+   },
+   {
+    "object": "dirty_mug",
+    "destination": "dishwasher",
+    "relation": "inside",
+    "confidence": 0.92,
+    "states": [],
+    "restoration": "state_mediated_return"
+   },
+   {
+    "object": "clean_glass",
+    "destination": "cupboard",
+    "relation": "inside",
+    "confidence": 0.9,
+    "states": [],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "empty_carton",
+    "destination": "recycling",
+    "relation": "inside",
+    "confidence": 0.95,
+    "states": [],
+    "restoration": "successor_state_resolution"
+   },
+   {
+    "object": "keys",
+    "destination": "entrance_bowl",
+    "relation": "inside",
+    "confidence": 0.8,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "book",
+    "destination": "bookshelf",
+    "relation": "on",
+    "confidence": 0.85,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "tv_remote",
+    "destination": "tv_stand",
+    "relation": "on",
+    "confidence": 0.8,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "plate",
+    "destination": "cupboard",
+    "relation": "inside",
+    "confidence": 0.9,
+    "states": [],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "bowl",
+    "destination": "cupboard",
+    "relation": "inside",
+    "confidence": 0.88,
+    "states": [],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "fork",
+    "destination": "drawer",
+    "relation": "inside",
+    "confidence": 0.85,
+    "states": [],
+    "restoration": "state_mediated_return"
+   },
+   {
+    "object": "knife",
+    "destination": "drawer",
+    "relation": "inside",
+    "confidence": 0.85,
+    "states": [],
+    "restoration": "state_mediated_return"
+   },
+   {
+    "object": "water_bottle",
+    "destination": "cupboard",
+    "relation": "inside",
+    "confidence": 0.82,
+    "states": [],
+    "restoration": "functional_return"
+   },
+   {
+    "object": "napkin",
+    "destination": "recycling",
+    "relation": "inside",
+    "confidence": 0.8,
+    "states": [],
+    "restoration": "successor_state_resolution"
+   },
+   {
+    "object": "phone",
+    "destination": "charging_dock",
+    "relation": "on",
+    "confidence": 0.8,
+    "states": [],
+    "restoration": "exact_return"
+   },
+   {
+    "object": "magazine",
+    "destination": "bookshelf",
+    "relation": "on",
+    "confidence": 0.78,
+    "states": [],
+    "restoration": "exact_return"
    }
   ],
   "activities": [
@@ -731,6 +1510,22 @@
      "milk",
      "breakfast_cereal",
      "spoon"
+    ]
+   },
+   {
+    "id": "keys_reminder",
+    "label": "Keys left as a reminder",
+    "licenses": [
+     "keys"
+    ]
+   },
+   {
+    "id": "reading",
+    "label": "Reading on the sofa",
+    "licenses": [
+     "book",
+     "tv_remote",
+     "phone"
     ]
    }
   ]
