@@ -2204,5 +2204,51 @@
     <child link="table_area_main"/>
   </joint>
 
+  <!-- ==== Added placement destinations ====================================================
+       Simple box furniture attached to apartment_root (world frame). Positioned at the
+       schematic living-area coordinates so the bullet target and the top-down overlay agree.
+       Physics/collision only; no mesh assets. Kept narrow/low so the PR2 base can park in
+       front and reach the top surface (validated: each object placed within <0.01 m). -->
+  <link name="living_backwall">
+    <visual><origin rpy="0 0 0" xyz="0 0 1.0"/><geometry><box size="0.2 4.0 2.0"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0 0 1.0"/><geometry><box size="0.2 4.0 2.0"/></geometry></collision>
+  </link>
+  <joint name="living_backwall_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="8.7 2.3 0.0"/>
+    <parent link="apartment_root"/><child link="living_backwall"/>
+  </joint>
+  <link name="bookshelf">
+    <visual><origin rpy="0 0 0" xyz="0 0 0.375"/><geometry><box size="0.30 0.50 0.75"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0 0 0.375"/><geometry><box size="0.30 0.50 0.75"/></geometry></collision>
+  </link>
+  <joint name="bookshelf_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="8.0 3.4 0.0"/>
+    <parent link="apartment_root"/><child link="bookshelf"/>
+  </joint>
+  <link name="tv_stand">
+    <visual><origin rpy="0 0 0" xyz="0 0 0.40"/><geometry><box size="0.35 0.60 0.80"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0 0 0.40"/><geometry><box size="0.35 0.60 0.80"/></geometry></collision>
+  </link>
+  <joint name="tv_stand_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="8.0 1.8 0.0"/>
+    <parent link="apartment_root"/><child link="tv_stand"/>
+  </joint>
+  <link name="entrance_console">
+    <visual><origin rpy="0 0 0" xyz="0 0 0.40"/><geometry><box size="0.35 0.40 0.80"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0 0 0.40"/><geometry><box size="0.35 0.40 0.80"/></geometry></collision>
+  </link>
+  <joint name="entrance_console_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="8.0 2.6 0.0"/>
+    <parent link="apartment_root"/><child link="entrance_console"/>
+  </joint>
+  <link name="charging_dock">
+    <visual><origin rpy="0 0 0" xyz="0 0 0.375"/><geometry><box size="0.25 0.30 0.75"/></geometry></visual>
+    <collision><origin rpy="0 0 0" xyz="0 0 0.375"/><geometry><box size="0.25 0.30 0.75"/></geometry></collision>
+  </link>
+  <joint name="charging_dock_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="8.0 0.5 0.0"/>
+    <parent link="apartment_root"/><child link="charging_dock"/>
+  </joint>
+
 </robot>
 

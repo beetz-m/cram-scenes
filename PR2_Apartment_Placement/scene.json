@@ -1003,46 +1003,62 @@
    "entrance_bowl": {
     "label": "entrance bowl",
     "pos": [
-     7.05,
-     0.55,
+     8.0,
+     2.6,
      0.8
     ],
     "kind": "destination",
-    "performPose": null,
-    "physical": false
+    "performPose": [
+     7.8,
+     2.95,
+     0.82
+    ],
+    "physical": true
    },
    "bookshelf": {
     "label": "bookshelf",
     "pos": [
      8.0,
      3.4,
-     1.0
+     0.75
     ],
     "kind": "destination",
-    "performPose": null,
-    "physical": false
+    "performPose": [
+     7.85,
+     3.4,
+     0.8
+    ],
+    "physical": true
    },
    "tv_stand": {
     "label": "TV stand",
     "pos": [
-     8.2,
-     2.0,
-     0.55
+     8.0,
+     1.8,
+     0.8
     ],
     "kind": "destination",
-    "performPose": null,
-    "physical": false
+    "performPose": [
+     7.85,
+     1.55,
+     0.85
+    ],
+    "physical": true
    },
    "charging_dock": {
     "label": "charging dock",
     "pos": [
-     7.9,
-     0.9,
-     0.6
+     8.0,
+     0.5,
+     0.75
     ],
     "kind": "destination",
-    "performPose": null,
-    "physical": false
+    "performPose": [
+     7.88,
+     0.5,
+     0.8
+    ],
+    "physical": true
    },
    "table": {
     "label": "breakfast table",
@@ -1134,7 +1150,7 @@
     "key": "breakfast_cereal.stl",
     "label": "cereal",
     "state": "open",
-    "current": "counter",
+    "current": "pantry",
     "home": "pantry",
     "outSpots": [
      "table",
@@ -1147,7 +1163,7 @@
     "key": "spoon.stl",
     "label": "spoon",
     "state": "used",
-    "current": "counter",
+    "current": "drawer",
     "home": "drawer",
     "outSpots": [
      "table",
@@ -1174,7 +1190,7 @@
     "key": "clean_glass",
     "label": "clean glass",
     "state": "clean",
-    "current": "counter",
+    "current": "cupboard",
     "home": "cupboard",
     "outSpots": [
      "table",
@@ -1200,7 +1216,7 @@
     "key": "keys",
     "label": "keys",
     "state": "cue",
-    "current": "entrance_bowl",
+    "current": "table",
     "home": "entrance_bowl",
     "outSpots": [
      "table",
@@ -1213,7 +1229,7 @@
     "key": "book",
     "label": "book",
     "state": "unread",
-    "current": "bookshelf",
+    "current": "coffee_table",
     "home": "bookshelf",
     "outSpots": [
      "sofa",
@@ -1228,7 +1244,7 @@
     "key": "tv_remote",
     "label": "TV remote",
     "state": "idle",
-    "current": "tv_stand",
+    "current": "sofa",
     "home": "tv_stand",
     "outSpots": [
      "sofa",
